@@ -1,6 +1,6 @@
 import { readFileSync, promises as fs, statSync, existsSync } from 'fs';
 import { basename, dirname, join, relative, sep } from 'path';
-import { isErrnoException } from '@vercel/error-utils';
+import { isErrnoException } from '@khulnasoft/error-utils';
 import { nodeFileTrace } from '@vercel/nft';
 import {
   BuildResultV2Typical,

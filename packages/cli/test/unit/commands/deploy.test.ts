@@ -3,7 +3,7 @@ import bytes from 'bytes';
 import fs from 'fs-extra';
 import { join } from 'path';
 import { randomBytes } from 'crypto';
-import { fileNameSymbol } from '@vercel/client';
+import { fileNameSymbol } from '@khulnasoft/client';
 import { client } from '../../mocks/client';
 import deploy from '../../../src/commands/deploy';
 import { setupUnitFixture } from '../../helpers/setup-unit-fixture';

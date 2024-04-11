@@ -1,5 +1,5 @@
 import { basename } from 'path';
-import { VercelConfig } from '@vercel/client';
+import { VercelConfig } from '@khulnasoft/client';
 
 export interface GetProjectNameOptions {
   argv: { [k: string]: string | undefined };

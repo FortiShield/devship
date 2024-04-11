@@ -2,7 +2,7 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/next",
+      "use": "@khulnasoft/next",
       "config": {
         "buildCommand": "next build",
         "outputDirectory": "the-output-directory"

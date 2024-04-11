@@ -13,7 +13,7 @@ import {
   FileFsRef,
   Lambda,
 } from '@khulnasoft/build-utils';
-import { VercelConfig } from '@vercel/client';
+import { VercelConfig } from '@khulnasoft/client';
 import { HandleValue, Route } from '@khulnasoft/routing-utils';
 import { Output } from '../output';
 import type { ProjectSettings } from '@vercel-internals/types';

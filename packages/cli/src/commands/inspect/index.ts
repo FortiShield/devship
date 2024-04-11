@@ -11,7 +11,7 @@ import Client from '../../util/client';
 import getDeployment from '../../util/get-deployment';
 import type { Build, Deployment } from '@vercel-internals/types';
 import title from 'title';
-import { isErrnoException } from '@vercel/error-utils';
+import { isErrnoException } from '@khulnasoft/error-utils';
 import { URL } from 'url';
 import readStandardInput from '../../util/input/read-standard-input';
 import sleep from '../../util/sleep';

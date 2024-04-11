@@ -12,7 +12,7 @@ import {
 import { isObjectEmpty } from './_shared';
 import { Project } from 'ts-morph';
 import { getConfig } from '@khulnasoft/static-config';
-import { isErrnoException } from '@vercel/error-utils';
+import { isErrnoException } from '@khulnasoft/error-utils';
 
 const BUILD_OUTPUT_DIR = '.output';
 const BRIDGE_MIDDLEWARE_V2_TO_V3 = `

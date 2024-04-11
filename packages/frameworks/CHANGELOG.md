@@ -37,7 +37,7 @@
 - update Angular output path discovery ([#10678](https://github.com/khulnasoft/devship/pull/10678))
 
 - Updated dependencies [[`34dd9c091`](https://github.com/khulnasoft/devship/commit/34dd9c0918585cf6d3b04bddd9158978b0b4192f)]:
-  - @vercel/error-utils@2.0.2
+  - @khulnasoft/error-utils@2.0.2
 
 ## 2.0.2
 
@@ -52,7 +52,7 @@
 - move some frameworks deps to dependencies ([#10380](https://github.com/khulnasoft/devship/pull/10380))
 
 - Updated dependencies [[`96f99c714`](https://github.com/khulnasoft/devship/commit/96f99c714715651b85eb7a03f58ecc9e1316d156)]:
-  - @vercel/error-utils@2.0.1
+  - @khulnasoft/error-utils@2.0.1
 
 ## 2.0.0
 

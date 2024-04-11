@@ -27,7 +27,7 @@ export const frameworks = [
       'A brand new Blitz.js app - the result of running `npx blitz@0.45.4 new`.',
     website: 'https://blitzjs.com',
     envPrefix: 'NEXT_PUBLIC_',
-    useRuntime: { src: 'package.json', use: '@vercel/next' },
+    useRuntime: { src: 'package.json', use: '@khulnasoft/next' },
     detectors: {
       some: [
         // Intentionally does not detect a package name
@@ -73,7 +73,7 @@ export const frameworks = [
     website: 'https://nextjs.org',
     sort: 1,
     envPrefix: 'NEXT_PUBLIC_',
-    useRuntime: { src: 'package.json', use: '@vercel/next' },
+    useRuntime: { src: 'package.json', use: '@khulnasoft/next' },
     detectors: {
       every: [
         {
@@ -1986,7 +1986,7 @@ export const frameworks = [
     description:
       'Storybook is a frontend workshop for building UI components and pages in isolation.',
     website: 'https://storybook.js.org',
-    ignoreRuntimes: ['@vercel/next', '@khulnasoft/node'],
+    ignoreRuntimes: ['@khulnasoft/next', '@khulnasoft/node'],
     disableRootMiddleware: true,
     detectors: {
       every: [

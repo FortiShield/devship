@@ -11,7 +11,7 @@ import confirm from '../../util/input/confirm';
 import purchaseDomain from '../../util/domains/purchase-domain';
 import stamp from '../../util/output/stamp';
 import { getCommandName } from '../../util/pkg-name';
-import { errorToString } from '@vercel/error-utils';
+import { errorToString } from '@khulnasoft/error-utils';
 
 type Options = {};
 

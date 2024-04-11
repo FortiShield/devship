@@ -7,7 +7,7 @@
   "builds": [
     {
       "src": "packages/webapp/next.config.js",
-      "use": "@vercel/next"
+      "use": "@khulnasoft/next"
     }
   ],
   "probes": [
@@ -34,7 +34,7 @@
       "status": 404
     },
     {
-      "logMustContain": "WARNING: your application is being opted out of @vercel/next's optimized lambdas mode due to legacy routes"
+      "logMustContain": "WARNING: your application is being opted out of @khulnasoft/next's optimized lambdas mode due to legacy routes"
     }
   ]
 }

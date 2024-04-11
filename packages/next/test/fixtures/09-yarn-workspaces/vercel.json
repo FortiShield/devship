@@ -1,7 +1,7 @@
 {
   "version": 2,
   "uploadNowJson": true,
-  "builds": [{ "src": "packages/web/next.config.js", "use": "@vercel/next" }],
+  "builds": [{ "src": "packages/web/next.config.js", "use": "@khulnasoft/next" }],
   "routes": [{ "src": "/(.*)", "dest": "/packages/web/$1", "continue": true }],
   "probes": [
     {
@@ -9,7 +9,7 @@
       "mustContain": "hello world <!-- -->6"
     },
     {
-      "logMustContain": "WARNING: your application is being opted out of @vercel/next's optimized lambdas mode due to legacy routes"
+      "logMustContain": "WARNING: your application is being opted out of @khulnasoft/next's optimized lambdas mode due to legacy routes"
     }
   ]
 }

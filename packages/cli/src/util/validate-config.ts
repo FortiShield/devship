@@ -14,7 +14,7 @@ import {
   NowBuildError,
   getPrettyError,
 } from '@khulnasoft/build-utils';
-import { fileNameSymbol } from '@vercel/client';
+import { fileNameSymbol } from '@khulnasoft/client';
 
 const imagesSchema = {
   type: 'object',

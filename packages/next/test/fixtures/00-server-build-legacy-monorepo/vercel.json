@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "builds": [{ "src": "packages/nextjs/package.json", "use": "@vercel/next" }],
+  "builds": [{ "src": "packages/nextjs/package.json", "use": "@khulnasoft/next" }],
   "rewrites": [
     {
       "source": "/(.*)",

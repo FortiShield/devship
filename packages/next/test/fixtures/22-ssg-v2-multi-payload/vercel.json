@@ -1,7 +1,7 @@
 {
   "version": 2,
   "uploadNowJson": true,
-  "builds": [{ "src": "package.json", "use": "@vercel/next" }],
+  "builds": [{ "src": "package.json", "use": "@khulnasoft/next" }],
   "probes": [
     {
       "path": "/lambda",
@@ -177,10 +177,10 @@
       "status": 200
     },
     {
-      "logMustNotContain": "WARNING: your application is being opted out of @vercel/next's optimized lambdas mode due to legacy routes"
+      "logMustNotContain": "WARNING: your application is being opted out of @khulnasoft/next's optimized lambdas mode due to legacy routes"
     },
     {
-      "logMustNotContain": "WARNING: Your application is being opted out of \"@vercel/next\" optimized lambdas mode due to `functions` config"
+      "logMustNotContain": "WARNING: Your application is being opted out of \"@khulnasoft/next\" optimized lambdas mode due to `functions` config"
     }
   ]
 }

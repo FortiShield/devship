@@ -1,6 +1,6 @@
 import fs from 'fs-extra';
 import { resolve } from 'path';
-import { getVercelIgnore } from '@vercel/client';
+import { getVercelIgnore } from '@khulnasoft/client';
 import uniqueStrings from './unique-strings';
 import { Output } from './output/create-output';
 

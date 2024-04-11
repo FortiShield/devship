@@ -5,7 +5,7 @@ An extension to the standard `Request` object that is passed to every Edge Funct
 **`Example`**
 
 ```ts
-import type { RequestContext } from '@vercel/edge';
+import type { RequestContext } from '@khulnasoft/edge';
 
 export default async function handler(
   request: Request,
@@ -36,7 +36,7 @@ response has been sent and the request has ended.
 <caption>Sending an internal error to an error tracking service</caption>
 
 ```ts
-import type { RequestContext } from '@vercel/edge';
+import type { RequestContext } from '@khulnasoft/edge';
 
 export async function handleRequest(
   request: Request,

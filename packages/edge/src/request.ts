@@ -3,7 +3,7 @@
  *
  * @example
  * ```ts
- * import type { RequestContext } from '@vercel/edge';
+ * import type { RequestContext } from '@khulnasoft/edge';
  *
  * export default async function handler(request: Request, ctx: RequestContext): Promise<Response> {
  *   // ctx is the RequestContext
@@ -21,7 +21,7 @@ export interface RequestContext {
    * <caption>Sending an internal error to an error tracking service</caption>
    *
    * ```ts
-   * import type { RequestContext } from '@vercel/edge';
+   * import type { RequestContext } from '@khulnasoft/edge';
    *
    * export async function handleRequest(request: Request, ctx: RequestContext): Promise<Response> {
    *  try {

@@ -11,7 +11,7 @@ import { packageName, getCommandName } from '../../util/pkg-name';
 import Client from '../../util/client';
 import createTeam from '../../util/teams/create-team';
 import patchTeam from '../../util/teams/patch-team';
-import { errorToString, isError } from '@vercel/error-utils';
+import { errorToString, isError } from '@khulnasoft/error-utils';
 
 const validateSlugKeypress = (data: string, value: string) =>
   // TODO: the `value` here should contain the current value + the keypress

@@ -51,7 +51,7 @@
 
 - Updated dependencies [[`306f653da`](https://github.com/khulnasoft/devship/commit/306f653da9de96ddf583cce35603229aa55c4e53), [`34dd9c091`](https://github.com/khulnasoft/devship/commit/34dd9c0918585cf6d3b04bddd9158978b0b4192f)]:
   - @khulnasoft/frameworks@2.0.3
-  - @vercel/error-utils@2.0.2
+  - @khulnasoft/error-utils@2.0.2
 
 ## 5.1.2
 
@@ -91,7 +91,7 @@
 
 - Updated dependencies [[`c615423a0`](https://github.com/khulnasoft/devship/commit/c615423a0b60ed64bf5e0e10bbc4ca997c31bd60), [`96f99c714`](https://github.com/khulnasoft/devship/commit/96f99c714715651b85eb7a03f58ecc9e1316d156)]:
   - @khulnasoft/frameworks@2.0.1
-  - @vercel/error-utils@2.0.1
+  - @khulnasoft/error-utils@2.0.1
 
 ## 5.0.0
 
@@ -106,7 +106,7 @@
 - Add "supersedes" prop to Framework interface ([#10345](https://github.com/khulnasoft/devship/pull/10345))
 
 - Updated dependencies [[`37f5c6270`](https://github.com/khulnasoft/devship/commit/37f5c6270058336072ca733673ea72dd6c56bd6a), [`ed806d8a6`](https://github.com/khulnasoft/devship/commit/ed806d8a6b560b173ba80b24cbfafaa6f179d8b1)]:
-  - @vercel/error-utils@2.0.0
+  - @khulnasoft/error-utils@2.0.0
   - @khulnasoft/frameworks@2.0.0
   - @khulnasoft/routing-utils@3.0.0
 

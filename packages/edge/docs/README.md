@@ -1,4 +1,4 @@
-# @vercel/edge
+# @khulnasoft/edge
 
 ## Table of contents
 
@@ -202,7 +202,7 @@ Builds a response object from a serializable JavaScript object:
 <caption>Building a JSON response</caption>
 
 ```ts
-import { json } from '@vercel/edge';
+import { json } from '@khulnasoft/edge';
 
 const response = json(
   { notification: { success: true, content: 'worked' } },
@@ -238,7 +238,7 @@ Returns a Response that instructs the system to continue processing the request.
 <caption>No-op middleware</caption>
 
 ```ts
-import { next } from '@vercel/edge';
+import { next } from '@khulnasoft/edge';
 
 export default function middleware(_req: Request) {
   return next();
@@ -250,7 +250,7 @@ export default function middleware(_req: Request) {
 <caption>Add response headers to all requests</caption>
 
 ```ts
-import { next } from '@vercel/edge';
+import { next } from '@khulnasoft/edge';
 
 export default function middleware(_req: Request) {
   return next({
@@ -286,7 +286,7 @@ Returns a response that rewrites the request to a different URL.
 <caption>Rewrite all feature-flagged requests from `/:path*` to `/experimental/:path*`</caption>
 
 ```ts
-import { rewrite, next } from '@vercel/edge';
+import { rewrite, next } from '@khulnasoft/edge';
 
 export default async function middleware(req: Request) {
   const flagged = await getFlag(req, 'isExperimental');
@@ -305,7 +305,7 @@ export default async function middleware(req: Request) {
 <caption>JWT authentication for `/api/:path*` requests</caption>
 
 ```ts
-import { rewrite, next } from '@vercel/edge';
+import { rewrite, next } from '@khulnasoft/edge';
 
 export default function middleware(req: Request) {
   const auth = checkJwt(req.headers.get('Authorization'));

@@ -7,8 +7,8 @@ import {
   fileNameSymbol,
   VALID_ARCHIVE_FORMATS,
   VercelConfig,
-} from '@vercel/client';
-import { errorToString, isErrnoException, isError } from '@vercel/error-utils';
+} from '@khulnasoft/client';
+import { errorToString, isErrnoException, isError } from '@khulnasoft/error-utils';
 import bytes from 'bytes';
 import chalk from 'chalk';
 import fs from 'fs-extra';

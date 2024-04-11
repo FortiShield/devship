@@ -1,4 +1,4 @@
-import { isErrnoException } from '@vercel/error-utils';
+import { isErrnoException } from '@khulnasoft/error-utils';
 import fs from 'fs-extra';
 import * as path from 'path';
 import semver from 'semver';
@@ -6,8 +6,8 @@ import { createRequire } from 'module';
 import { fileExists } from './_shared';
 
 const PLUGINS = [
-  '@vercel/gatsby-plugin-vercel-analytics',
-  '@vercel/gatsby-plugin-vercel-builder',
+  '@khulnasoft/gatsby-plugin-khulnasoft-analytics',
+  '@khulnasoft/gatsby-plugin-khulnasoft-builder',
 ] as const;
 type PluginName = typeof PLUGINS[number];
 
@@ -17,11 +17,11 @@ const GATSBY_NODE_FILE = 'gatsby-node';
 const require_ = createRequire(__filename);
 
 const PLUGIN_PATHS: Record<PluginName, string> = {
-  '@vercel/gatsby-plugin-vercel-analytics': path.dirname(
-    require_.resolve(`@vercel/gatsby-plugin-vercel-analytics/package.json`)
+  '@khulnasoft/gatsby-plugin-khulnasoft-analytics': path.dirname(
+    require_.resolve(`@khulnasoft/gatsby-plugin-khulnasoft-analytics/package.json`)
   ),
-  '@vercel/gatsby-plugin-vercel-builder': path.dirname(
-    require_.resolve(`@vercel/gatsby-plugin-vercel-builder/package.json`)
+  '@khulnasoft/gatsby-plugin-khulnasoft-builder': path.dirname(
+    require_.resolve(`@khulnasoft/gatsby-plugin-khulnasoft-builder/package.json`)
   ),
 };
 
@@ -36,7 +36,7 @@ export async function injectPlugins(
   if (detectedVersion) {
     const version = semver.coerce(detectedVersion);
     if (version && semver.satisfies(version, '>=4.0.0')) {
-      plugins.add('@vercel/gatsby-plugin-vercel-builder');
+      plugins.add('@khulnasoft/gatsby-plugin-khulnasoft-builder');
 
       if (!GLOBAL_EXIT_HANDLER) {
         GLOBAL_EXIT_HANDLER = () => {
@@ -49,7 +49,7 @@ export async function injectPlugins(
 
   if (process.env.VERCEL_ANALYTICS_ID) {
     process.env.GATSBY_VERCEL_ANALYTICS_ID = process.env.VERCEL_ANALYTICS_ID;
-    plugins.add('@vercel/gatsby-plugin-vercel-analytics');
+    plugins.add('@khulnasoft/gatsby-plugin-khulnasoft-analytics');
     console.warn(
       'Vercel Speed Insights auto-injection is deprecated in favor of @vercel/speed-insights package. Learn more: https://vercel.link/upgrate-to-speed-insights-package'
     );
@@ -71,13 +71,13 @@ export async function injectPlugins(
 
   const ops = [];
 
-  if (plugins.has('@vercel/gatsby-plugin-vercel-analytics')) {
+  if (plugins.has('@khulnasoft/gatsby-plugin-khulnasoft-analytics')) {
     ops.push(
-      updateGatsbyConfig(dir, ['@vercel/gatsby-plugin-vercel-analytics'])
+      updateGatsbyConfig(dir, ['@khulnasoft/gatsby-plugin-khulnasoft-analytics'])
     );
   }
 
-  if (plugins.has('@vercel/gatsby-plugin-vercel-builder')) {
+  if (plugins.has('@khulnasoft/gatsby-plugin-khulnasoft-builder')) {
     ops.push(updateGatsbyNode(dir));
   }
 
@@ -245,7 +245,7 @@ async function updateGatsbyNode(dir: string) {
     await fs.writeFile(
       gatsbyNodePathJs,
       `${GENERATED_FILE_COMMENT}
-module.exports = require('@vercel/gatsby-plugin-vercel-builder/gatsby-node.js');`
+module.exports = require('@khulnasoft/gatsby-plugin-khulnasoft-builder/gatsby-node.js');`
     );
   }
 }
@@ -260,7 +260,7 @@ async function updateGatsbyNodeTs(configPath: string) {
     configPath,
     `${GENERATED_FILE_COMMENT}
 import type { GatsbyNode } from 'gatsby';
-import * as vercelBuilder from '@vercel/gatsby-plugin-vercel-builder/gatsby-node.js';
+import * as vercelBuilder from '@khulnasoft/gatsby-plugin-khulnasoft-builder/gatsby-node.js';
 import * as gatsbyNode from './gatsby-node.ts.__vercel_builder_backup__.ts';
 
 export * from './gatsby-node.ts.__vercel_builder_backup__.ts';
@@ -284,7 +284,7 @@ async function updateGatsbyNodeMjs(configPath: string) {
   await fs.writeFile(
     configPath,
     `${GENERATED_FILE_COMMENT}
-import * as vercelBuilder from '@vercel/gatsby-plugin-vercel-builder/gatsby-node.js';
+import * as vercelBuilder from '@khulnasoft/gatsby-plugin-khulnasoft-builder/gatsby-node.js';
 import * as gatsbyNode from './gatsby-node.mjs.__vercel_builder_backup__.mjs';
 
 export * from './gatsby-node.mjs.__vercel_builder_backup__.mjs';
@@ -308,7 +308,7 @@ async function updateGatsbyNodeJs(configPath: string) {
   await fs.writeFile(
     configPath,
     `${GENERATED_FILE_COMMENT}
-const vercelBuilder = require('@vercel/gatsby-plugin-vercel-builder/gatsby-node.js');
+const vercelBuilder = require('@khulnasoft/gatsby-plugin-khulnasoft-builder/gatsby-node.js');
 const gatsbyNode = require('./gatsby-node.js.__vercel_builder_backup__.js');
 
 const origOnPostBuild = gatsbyNode.onPostBuild;

@@ -11,7 +11,7 @@
  * <caption>Building a JSON response</caption>
  *
  * ```ts
- * import { json } from '@vercel/edge';
+ * import { json } from '@khulnasoft/edge';
  *
  * const response = json({ notification: { success: true, content: 'worked' } }, { headers: {'x-custom': '1' }})
  * ```

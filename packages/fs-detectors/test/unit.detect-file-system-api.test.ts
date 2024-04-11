@@ -321,7 +321,7 @@ describe('Test `detectFileSystemAPI`', () => {
     const result = await detectFileSystemAPI({
       files: { 'pages/foo.js': 'console.log("foo")' },
       projectSettings: { framework: 'nextjs', outputDirectory: 'dist' },
-      builders: [{ use: '@vercel/next', src: 'package.json' }],
+      builders: [{ use: '@khulnasoft/next', src: 'package.json' }],
       vercelConfig: null,
       pkg: { dependencies: { next: '^12.0.0' } },
       tag: '',
@@ -339,7 +339,7 @@ describe('Test `detectFileSystemAPI`', () => {
     const result = await detectFileSystemAPI({
       files: { 'pages/foo.js': 'console.log("foo")' },
       projectSettings: { framework: 'nextjs' },
-      builders: [{ use: '@vercel/next', src: 'package.json' }],
+      builders: [{ use: '@khulnasoft/next', src: 'package.json' }],
       vercelConfig: null,
       pkg: { dependencies: { 'not-next': '^12.0.0' } },
       tag: '',
@@ -357,7 +357,7 @@ describe('Test `detectFileSystemAPI`', () => {
     const result = await detectFileSystemAPI({
       files: { 'pages/foo.js': 'console.log("foo")' },
       projectSettings: { framework: 'nextjs' },
-      builders: [{ use: '@vercel/next', src: 'package.json' }],
+      builders: [{ use: '@khulnasoft/next', src: 'package.json' }],
       vercelConfig: null,
       pkg: { dependencies: { next: '^9.0.0' } },
       tag: '',
@@ -375,7 +375,7 @@ describe('Test `detectFileSystemAPI`', () => {
     const result = await detectFileSystemAPI({
       files: { 'pages/foo.js': 'console.log("foo")' },
       projectSettings: { framework: 'nextjs' },
-      builders: [{ use: '@vercel/next', src: 'package.json' }],
+      builders: [{ use: '@khulnasoft/next', src: 'package.json' }],
       vercelConfig: null,
       pkg: { dependencies: { next: '^12.1.0', vercel: '^23.1.1' } },
       tag: '',

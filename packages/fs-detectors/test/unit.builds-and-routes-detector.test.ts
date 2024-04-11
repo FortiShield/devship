@@ -39,7 +39,7 @@ describe('Test `detectBuilders`', () => {
     };
     const files = ['package.json', 'pages/index.js'];
     const { builders, errors } = await detectBuilders(files, pkg);
-    expect(builders![0].use).toBe('@vercel/next');
+    expect(builders![0].use).toBe('@khulnasoft/next');
     expect(errors).toBe(null);
   });
 
@@ -50,7 +50,7 @@ describe('Test `detectBuilders`', () => {
     };
     const files = ['package.json', 'pages/index.js'];
     const { builders, errors } = await detectBuilders(files, pkg);
-    expect(builders![0].use).toBe('@vercel/next');
+    expect(builders![0].use).toBe('@khulnasoft/next');
     expect(errors).toBe(null);
   });
 
@@ -121,7 +121,7 @@ describe('Test `detectBuilders`', () => {
     const { builders } = await detectBuilders(files, pkg);
     expect(builders![0].use).toBe('@khulnasoft/node');
     expect(builders![0].src).toBe('api/endpoint.js');
-    expect(builders![1].use).toBe('@vercel/next');
+    expect(builders![1].use).toBe('@khulnasoft/next');
     expect(builders![1].src).toBe('package.json');
     expect(builders!.length).toBe(2);
   });
@@ -136,7 +136,7 @@ describe('Test `detectBuilders`', () => {
     const { builders } = await detectBuilders(files, pkg);
     expect(builders![0].use).toBe('@khulnasoft/node');
     expect(builders![0].src).toBe('api/endpoint.js');
-    expect(builders![1].use).toBe('@vercel/next');
+    expect(builders![1].use).toBe('@khulnasoft/next');
     expect(builders![1].src).toBe('package.json');
     expect(builders!.length).toBe(2);
   });
@@ -205,7 +205,7 @@ describe('Test `detectBuilders`', () => {
     const files = ['package.json', 'public/index.html', 'README.md'];
 
     const { builders } = await detectBuilders(files, pkg);
-    expect(builders![0].use).toBe('@vercel/next');
+    expect(builders![0].use).toBe('@khulnasoft/next');
     expect(builders![0].src).toBe('package.json');
     expect(builders!.length).toBe(1);
   });
@@ -284,7 +284,7 @@ describe('Test `detectBuilders`', () => {
     const { builders } = await detectBuilders(files, pkg, { tag: 'canary' });
     expect(builders![0].use).toBe('@khulnasoft/node@canary');
     expect(builders![1].use).toBe('@khulnasoft/node@canary');
-    expect(builders![2].use).toBe('@vercel/next@canary');
+    expect(builders![2].use).toBe('@khulnasoft/next@canary');
     expect(builders!.length).toBe(3);
   });
 
@@ -302,7 +302,7 @@ describe('Test `detectBuilders`', () => {
     const { builders } = await detectBuilders(files, pkg, { tag: 'latest' });
     expect(builders![0].use).toBe('@khulnasoft/node@latest');
     expect(builders![1].use).toBe('@khulnasoft/node@latest');
-    expect(builders![2].use).toBe('@vercel/next@latest');
+    expect(builders![2].use).toBe('@khulnasoft/next@latest');
     expect(builders!.length).toBe(3);
   });
 
@@ -320,7 +320,7 @@ describe('Test `detectBuilders`', () => {
     const { builders } = await detectBuilders(files, pkg, { tag: 'haha' });
     expect(builders![0].use).toBe('@khulnasoft/node@haha');
     expect(builders![1].use).toBe('@khulnasoft/node@haha');
-    expect(builders![2].use).toBe('@vercel/next@haha');
+    expect(builders![2].use).toBe('@khulnasoft/next@haha');
     expect(builders!.length).toBe(3);
   });
 
@@ -339,7 +339,7 @@ describe('Test `detectBuilders`', () => {
     expect(builders).toBeDefined();
     expect(builders!.length).toBe(2);
     expect(builders![0].use).toBe('@khulnasoft/node');
-    expect(builders![1].use).toBe('@vercel/next');
+    expect(builders![1].use).toBe('@khulnasoft/next');
   });
 
   it('many static files + one api file', async () => {
@@ -378,7 +378,7 @@ describe('Test `detectBuilders`', () => {
     expect(builders!.length).toBe(1);
     expect(builders![0]).toEqual({
       src: 'package.json',
-      use: '@vercel/next',
+      use: '@khulnasoft/next',
       config: {
         zeroConfig: true,
         functions: {
@@ -441,7 +441,7 @@ describe('Test `detectBuilders`', () => {
     });
     expect(builders![2]).toEqual({
       src: 'package.json',
-      use: '@vercel/next',
+      use: '@khulnasoft/next',
       config: {
         zeroConfig: true,
       },
@@ -554,7 +554,7 @@ describe('Test `detectBuilders`', () => {
     expect(errors![0].code).toBe('invalid_function');
   });
 
-  it('Do not allow functions that are not used by @vercel/next', async () => {
+  it('Do not allow functions that are not used by @khulnasoft/next', async () => {
     const pkg = {
       scripts: { build: 'next build' },
       dependencies: { next: '9.0.0' },
@@ -907,7 +907,7 @@ describe('Test `detectBuilders` with `featHandleMiss=true`', () => {
     expect(builders).toBeDefined();
     expect(builders!.length).toStrictEqual(1);
     expect(builders![0].src).toStrictEqual('package.json');
-    expect(builders![0].use).toStrictEqual('@vercel/next');
+    expect(builders![0].use).toStrictEqual('@khulnasoft/next');
     expect(builders![0].config!.zeroConfig).toStrictEqual(true);
     expect(builders![0].config!.installCommand).toStrictEqual(
       'npx pnpm install'
@@ -930,7 +930,7 @@ describe('Test `detectBuilders` with `featHandleMiss=true`', () => {
     expect(builders).toBeDefined();
     expect(builders!.length).toStrictEqual(1);
     expect(builders![0].src).toStrictEqual('package.json');
-    expect(builders![0].use).toStrictEqual('@vercel/next');
+    expect(builders![0].use).toStrictEqual('@khulnasoft/next');
     expect(builders![0].config!.zeroConfig).toStrictEqual(true);
     expect(builders![0].config!.installCommand).toStrictEqual('');
   });
@@ -973,7 +973,7 @@ describe('Test `detectBuilders` with `featHandleMiss=true`', () => {
       rewriteRoutes,
       errorRoutes,
     } = await detectBuilders(files, pkg, { featHandleMiss });
-    expect(builders![0].use).toBe('@vercel/next');
+    expect(builders![0].use).toBe('@khulnasoft/next');
     expect(errors).toBe(null);
     expect(defaultRoutes).toStrictEqual([]);
     expect(redirectRoutes).toStrictEqual([]);
@@ -995,7 +995,7 @@ describe('Test `detectBuilders` with `featHandleMiss=true`', () => {
       rewriteRoutes,
       errorRoutes,
     } = await detectBuilders(files, pkg, { featHandleMiss });
-    expect(builders![0].use).toBe('@vercel/next');
+    expect(builders![0].use).toBe('@khulnasoft/next');
     expect(errors).toBe(null);
     expect(defaultRoutes).toStrictEqual([]);
     expect(redirectRoutes).toStrictEqual([]);
@@ -1140,7 +1140,7 @@ describe('Test `detectBuilders` with `featHandleMiss=true`', () => {
     } = await detectBuilders(files, pkg, { featHandleMiss });
     expect(builders![0].use).toBe('@khulnasoft/node');
     expect(builders![0].src).toBe('api/endpoint.js');
-    expect(builders![1].use).toBe('@vercel/next');
+    expect(builders![1].use).toBe('@khulnasoft/next');
     expect(builders![1].src).toBe('package.json');
     expect(builders!.length).toBe(2);
 
@@ -1169,7 +1169,7 @@ describe('Test `detectBuilders` with `featHandleMiss=true`', () => {
     } = await detectBuilders(files, pkg, { featHandleMiss });
     expect(builders![0].use).toBe('@khulnasoft/node');
     expect(builders![0].src).toBe('api/endpoint.js');
-    expect(builders![1].use).toBe('@vercel/next');
+    expect(builders![1].use).toBe('@khulnasoft/next');
     expect(builders![1].src).toBe('package.json');
     expect(builders!.length).toBe(2);
 
@@ -1293,7 +1293,7 @@ describe('Test `detectBuilders` with `featHandleMiss=true`', () => {
 
     expect(builders).toEqual([
       {
-        use: '@vercel/next',
+        use: '@khulnasoft/next',
         src: 'package.json',
         config: {
           zeroConfig: true,
@@ -1465,7 +1465,7 @@ describe('Test `detectBuilders` with `featHandleMiss=true`', () => {
     const { builders, errorRoutes } = await detectBuilders(files, pkg, {
       featHandleMiss,
     });
-    expect(builders![0].use).toBe('@vercel/next');
+    expect(builders![0].use).toBe('@khulnasoft/next');
     expect(builders![0].src).toBe('package.json');
     expect(builders!.length).toBe(1);
     expect(errorRoutes!.length).toBe(0);
@@ -1567,7 +1567,7 @@ describe('Test `detectBuilders` with `featHandleMiss=true`', () => {
     });
     expect(builders![0].use).toBe('@khulnasoft/node@canary');
     expect(builders![1].use).toBe('@khulnasoft/node@canary');
-    expect(builders![2].use).toBe('@vercel/next@canary');
+    expect(builders![2].use).toBe('@khulnasoft/next@canary');
     expect(builders!.length).toBe(3);
   });
 
@@ -1588,7 +1588,7 @@ describe('Test `detectBuilders` with `featHandleMiss=true`', () => {
     });
     expect(builders![0].use).toBe('@khulnasoft/node@latest');
     expect(builders![1].use).toBe('@khulnasoft/node@latest');
-    expect(builders![2].use).toBe('@vercel/next@latest');
+    expect(builders![2].use).toBe('@khulnasoft/next@latest');
     expect(builders!.length).toBe(3);
   });
 
@@ -1609,7 +1609,7 @@ describe('Test `detectBuilders` with `featHandleMiss=true`', () => {
     });
     expect(builders![0].use).toBe('@khulnasoft/node@haha');
     expect(builders![1].use).toBe('@khulnasoft/node@haha');
-    expect(builders![2].use).toBe('@vercel/next@haha');
+    expect(builders![2].use).toBe('@khulnasoft/next@haha');
     expect(builders!.length).toBe(3);
   });
 
@@ -1630,7 +1630,7 @@ describe('Test `detectBuilders` with `featHandleMiss=true`', () => {
     expect(builders).toBeDefined();
     expect(builders!.length).toBe(2);
     expect(builders![0].use).toBe('@khulnasoft/node');
-    expect(builders![1].use).toBe('@vercel/next');
+    expect(builders![1].use).toBe('@khulnasoft/next');
   });
 
   it('many static files + one api file', async () => {
@@ -1674,7 +1674,7 @@ describe('Test `detectBuilders` with `featHandleMiss=true`', () => {
     expect(builders!.length).toBe(1);
     expect(builders![0]).toEqual({
       src: 'package.json',
-      use: '@vercel/next',
+      use: '@khulnasoft/next',
       config: {
         zeroConfig: true,
         functions: {
@@ -1740,7 +1740,7 @@ describe('Test `detectBuilders` with `featHandleMiss=true`', () => {
     });
     expect(builders![2]).toEqual({
       src: 'package.json',
-      use: '@vercel/next',
+      use: '@khulnasoft/next',
       config: {
         zeroConfig: true,
       },
@@ -1862,7 +1862,7 @@ describe('Test `detectBuilders` with `featHandleMiss=true`', () => {
     expect(errors![0].code).toBe('invalid_function');
   });
 
-  it('Do not allow functions that are not used by @vercel/next', async () => {
+  it('Do not allow functions that are not used by @khulnasoft/next', async () => {
     const pkg = {
       scripts: { build: 'next build' },
       dependencies: { next: '9.0.0' },
@@ -2367,7 +2367,7 @@ describe('Test `detectBuilders` with `featHandleMiss=true`', () => {
     });
     expect(builders).toEqual([
       {
-        use: '@vercel/next',
+        use: '@khulnasoft/next',
         src: 'package.json',
         config: {
           zeroConfig: true,
@@ -2393,7 +2393,7 @@ describe('Test `detectBuilders` with `featHandleMiss=true`', () => {
     });
     expect(builders).toEqual([
       {
-        use: '@vercel/next',
+        use: '@khulnasoft/next',
         src: 'package.json',
         config: {
           zeroConfig: true,
@@ -2821,7 +2821,7 @@ it('Test `detectRoutes` with `featHandleMiss=true`', async () => {
           zeroConfig: true,
         },
         src: 'package.json',
-        use: '@vercel/next',
+        use: '@khulnasoft/next',
       },
     ]);
     expect(warnings).toStrictEqual([
@@ -2856,7 +2856,7 @@ it('Test `detectRoutes` with `featHandleMiss=true`', async () => {
           zeroConfig: true,
         },
         src: 'package.json',
-        use: '@vercel/next@canary',
+        use: '@khulnasoft/next@canary',
       },
     ]);
     expect(warnings).toStrictEqual([
@@ -2890,7 +2890,7 @@ it('Test `detectRoutes` with `featHandleMiss=true`', async () => {
           zeroConfig: true,
         },
         src: 'package.json',
-        use: '@vercel/next',
+        use: '@khulnasoft/next',
       },
     ]);
     expect(warnings).toStrictEqual([]);
@@ -3597,7 +3597,7 @@ describe('Test `detectApiDirectory`', () => {
   it('should be `null` with zero config but without api directory', async () => {
     const builders = [
       {
-        use: '@vercel/next',
+        use: '@khulnasoft/next',
         src: 'package.json',
         config: { zeroConfig: true },
       },
@@ -3652,7 +3652,7 @@ describe('Test `detectApiExtensions`', () => {
         },
       },
       {
-        use: '@vercel/next',
+        use: '@khulnasoft/next',
         src: 'package.json',
         // No api directory should not be added
         config: {

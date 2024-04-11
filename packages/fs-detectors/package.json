@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@khulnasoft/routing-utils": "workspace:*",
-    "@vercel/error-utils": "workspace:*",
+    "@khulnasoft/error-utils": "workspace:*",
     "@khulnasoft/frameworks": "workspace:*",
     "glob": "8.0.3",
     "js-yaml": "4.1.0",

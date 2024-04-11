@@ -17,7 +17,7 @@ import isWildcardAlias from '../../util/alias/is-wildcard-alias';
 import link from '../../util/output/link';
 import { getCommandName } from '../../util/pkg-name';
 import toHost from '../../util/to-host';
-import type { VercelConfig } from '@vercel/client';
+import type { VercelConfig } from '@khulnasoft/client';
 
 type Options = {
   '--debug': boolean;

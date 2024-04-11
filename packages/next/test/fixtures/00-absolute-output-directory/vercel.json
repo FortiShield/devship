@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/next",
+      "use": "@khulnasoft/next",
       "config": {
         "buildCommand": "cd packages/client && yarn build",
         "outputDirectory": "/packages/client/.next"

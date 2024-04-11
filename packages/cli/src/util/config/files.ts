@@ -2,7 +2,7 @@ import { join, basename } from 'path';
 import loadJSON from 'load-json-file';
 import writeJSON from 'write-json-file';
 import { existsSync } from 'fs';
-import { fileNameSymbol } from '@vercel/client';
+import { fileNameSymbol } from '@khulnasoft/client';
 import getGlobalPathConfig from './global-path';
 import getLocalPathConfig from './local-path';
 import { NowError } from '../now-error';
@@ -10,7 +10,7 @@ import error from '../output/error';
 import highlight from '../output/highlight';
 import { VercelConfig } from '../dev/types';
 import { AuthConfig, GlobalConfig } from '@vercel-internals/types';
-import { isErrnoException, isError } from '@vercel/error-utils';
+import { isErrnoException, isError } from '@khulnasoft/error-utils';
 
 const VERCEL_DIR = getGlobalPathConfig();
 const CONFIG_FILE_PATH = join(VERCEL_DIR, 'config.json');

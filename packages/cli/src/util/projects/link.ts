@@ -20,7 +20,7 @@ import { prependEmoji, emoji, EmojiLabel } from '../emoji';
 import { isDirectory } from '../config/global-path';
 import { NowBuildError, getPlatformEnv } from '@khulnasoft/build-utils';
 import outputCode from '../output/code';
-import { isErrnoException, isError } from '@vercel/error-utils';
+import { isErrnoException, isError } from '@khulnasoft/error-utils';
 import { findProjectsFromPath, getRepoLink } from '../link/repo';
 import { addToGitIgnore } from '../link/add-to-gitignore';
 import type { RepoProjectConfig } from '../link/repo';

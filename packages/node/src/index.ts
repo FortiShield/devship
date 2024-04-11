@@ -1,4 +1,4 @@
-import { isErrnoException } from '@vercel/error-utils';
+import { isErrnoException } from '@khulnasoft/error-utils';
 import url from 'url';
 import { spawn } from 'child_process';
 import { createRequire } from 'module';

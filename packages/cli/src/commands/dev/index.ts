@@ -14,7 +14,7 @@ import readConfig from '../../util/config/read-config';
 import readJSONFile from '../../util/read-json-file';
 import { packageName, getCommandName } from '../../util/pkg-name';
 import { CantParseJSONFile } from '../../util/errors-ts';
-import { isErrnoException } from '@vercel/error-utils';
+import { isErrnoException } from '@khulnasoft/error-utils';
 import { help } from '../help';
 import { devCommand } from './command';
 

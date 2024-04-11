@@ -76,7 +76,7 @@ function validateEntrypoint(entrypoint: string) {
   ) {
     throw new NowBuildError({
       message:
-        'Specified "src" for "@vercel/next" has to be "package.json" or "next.config.js"',
+        'Specified "src" for "@khulnasoft/next" has to be "package.json" or "next.config.js"',
       code: 'NEXT_INCORRECT_SRC',
     });
   }
@@ -437,8 +437,8 @@ export async function getDynamicRoutes({
         // update MIN_ROUTES_MANIFEST_VERSION
         throw new NowBuildError({
           message:
-            'This version of `@vercel/next` does not support the version of Next.js you are trying to deploy.\n' +
-            'Please upgrade your `@vercel/next` builder and try again. Contact support if this continues to happen.',
+            'This version of `@khulnasoft/next` does not support the version of Next.js you are trying to deploy.\n' +
+            'Please upgrade your `@khulnasoft/next` builder and try again. Contact support if this continues to happen.',
           code: 'NEXT_VERSION_UPGRADE',
         });
       }

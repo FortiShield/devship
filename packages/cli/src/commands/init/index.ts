@@ -3,7 +3,7 @@ import getSubcommand from '../../util/get-subcommand';
 import Client from '../../util/client';
 import handleError from '../../util/handle-error';
 import init from './init';
-import { isError } from '@vercel/error-utils';
+import { isError } from '@khulnasoft/error-utils';
 import { help } from '../help';
 import { initCommand } from './command';
 

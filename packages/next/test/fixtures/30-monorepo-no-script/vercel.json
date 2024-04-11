@@ -1,7 +1,7 @@
 {
   "version": 2,
   "uploadNowJson": true,
-  "builds": [{ "src": "packages/www/package.json", "use": "@vercel/next" }],
+  "builds": [{ "src": "packages/www/package.json", "use": "@khulnasoft/next" }],
   "routes": [{ "src": "/(.*)", "dest": "/packages/www/$1" }],
   "probes": [
     {
@@ -13,10 +13,10 @@
       "logMustContain": "Your application is being built using `next build`"
     },
     {
-      "logMustContain": "WARNING: your application is being opted out of @vercel/next's optimized lambdas mode due to legacy routes"
+      "logMustContain": "WARNING: your application is being opted out of @khulnasoft/next's optimized lambdas mode due to legacy routes"
     },
     {
-      "logMustNotContain": "WARNING: Your application is being opted out of \"@vercel/next\" optimized lambdas mode due to `functions` config"
+      "logMustNotContain": "WARNING: Your application is being opted out of \"@khulnasoft/next\" optimized lambdas mode due to `functions` config"
     },
     {
       "logMustNotContain": "Traced Next.js serverless functions for external files in"

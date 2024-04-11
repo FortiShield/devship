@@ -17,7 +17,7 @@ import printIndications from './print-indications';
 import { GitMetadata, Org } from '@vercel-internals/types';
 import { VercelConfig } from './dev/types';
 import Client, { FetchOptions, isJSONObject } from './client';
-import { ArchiveFormat, Dictionary } from '@vercel/client';
+import { ArchiveFormat, Dictionary } from '@khulnasoft/client';
 
 export interface NowOptions {
   client: Client;

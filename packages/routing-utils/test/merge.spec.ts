@@ -428,7 +428,7 @@ test('mergeRoutes ensure beforeFiles comes after redirects (continue)', () => {
   const userRoutes: Route[] = [];
   const builds: Build[] = [
     {
-      use: '@vercel/next',
+      use: '@khulnasoft/next',
       entrypoint: 'package.json',
       routes: [
         {
@@ -475,7 +475,7 @@ test('mergeRoutes ensure beforeFiles comes after redirects (check)', () => {
   const userRoutes: Route[] = [];
   const builds: Build[] = [
     {
-      use: '@vercel/next',
+      use: '@khulnasoft/next',
       entrypoint: 'package.json',
       routes: [
         {

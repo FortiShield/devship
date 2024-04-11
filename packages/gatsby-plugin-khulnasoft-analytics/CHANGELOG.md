@@ -1,4 +1,4 @@
-# @vercel/gatsby-plugin-vercel-analytics
+# @khulnasoft/gatsby-plugin-khulnasoft-analytics
 
 ## 1.0.11
 

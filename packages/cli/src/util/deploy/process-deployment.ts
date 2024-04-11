@@ -5,7 +5,7 @@ import {
   createDeployment,
   DeploymentOptions,
   VercelClientOptions,
-} from '@vercel/client';
+} from '@khulnasoft/client';
 import { Output } from '../output';
 import { progress } from '../output/progress';
 import Now from '../../util';

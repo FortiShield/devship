@@ -1,4 +1,4 @@
-import type { Dictionary } from '@vercel/client';
+import type { Dictionary } from '@khulnasoft/client';
 
 // Converts `env` Arrays, Strings and Objects into env Objects.
 export const parseEnv = (env?: string | string[] | Dictionary<string>) => {

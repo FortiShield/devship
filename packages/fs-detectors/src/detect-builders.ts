@@ -305,7 +305,7 @@ export async function detectBuilders(
     };
   }
 
-  // Exclude the middleware builder for Next.js apps since @vercel/next
+  // Exclude the middleware builder for Next.js apps since @khulnasoft/next
   // will build middlewares.
   //
   // While maybeGetApiBuilder() excludes the middleware builder, however,
@@ -313,7 +313,7 @@ export async function detectBuilders(
   // `projectSettings.framework == null`.
   if (
     framework === null &&
-    frontendBuilder?.use === '@vercel/next' &&
+    frontendBuilder?.use === '@khulnasoft/next' &&
     apiBuilders.length > 0
   ) {
     apiBuilders = apiBuilders.filter(builder => {
@@ -374,7 +374,7 @@ function maybeGetApiBuilder(
   const middleware =
     fileName === 'middleware.js' || fileName === 'middleware.ts';
 
-  // Root-level Middleware file is handled by `@vercel/next`, so don't
+  // Root-level Middleware file is handled by `@khulnasoft/next`, so don't
   // schedule a separate Builder when "nextjs" framework is selected
   if (middleware && options.projectSettings?.framework === 'nextjs') {
     return null;

@@ -1,4 +1,4 @@
-import { isErrnoException } from '@vercel/error-utils';
+import { isErrnoException } from '@khulnasoft/error-utils';
 
 const knownErrorsCodes = new Set([
   'BAD_REQUEST',

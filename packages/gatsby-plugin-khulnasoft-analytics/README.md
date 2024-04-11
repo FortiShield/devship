@@ -1,4 +1,4 @@
-# @vercel/gatsby-plugin-vercel-analytics
+# @khulnasoft/gatsby-plugin-khulnasoft-analytics
 
 ---
 
@@ -11,7 +11,7 @@ This plugin sends [Core Web Vitals](https://web.dev/vitals/) to Vercel Speed Ins
 ## Install
 
 ```bash
-npm i @vercel/gatsby-plugin-vercel-analytics
+npm i @khulnasoft/gatsby-plugin-khulnasoft-analytics
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ npm i @vercel/gatsby-plugin-vercel-analytics
 module.exports = {
   plugins: [
     {
-      resolve: "@vercel/gatsby-plugin-vercel-analytics",
+      resolve: "@khulnasoft/gatsby-plugin-khulnasoft-analytics",
       options: {
         // (optional) Prints metrics in the console when true
         debug: false,

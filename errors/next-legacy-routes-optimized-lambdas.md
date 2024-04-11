@@ -1,8 +1,8 @@
-# `@vercel/next` Legacy Routes Optimized Lambdas Opt-out
+# `@khulnasoft/next` Legacy Routes Optimized Lambdas Opt-out
 
 #### Why This Warning Occurred
 
-`@vercel/next` by default now bundles pages into optimized functions, minimizing bootup time and increasing overall application throughput.
+`@khulnasoft/next` by default now bundles pages into optimized functions, minimizing bootup time and increasing overall application throughput.
 When legacy `routes` are added in `now.json` or `vercel.json`, they cause conflicts with this optimization, so it is opted-out.
 
 #### Possible Ways to Fix It

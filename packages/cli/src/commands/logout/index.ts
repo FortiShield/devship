@@ -7,7 +7,7 @@ import getArgs from '../../util/get-args';
 import Client from '../../util/client';
 import { getCommandName } from '../../util/pkg-name';
 import { isAPIError } from '../../util/errors-ts';
-import { errorToString } from '@vercel/error-utils';
+import { errorToString } from '@khulnasoft/error-utils';
 import { help } from '../help';
 import { logoutCommand } from './command';
 

@@ -1,4 +1,4 @@
-# @vercel/client
+# @khulnasoft/client
 
 ## 13.1.9
 

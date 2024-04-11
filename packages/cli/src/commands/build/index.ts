@@ -36,8 +36,8 @@ import {
   MergeRoutesProps,
   Route,
 } from '@khulnasoft/routing-utils';
-import { fileNameSymbol } from '@vercel/client';
-import type { VercelConfig } from '@vercel/client';
+import { fileNameSymbol } from '@khulnasoft/client';
+import type { VercelConfig } from '@khulnasoft/client';
 
 import pull from '../pull';
 import { staticFiles as getFiles } from '../../util/get-files';

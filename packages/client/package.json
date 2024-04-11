@@ -1,5 +1,5 @@
 {
-  "name": "@vercel/client",
+  "name": "@khulnasoft/client",
   "version": "13.1.9",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -39,7 +39,7 @@
   "dependencies": {
     "@khulnasoft/routing-utils": "workspace:*",
     "@khulnasoft/build-utils": "workspace:*",
-    "@vercel/error-utils": "workspace:*",
+    "@khulnasoft/error-utils": "workspace:*",
     "@zeit/fetch": "5.2.0",
     "async-retry": "1.2.3",
     "async-sema": "3.0.0",

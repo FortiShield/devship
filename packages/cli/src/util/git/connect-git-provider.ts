@@ -4,7 +4,7 @@ import chalk from 'chalk';
 import link from '../output/link';
 import { isAPIError } from '../errors-ts';
 import { Output } from '../output';
-import { Dictionary } from '@vercel/client';
+import { Dictionary } from '@khulnasoft/client';
 import type { Org } from '@vercel-internals/types';
 
 export interface RepoInfo {

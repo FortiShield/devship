@@ -1,5 +1,5 @@
 import { readFile } from 'fs-extra';
-import { isErrnoException } from '@vercel/error-utils';
+import { isErrnoException } from '@khulnasoft/error-utils';
 
 export async function getOsRelease() {
   try {

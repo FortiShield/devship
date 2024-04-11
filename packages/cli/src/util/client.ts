@@ -6,7 +6,7 @@ import input from '@inquirer/input';
 import select from '@inquirer/select';
 import { EventEmitter } from 'events';
 import { URL } from 'url';
-import { VercelConfig } from '@vercel/client';
+import { VercelConfig } from '@khulnasoft/client';
 import retry, { RetryFunction, Options as RetryOptions } from 'async-retry';
 import fetch, { BodyInit, Headers, RequestInit, Response } from 'node-fetch';
 import ua from './ua';
@@ -26,7 +26,7 @@ import type {
 } from '@vercel-internals/types';
 import { sharedPromise } from './promise';
 import { APIError } from './errors-ts';
-import { normalizeError } from '@vercel/error-utils';
+import { normalizeError } from '@khulnasoft/error-utils';
 import type { Agent } from 'http';
 import sleep from './sleep';
 import type * as tty from 'tty';

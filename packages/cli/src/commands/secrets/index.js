@@ -1,4 +1,4 @@
-import isErrnoException from '@vercel/error-utils';
+import isErrnoException from '@khulnasoft/error-utils';
 import chalk from 'chalk';
 import table from '../../util/output/table';
 import ms from 'ms';

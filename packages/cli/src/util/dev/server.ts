@@ -22,7 +22,7 @@ import npa from 'npm-package-arg';
 import type { ChildProcess } from 'child_process';
 import JSONparse from 'json-parse-better-errors';
 
-import { getVercelIgnore, fileNameSymbol } from '@vercel/client';
+import { getVercelIgnore, fileNameSymbol } from '@khulnasoft/client';
 import {
   getTransformedRoutes,
   appendRoutesToPhase,
@@ -93,7 +93,7 @@ import {
   isErrnoException,
   isError,
   isSpawnError,
-} from '@vercel/error-utils';
+} from '@khulnasoft/error-utils';
 import isURL from './is-url';
 import { pickOverrides } from '../projects/project-settings';
 import { replaceLocalhost } from './parse-listen';

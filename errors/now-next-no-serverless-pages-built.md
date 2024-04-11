@@ -1,4 +1,4 @@
-# `@vercel/next` No Serverless Pages Built
+# `@khulnasoft/next` No Serverless Pages Built
 
 #### Why This Error Occurred
 
@@ -35,14 +35,14 @@ module.exports = {
 };
 ```
 
-5. Remove `distDir` from `next.config.js` as `@vercel/next` can't parse this file and expects your build output at `/.next`
+5. Remove `distDir` from `next.config.js` as `@khulnasoft/next` can't parse this file and expects your build output at `/.next`
 
 6. Optionally make sure the `"src"` in `"builds"` points to your application `package.json`
 
 ```js
 {
   "version": 2,
-  "builds": [{ "src": "package.json", "use": "@vercel/next" }]
+  "builds": [{ "src": "package.json", "use": "@khulnasoft/next" }]
 }
 ```
 

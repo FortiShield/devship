@@ -32,7 +32,7 @@ import pipe from 'promisepipe';
 import { merge } from './merge';
 import { unzip } from './unzip';
 import { VERCEL_DIR } from '../projects/link';
-import { fileNameSymbol, VercelConfig } from '@vercel/client';
+import { fileNameSymbol, VercelConfig } from '@khulnasoft/client';
 
 const { normalize } = posix;
 export const OUTPUT_DIR = join(VERCEL_DIR, 'output');

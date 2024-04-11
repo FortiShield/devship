@@ -129,7 +129,7 @@ export interface Framework {
     src: string;
     /**
      * Runtime
-     * @example "@vercel/next"
+     * @example "@khulnasoft/next"
      */
     use: string;
   };

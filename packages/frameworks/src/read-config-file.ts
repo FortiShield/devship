@@ -1,7 +1,7 @@
 import yaml from 'js-yaml';
 import toml from '@iarna/toml';
 import { promises } from 'fs';
-import { isErrnoException } from '@vercel/error-utils';
+import { isErrnoException } from '@khulnasoft/error-utils';
 
 const { readFile } = promises;
 

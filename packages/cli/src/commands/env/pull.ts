@@ -22,7 +22,7 @@ import {
   buildDeltaString,
   createEnvObject,
 } from '../../util/env/diff-env-files';
-import { isErrnoException } from '@vercel/error-utils';
+import { isErrnoException } from '@khulnasoft/error-utils';
 import { addToGitIgnore } from '../../util/link/add-to-gitignore';
 import JSONparse from 'json-parse-better-errors';
 

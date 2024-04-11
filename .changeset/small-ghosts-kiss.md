@@ -1,5 +1,5 @@
 ---
-'@vercel/client': minor
+'@khulnasoft/client': minor
 ---
 
 Always use v13 of create deployment API endpoint

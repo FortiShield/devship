@@ -4,7 +4,7 @@
   "builds": [
     {
       "src": "apps/app/package.json",
-      "use": "@vercel/next"
+      "use": "@khulnasoft/next"
     }
   ],
   "routes": [

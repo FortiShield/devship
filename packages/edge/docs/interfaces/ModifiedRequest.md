@@ -22,7 +22,7 @@ Serverless or Edge Function.
 <caption>Add a `x-user-id` header and remove the `Authorization` header</caption>
 
 ```ts
-import { rewrite } from '@vercel/edge';
+import { rewrite } from '@khulnasoft/edge';
 export default async function middleware(request: Request): Promise<Response> {
   const newHeaders = new Headers(request.headers);
   newHeaders.set('x-user-id', 'user_123');

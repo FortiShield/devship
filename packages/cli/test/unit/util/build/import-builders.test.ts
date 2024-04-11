@@ -7,7 +7,7 @@ import {
   importBuilders,
   resolveBuilders,
 } from '../../../../src/util/build/import-builders';
-import vercelNextPkg from '@vercel/next/package.json';
+import vercelNextPkg from '@khulnasoft/next/package.json';
 import vercelNodePkg from '@khulnasoft/node/package.json';
 import { vi } from 'vitest';
 
@@ -18,69 +18,69 @@ const repoRoot = join(__dirname, '../../../../../..');
 
 describe('importBuilders()', () => {
   it('should import built-in Builders', async () => {
-    const specs = new Set(['@khulnasoft/node', '@vercel/next']);
+    const specs = new Set(['@khulnasoft/node', '@khulnasoft/next']);
     const builders = await importBuilders(specs, process.cwd(), client.output);
     expect(builders.size).toEqual(2);
     expect(builders.get('@khulnasoft/node')?.pkg).toMatchObject(vercelNodePkg);
-    expect(builders.get('@vercel/next')?.pkg).toMatchObject(vercelNextPkg);
+    expect(builders.get('@khulnasoft/next')?.pkg).toMatchObject(vercelNextPkg);
     expect(builders.get('@khulnasoft/node')?.pkgPath).toEqual(
       join(repoRoot, 'packages/node/package.json')
     );
-    expect(builders.get('@vercel/next')?.pkgPath).toEqual(
+    expect(builders.get('@khulnasoft/next')?.pkgPath).toEqual(
       join(repoRoot, 'packages/next/package.json')
     );
     expect(typeof builders.get('@khulnasoft/node')?.builder.build).toEqual(
       'function'
     );
-    expect(typeof builders.get('@vercel/next')?.builder.build).toEqual(
+    expect(typeof builders.get('@khulnasoft/next')?.builder.build).toEqual(
       'function'
     );
   });
 
   it('should import built-in Builders using `@latest`', async () => {
-    const specs = new Set(['@khulnasoft/node@latest', '@vercel/next@latest']);
+    const specs = new Set(['@khulnasoft/node@latest', '@khulnasoft/next@latest']);
     const builders = await importBuilders(specs, process.cwd(), client.output);
     expect(builders.size).toEqual(2);
     expect(builders.get('@khulnasoft/node@latest')?.pkg).toMatchObject(
       vercelNodePkg
     );
-    expect(builders.get('@vercel/next@latest')?.pkg).toMatchObject(
+    expect(builders.get('@khulnasoft/next@latest')?.pkg).toMatchObject(
       vercelNextPkg
     );
     expect(builders.get('@khulnasoft/node@latest')?.pkgPath).toEqual(
       join(repoRoot, 'packages/node/package.json')
     );
-    expect(builders.get('@vercel/next@latest')?.pkgPath).toEqual(
+    expect(builders.get('@khulnasoft/next@latest')?.pkgPath).toEqual(
       join(repoRoot, 'packages/next/package.json')
     );
     expect(typeof builders.get('@khulnasoft/node@latest')?.builder.build).toEqual(
       'function'
     );
-    expect(typeof builders.get('@vercel/next@latest')?.builder.build).toEqual(
+    expect(typeof builders.get('@khulnasoft/next@latest')?.builder.build).toEqual(
       'function'
     );
   });
 
   it('should import built-in Builders using `@canary`', async () => {
-    const specs = new Set(['@khulnasoft/node@canary', '@vercel/next@canary']);
+    const specs = new Set(['@khulnasoft/node@canary', '@khulnasoft/next@canary']);
     const builders = await importBuilders(specs, process.cwd(), client.output);
     expect(builders.size).toEqual(2);
     expect(builders.get('@khulnasoft/node@canary')?.pkg).toMatchObject(
       vercelNodePkg
     );
-    expect(builders.get('@vercel/next@canary')?.pkg).toMatchObject(
+    expect(builders.get('@khulnasoft/next@canary')?.pkg).toMatchObject(
       vercelNextPkg
     );
     expect(builders.get('@khulnasoft/node@canary')?.pkgPath).toEqual(
       join(repoRoot, 'packages/node/package.json')
     );
-    expect(builders.get('@vercel/next@canary')?.pkgPath).toEqual(
+    expect(builders.get('@khulnasoft/next@canary')?.pkgPath).toEqual(
       join(repoRoot, 'packages/next/package.json')
     );
     expect(typeof builders.get('@khulnasoft/node@canary')?.builder.build).toEqual(
       'function'
     );
-    expect(typeof builders.get('@vercel/next@canary')?.builder.build).toEqual(
+    expect(typeof builders.get('@khulnasoft/next@canary')?.builder.build).toEqual(
       'function'
     );
   });

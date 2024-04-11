@@ -9,7 +9,7 @@ export interface ModifiedRequest {
    * <caption>Add a `x-user-id` header and remove the `Authorization` header</caption>
    *
    * ```ts
-   * import { rewrite } from '@vercel/edge';
+   * import { rewrite } from '@khulnasoft/edge';
    * export default async function middleware(request: Request): Promise<Response> {
    *   const newHeaders = new Headers(request.headers);
    *   newHeaders.set('x-user-id', 'user_123');
@@ -65,7 +65,7 @@ function handleMiddlewareField(
  * <caption>Rewrite all feature-flagged requests from `/:path*` to `/experimental/:path*`</caption>
  *
  * ```ts
- * import { rewrite, next } from '@vercel/edge';
+ * import { rewrite, next } from '@khulnasoft/edge';
  *
  * export default async function middleware(req: Request) {
  *   const flagged = await getFlag(req, 'isExperimental');
@@ -83,7 +83,7 @@ function handleMiddlewareField(
  * <caption>JWT authentication for `/api/:path*` requests</caption>
  *
  * ```ts
- * import { rewrite, next } from '@vercel/edge';
+ * import { rewrite, next } from '@khulnasoft/edge';
  *
  * export default function middleware(req: Request) {
  *   const auth = checkJwt(req.headers.get('Authorization'));
@@ -122,7 +122,7 @@ export function rewrite(
  * <caption>No-op middleware</caption>
  *
  * ```ts
- * import { next } from '@vercel/edge';
+ * import { next } from '@khulnasoft/edge';
  *
  * export default function middleware(_req: Request) {
  *   return next();
@@ -133,7 +133,7 @@ export function rewrite(
  * <caption>Add response headers to all requests</caption>
  *
  * ```ts
- * import { next } from '@vercel/edge';
+ * import { next } from '@khulnasoft/edge';
  *
  * export default function middleware(_req: Request) {
  *   return next({

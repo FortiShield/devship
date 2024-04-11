@@ -1,4 +1,4 @@
-# @vercel/error-utils
+# @khulnasoft/error-utils
 
 ## 2.0.2
 

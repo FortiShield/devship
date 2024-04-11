@@ -5,7 +5,7 @@ import {
 } from './edge-node-compat-plugin.mjs';
 import { EdgeRuntime, runServer } from 'edge-runtime';
 import { type Dispatcher, Headers, request as undiciRequest } from 'undici';
-import { isError } from '@vercel/error-utils';
+import { isError } from '@khulnasoft/error-utils';
 import { readFileSync } from 'fs';
 import { serializeBody, entrypointToOutputPath, logError } from '../utils.js';
 import esbuild from 'esbuild';

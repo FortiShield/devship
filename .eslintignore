@@ -41,5 +41,5 @@ packages/redwood/test/fixtures
 # remix
 packages/remix/test/fixtures-*
 
-# gatsby-plugin-vercel-analytics
-packages/gatsby-plugin-vercel-analytics
+# gatsby-plugin-khulnasoft-analytics
+packages/gatsby-plugin-khulnasoft-analytics

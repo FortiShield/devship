@@ -5,8 +5,8 @@ packages/cli/test/dev/fixtures/edge-function-error/api/edge-error-syntax.js
 packages/cli/test/fixtures/unit/commands/build/node-error/api/typescript.ts
 examples/sveltekit-1
 
-# gatsby-plugin-vercel-analytics
-packages/gatsby-plugin-vercel-analytics
+# gatsby-plugin-khulnasoft-analytics
+packages/gatsby-plugin-khulnasoft-analytics
 
 # ignore directories that are not source code
 node_modules

@@ -1,5 +1,5 @@
 import path from 'path';
-import { fileNameSymbol } from '@vercel/client';
+import { fileNameSymbol } from '@khulnasoft/client';
 import {
   CantParseJSONFile,
   CantFindConfig,
@@ -10,7 +10,7 @@ import humanizePath from './humanize-path';
 import readJSONFile from './read-json-file';
 import { VercelConfig } from './dev/types';
 import { Output } from './output';
-import { isErrnoException } from '@vercel/error-utils';
+import { isErrnoException } from '@khulnasoft/error-utils';
 
 let config: VercelConfig;
 

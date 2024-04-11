@@ -4,9 +4,9 @@ import { sortBuilders } from '../../../../src/util/build/sort-builders';
 describe('sortBuilders()', () => {
   test.each([
     {
-      name: 'should sort @vercel/next from middle to beginning',
-      input: ['@khulnasoft/node', '@vercel/next', '@khulnasoft/python'],
-      output: ['@vercel/next', '@khulnasoft/node', '@khulnasoft/python'],
+      name: 'should sort @khulnasoft/next from middle to beginning',
+      input: ['@khulnasoft/node', '@khulnasoft/next', '@khulnasoft/python'],
+      output: ['@khulnasoft/next', '@khulnasoft/node', '@khulnasoft/python'],
     },
     {
       name: 'should sort @khulnasoft/static-build from middle to beginning',

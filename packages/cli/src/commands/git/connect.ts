@@ -1,4 +1,4 @@
-import { Dictionary } from '@vercel/client';
+import { Dictionary } from '@khulnasoft/client';
 import chalk from 'chalk';
 import { join } from 'path';
 import { Org, Project, ProjectLinkData } from '@vercel-internals/types';

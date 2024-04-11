@@ -12,7 +12,7 @@ import {
 import type {
   NodejsServerlessFunctionConfig,
   PrerenderFunctionConfig,
-} from './../types';
+} from '../types';
 
 export const writeHandler = async ({
   outDir,

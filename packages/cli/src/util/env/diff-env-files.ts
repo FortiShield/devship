@@ -1,5 +1,5 @@
 import { Output } from '../output';
-import { Dictionary } from '@vercel/client';
+import { Dictionary } from '@khulnasoft/client';
 import { readFile } from 'fs-extra';
 import { parseEnv } from '../parse-env';
 import chalk from 'chalk';

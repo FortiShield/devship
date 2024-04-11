@@ -1,5 +1,5 @@
 import { join } from 'path';
-import { isErrnoException } from '@vercel/error-utils';
+import { isErrnoException } from '@khulnasoft/error-utils';
 import { stat, move, remove, rmdir, readdir } from 'fs-extra';
 import type { Stats } from 'fs-extra';
 

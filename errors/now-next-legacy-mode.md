@@ -1,8 +1,8 @@
-# `@vercel/next` Legacy Mode
+# `@khulnasoft/next` Legacy Mode
 
 #### Why This Warning Occurred
 
-`@vercel/next` has two modes: `legacy` and `serverless`. You will always want to use the `serverless` mode. `legacy` is to provide backwards compatibility with previous `@vercel/next` versions.
+`@khulnasoft/next` has two modes: `legacy` and `serverless`. You will always want to use the `serverless` mode. `legacy` is to provide backwards compatibility with previous `@khulnasoft/next` versions.
 
 The differences:
 
@@ -63,7 +63,7 @@ module.exports = {
 ```js
 {
   "version": 2,
-  "builds": [{ "src": "package.json", "use": "@vercel/next" }]
+  "builds": [{ "src": "package.json", "use": "@khulnasoft/next" }]
 }
 ```
 

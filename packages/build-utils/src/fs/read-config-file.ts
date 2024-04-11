@@ -1,7 +1,7 @@
 import yaml from 'js-yaml';
 import toml from '@iarna/toml';
 import { readFile } from 'fs-extra';
-import { isErrnoException } from '@vercel/error-utils';
+import { isErrnoException } from '@khulnasoft/error-utils';
 
 async function readFileOrNull(file: string) {
   try {

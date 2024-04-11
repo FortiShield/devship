@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import { checkDeploymentStatus } from '@vercel/client';
+import { checkDeploymentStatus } from '@khulnasoft/client';
 import type Client from '../../util/client';
 import { emoji, prependEmoji } from '../../util/emoji';
 import getArgs from '../../util/get-args';
@@ -7,12 +7,12 @@ import { getCommandName } from '../../util/pkg-name';
 import { getDeploymentByIdOrURL } from '../../util/deploy/get-deployment-by-id-or-url';
 import getScope from '../../util/get-scope';
 import handleError from '../../util/handle-error';
-import { isErrnoException } from '@vercel/error-utils';
+import { isErrnoException } from '@khulnasoft/error-utils';
 import Now from '../../util';
 import { printDeploymentStatus } from '../../util/deploy/print-deployment-status';
 import stamp from '../../util/output/stamp';
 import ua from '../../util/ua';
-import type { VercelClientOptions } from '@vercel/client';
+import type { VercelClientOptions } from '@khulnasoft/client';
 import { help } from '../help';
 import { redeployCommand } from './command';
 

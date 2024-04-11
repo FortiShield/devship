@@ -1,4 +1,4 @@
-# @vercel/next
+# @khulnasoft/next
 
 ## 4.2.0
 
@@ -64,7 +64,7 @@
 
 ### Patch Changes
 
-- Use `worker.name` instead of edge function name to fix type error in `@vercel/next` ([#11050](https://github.com/khulnasoft/devship/pull/11050))
+- Use `worker.name` instead of edge function name to fix type error in `@khulnasoft/next` ([#11050](https://github.com/khulnasoft/devship/pull/11050))
 
 ## 4.0.17
 

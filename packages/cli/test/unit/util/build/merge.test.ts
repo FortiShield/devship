@@ -3,7 +3,7 @@ import { tmpdir } from 'os';
 import { join } from 'path';
 import { writeFile, readdir, mkdirp, stat, remove, readFile } from 'fs-extra';
 import { merge } from '../../../../src/util/build/merge';
-import { isErrnoException } from '@vercel/error-utils';
+import { isErrnoException } from '@khulnasoft/error-utils';
 
 describe('merge()', () => {
   it('should move source to non-existent destination', async () => {

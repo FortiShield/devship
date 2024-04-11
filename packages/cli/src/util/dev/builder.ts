@@ -156,7 +156,7 @@ export async function executeBuild(
       filesChanged,
       filesRemoved,
       // This env distiniction is only necessary to maintain
-      // backwards compatibility with the `@vercel/next` builder.
+      // backwards compatibility with the `@khulnasoft/next` builder.
       env: { ...envConfigs.runEnv },
       buildEnv: { ...envConfigs.buildEnv },
     },

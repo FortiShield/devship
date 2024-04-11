@@ -28,11 +28,11 @@
       "passthrough": null
     }
   },
-  "packages": ["@vercel/error-utils"],
+  "packages": ["@khulnasoft/error-utils"],
   "envMode": "infer",
   "frameworkInference": true,
   "execution": {
-    "command": "turbo run test --filter=@vercel/error-utils -- test/index.test.ts",
+    "command": "turbo run test --filter=@khulnasoft/error-utils -- test/index.test.ts",
     "repoPath": "",
     "success": 0,
     "failed": 0,
@@ -44,9 +44,9 @@
   },
   "tasks": [
     {
-      "taskId": "@vercel/error-utils#build",
+      "taskId": "@khulnasoft/error-utils#build",
       "task": "build",
-      "package": "@vercel/error-utils",
+      "package": "@khulnasoft/error-utils",
       "hash": "5d8590c998bec75a",
       "inputs": {
         "CHANGELOG.md": "bf7445d194d8a0080f7b98b0181e1f0ac4ef0ef3",
@@ -72,7 +72,7 @@
       "logFile": "packages/error-utils/.turbo/turbo-build.log",
       "directory": "packages/error-utils",
       "dependencies": [],
-      "dependents": ["@vercel/error-utils#test"],
+      "dependents": ["@khulnasoft/error-utils#test"],
       "resolvedTaskDefinition": {
         "outputs": ["dist/**"],
         "cache": true,
@@ -110,9 +110,9 @@
       }
     },
     {
-      "taskId": "@vercel/error-utils#test",
+      "taskId": "@khulnasoft/error-utils#test",
       "task": "test",
-      "package": "@vercel/error-utils",
+      "package": "@khulnasoft/error-utils",
       "hash": "5bb22ba520f1cbe8",
       "inputs": {
         "CHANGELOG.md": "bf7445d194d8a0080f7b98b0181e1f0ac4ef0ef3",
@@ -137,7 +137,7 @@
       "excludedOutputs": null,
       "logFile": "packages/error-utils/.turbo/turbo-test.log",
       "directory": "packages/error-utils",
-      "dependencies": ["@vercel/error-utils#build"],
+      "dependencies": ["@khulnasoft/error-utils#build"],
       "dependents": [],
       "resolvedTaskDefinition": {
         "outputs": [],

@@ -1,4 +1,4 @@
-# @vercel/edge
+# @khulnasoft/edge
 
 ## 1.1.1
 

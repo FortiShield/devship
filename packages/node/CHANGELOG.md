@@ -145,7 +145,7 @@
 
 - Updated dependencies [[`0861dc8fb`](https://github.com/khulnasoft/devship/commit/0861dc8fbcea1037626b00664a4b6c22f1b0a7ed), [`34dd9c091`](https://github.com/khulnasoft/devship/commit/34dd9c0918585cf6d3b04bddd9158978b0b4192f)]:
   - @khulnasoft/build-utils@7.2.3
-  - @vercel/error-utils@2.0.2
+  - @khulnasoft/error-utils@2.0.2
 
 ## 3.0.7
 
@@ -207,7 +207,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`96f99c714`](https://github.com/khulnasoft/devship/commit/96f99c714715651b85eb7a03f58ecc9e1316d156)]:
-  - @vercel/error-utils@2.0.1
+  - @khulnasoft/error-utils@2.0.1
 
 ## 3.0.0
 
@@ -219,7 +219,7 @@
 
 - Updated dependencies [[`37f5c6270`](https://github.com/khulnasoft/devship/commit/37f5c6270058336072ca733673ea72dd6c56bd6a)]:
   - @khulnasoft/build-utils@7.0.0
-  - @vercel/error-utils@2.0.0
+  - @khulnasoft/error-utils@2.0.0
   - @khulnasoft/static-config@3.0.0
 
 ## 2.15.10

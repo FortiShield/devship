@@ -1,4 +1,4 @@
-# @vercel/client
+# @khulnasoft/client
 
 [![Join the community on GitHub Discussions](https://badgen.net/badge/join%20the%20discussion/on%20github/black?icon=github)](https://github.com/khulnasoft/devship/discussions)
 
@@ -9,13 +9,13 @@ The official Node.js client for deploying to [Vercel](https://vercel.com).
 Firstly, install the package:
 
 ```bash
-npm install @vercel/client
+npm install @khulnasoft/client
 ```
 
 Next, load it:
 
 ```js
-const { createDeployment } = require('@vercel/client');
+const { createDeployment } = require('@khulnasoft/client');
 ```
 
 Then call inside a `for...of` loop to follow the progress with the following arguments:
@@ -63,5 +63,5 @@ Full list of events:
 You can also get the events set programmatically:
 
 ```js
-import { EVENTS } from '@vercel/client';
+import { EVENTS } from '@khulnasoft/client';
 ```

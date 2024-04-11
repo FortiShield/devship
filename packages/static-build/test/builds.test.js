@@ -35,7 +35,7 @@ it(
       .toMatchInlineSnapshot(`
       Object {
         "plugins": Array [
-          "@vercel/gatsby-plugin-vercel-analytics"
+          "@khulnasoft/gatsby-plugin-khulnasoft-analytics"
         ],
       }
     `);
@@ -66,7 +66,7 @@ it(
       .toMatchInlineSnapshot(`
       Object {
         "plugins": Array [
-          "@vercel/gatsby-plugin-vercel-analytics"
+          "@khulnasoft/gatsby-plugin-khulnasoft-analytics"
         ],
         "siteMetadata": Object {
           "author": "@gatsbyjs",
@@ -100,7 +100,7 @@ it(
       Object {
         "plugins": Array [
           "gatsby-plugin-react-helmet",
-          "@vercel/gatsby-plugin-vercel-analytics"
+          "@khulnasoft/gatsby-plugin-khulnasoft-analytics"
         ],
         "siteMetadata": Object {
           "author": "@gatsbyjs",
@@ -133,7 +133,7 @@ it(
       .toMatchInlineSnapshot(`
       Object {
         "plugins": Array [
-          "@vercel/gatsby-plugin-vercel-analytics",
+          "@khulnasoft/gatsby-plugin-khulnasoft-analytics",
         ],
         "siteMetadata": Object {
           "author": "@gatsbyjs",
@@ -168,7 +168,7 @@ it(
         "plugins": Array [
           Object {
             "options": Object {},
-            "resolve": "@vercel/gatsby-plugin-vercel-analytics",
+            "resolve": "@khulnasoft/gatsby-plugin-khulnasoft-analytics",
           },
         ],
         "siteMetadata": Object {
@@ -203,7 +203,7 @@ it(
       Object {
         "plugins": Array [
           "gatsby-plugin-react-helmet",
-          "@vercel/gatsby-plugin-vercel-analytics"
+          "@khulnasoft/gatsby-plugin-khulnasoft-analytics"
         ],
         "siteMetadata": Object {
           "author": "@gatsbyjs",
@@ -239,7 +239,7 @@ it(
             },
             "resolve": "gatsby-plugin-zeit-now",
           },
-          "@vercel/gatsby-plugin-vercel-analytics"
+          "@khulnasoft/gatsby-plugin-khulnasoft-analytics"
         ],
         "siteMetadata": Object {
           "author": "@gatsbyjs",
@@ -269,8 +269,8 @@ it(
       Object {
         "default": Object {
           "plugins": Array [
-            "@vercel/gatsby-plugin-vercel-builder",
-            "@vercel/gatsby-plugin-vercel-analytics",
+            "@khulnasoft/gatsby-plugin-khulnasoft-builder",
+            "@khulnasoft/gatsby-plugin-khulnasoft-analytics",
           ],
           "siteMetadata": Object {
             "siteUrl": "https://gatsby-typescript-config.vercel.app",
@@ -311,7 +311,7 @@ if (!vercelConfig.plugins) {
   vercelConfig.plugins = [];
 }
 
-for (const plugin of ["@vercel/gatsby-plugin-vercel-builder","@vercel/gatsby-plugin-vercel-analytics"]) {
+for (const plugin of ["@khulnasoft/gatsby-plugin-khulnasoft-builder","@khulnasoft/gatsby-plugin-khulnasoft-analytics"]) {
   const hasPlugin = vercelConfig.plugins.find(
     (p) => p && (p === plugin || p.resolve === plugin)
   );

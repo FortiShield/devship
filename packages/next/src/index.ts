@@ -285,7 +285,7 @@ export const build: BuildV2 = async ({
 
   if (isLegacy) {
     console.warn(
-      "WARNING: your application is being deployed in @vercel/next's legacy mode. http://err.sh/vercel/vercel/now-next-legacy-mode"
+      "WARNING: your application is being deployed in @khulnasoft/next's legacy mode. http://err.sh/vercel/vercel/now-next-legacy-mode"
     );
 
     await Promise.all([
@@ -376,7 +376,7 @@ export const build: BuildV2 = async ({
       if (Array.isArray(nowJsonData.routes) && nowJsonData.routes.length > 0) {
         hasLegacyRoutes = true;
         console.warn(
-          `WARNING: your application is being opted out of @vercel/next's optimized lambdas mode due to legacy routes in ${path.basename(
+          `WARNING: your application is being opted out of @khulnasoft/next's optimized lambdas mode due to legacy routes in ${path.basename(
             nowJsonPath
           )}. http://err.sh/vercel/vercel/next-legacy-routes-optimized-lambdas`
         );
@@ -385,7 +385,7 @@ export const build: BuildV2 = async ({
 
     if (hasFunctionsConfig) {
       console.warn(
-        `WARNING: Your application is being opted out of "@vercel/next" optimized lambdas mode due to \`functions\` config.\nMore info: http://err.sh/vercel/vercel/next-functions-config-optimized-lambdas`
+        `WARNING: Your application is being opted out of "@khulnasoft/next" optimized lambdas mode due to \`functions\` config.\nMore info: http://err.sh/vercel/vercel/next-functions-config-optimized-lambdas`
       );
     }
   }
@@ -668,14 +668,14 @@ export const build: BuildV2 = async ({
             throw new NowBuildError({
               code: 'NEXT_BASEPATH_STARTING_SLASH',
               message:
-                'basePath must start with `/`. Please upgrade your `@vercel/next` builder and try again. Contact support if this continues to happen.',
+                'basePath must start with `/`. Please upgrade your `@khulnasoft/next` builder and try again. Contact support if this continues to happen.',
             });
           }
           if (nextBasePath.endsWith('/')) {
             throw new NowBuildError({
               code: 'NEXT_BASEPATH_TRAILING_SLASH',
               message:
-                'basePath must not end with `/`. Please upgrade your `@vercel/next` builder and try again. Contact support if this continues to happen.',
+                'basePath must not end with `/`. Please upgrade your `@khulnasoft/next` builder and try again. Contact support if this continues to happen.',
             });
           }
 
@@ -707,8 +707,8 @@ export const build: BuildV2 = async ({
         throw new NowBuildError({
           code: 'NEXT_VERSION_OUTDATED',
           message:
-            'This version of `@vercel/next` does not support the version of Next.js you are trying to deploy.\n' +
-            'Please upgrade your `@vercel/next` builder and try again. Contact support if this continues to happen.',
+            'This version of `@khulnasoft/next` does not support the version of Next.js you are trying to deploy.\n' +
+            'Please upgrade your `@khulnasoft/next` builder and try again. Contact support if this continues to happen.',
         });
       }
     }
@@ -785,8 +785,8 @@ export const build: BuildV2 = async ({
         throw new NowBuildError({
           code: 'NEXT_IMAGES_VERSION_UNKNOWN',
           message:
-            'This version of `@vercel/next` does not support the version of Next.js you are trying to deploy.\n' +
-            'Please upgrade your `@vercel/next` builder and try again. Contact support if this continues to happen.',
+            'This version of `@khulnasoft/next` does not support the version of Next.js you are trying to deploy.\n' +
+            'Please upgrade your `@khulnasoft/next` builder and try again. Contact support if this continues to happen.',
         });
       }
     }
@@ -1313,8 +1313,8 @@ export const build: BuildV2 = async ({
           throw new NowBuildError({
             code: 'NEXT_VERSION_OUTDATED',
             message:
-              'This version of `@vercel/next` does not support the version of Next.js you are trying to deploy.\n' +
-              'Please upgrade your `@vercel/next` builder and try again. Contact support if this continues to happen.',
+              'This version of `@khulnasoft/next` does not support the version of Next.js you are trying to deploy.\n' +
+              'Please upgrade your `@khulnasoft/next` builder and try again. Contact support if this continues to happen.',
           });
         }
       }

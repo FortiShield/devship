@@ -4,7 +4,7 @@ import { hash, hashes, mapToObject } from './utils/hashes';
 import { upload } from './upload';
 import { buildFileTree, createDebug } from './utils';
 import { DeploymentError } from './errors';
-import { isErrnoException } from '@vercel/error-utils';
+import { isErrnoException } from '@khulnasoft/error-utils';
 import {
   VercelClientOptions,
   DeploymentOptions,

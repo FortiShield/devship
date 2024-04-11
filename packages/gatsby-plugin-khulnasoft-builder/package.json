@@ -1,5 +1,5 @@
 {
-  "name": "@vercel/gatsby-plugin-vercel-builder",
+  "name": "@khulnasoft/gatsby-plugin-khulnasoft-builder",
   "version": "2.0.24",
   "main": "dist/index.js",
   "files": [
@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/khulnasoft/devship.git",
-    "directory": "packages/gatsby-plugin-vercel-builder"
+    "directory": "packages/gatsby-plugin-khulnasoft-builder"
   },
   "scripts": {
     "build": "node ../../utils/build-builder.mjs",

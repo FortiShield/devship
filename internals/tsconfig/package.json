@@ -2,11 +2,11 @@
   "private": true,
   "name": "@vercel-internals/tsconfig",
   "version": "1.0.0",
-  "description": "Node.js tsconfig file based on `@vercel/style-guide`",
+  "description": "Node.js tsconfig file based on `@khulnasoft/style-guide`",
   "files": [
     "tsconfig.json"
   ],
   "devDependencies": {
-    "@vercel/style-guide": "4.0.2"
+    "@khulnasoft/style-guide": "5.3.0-canary.1"
   }
 }

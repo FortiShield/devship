@@ -38,7 +38,7 @@ async function processMessage(message) {
 
   const result = await builder.build(buildOptions);
 
-  // `@vercel/next` sets this, but it causes "Converting circular
+  // `@khulnasoft/next` sets this, but it causes "Converting circular
   // structure to JSON" errors, so delete the property...
   delete result.childProcesses;
 

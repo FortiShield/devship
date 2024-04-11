@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { isErrnoException, isError, errorToString } from '@vercel/error-utils';
+import { isErrnoException, isError, errorToString } from '@khulnasoft/error-utils';
 
 try {
   // Test to see if cwd has been deleted before
@@ -50,7 +50,7 @@ import { metrics, shouldCollectMetrics } from './util/metrics';
 import { getCommandName, getTitleName } from './util/pkg-name';
 import doLoginPrompt from './util/login/prompt';
 import type { AuthConfig, GlobalConfig } from '@vercel-internals/types';
-import { VercelConfig } from '@vercel/client';
+import { VercelConfig } from '@khulnasoft/client';
 import { ProxyAgent } from 'proxy-agent';
 import box from './util/output/box';
 import { execExtension } from './util/extension/exec';
