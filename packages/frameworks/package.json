@@ -1,5 +1,5 @@
 {
-  "name": "@khulnasoft/frameworks",
+  "name": "@vercel/frameworks",
   "version": "3.0.1",
   "main": "./dist/frameworks.js",
   "types": "./dist/frameworks.d.ts",
