@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://vercel.com">
-    <img src="https://assets.vercel.com/image/upload/v1588805858/repositories/vercel/logo.png" height="96">
-    <h3 align="center">Vercel</h3>
+    <img src="https://avatars.githubusercontent.com/u/43526139?s=400&u=4355b45dd52b19a45a83f86b7f90ef5ad6ecc2cb&v=4" height="96">
+    <h3 align="center">KhulnaSoft</h3>
   </a>
 </p>
 
