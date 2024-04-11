@@ -374,7 +374,7 @@ function getSystemEnvValue(
   systemEnvRef: string,
   { vercelUrl }: { vercelUrl?: string }
 ) {
-  if (systemEnvRef === 'VERCEL_URL') {
+  if (systemEnvRef === 'KHULNASOFT_URL') {
     return vercelUrl || '';
   }
 
@@ -391,8 +391,8 @@ function exposeSystemEnvs(
   const envs: Env = {};
 
   if (autoExposeSystemEnvs) {
-    envs['VERCEL'] = '1';
-    envs['VERCEL_ENV'] = target || 'development';
+    envs['KHULNASOFT'] = '1';
+    envs['KHULNASOFT_ENV'] = target || 'development';
 
     for (const key of systemEnvValues) {
       envs[key] = getSystemEnvValue(key, { vercelUrl });

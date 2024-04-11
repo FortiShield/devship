@@ -7,7 +7,7 @@ import { createProxy } from './proxy';
 import type Client from '../client';
 
 /**
- * Attempts to execute a Vercel CLI Extension.
+ * Attempts to execute a Khulnasoft CLI Extension.
  *
  * If the extension was found and executed, then the
  * exit code is returned.
@@ -56,8 +56,8 @@ export async function execExtension(
   });
 
   const proxyUrl = await listen(proxy, { port: 0, host: '127.0.0.1' });
-  const VERCEL_API = proxyUrl.href.replace(/\/$/, '');
-  debug(`extension proxy server listening at ${VERCEL_API}`);
+  const KHULNASOFT_API = proxyUrl.href.replace(/\/$/, '');
+  debug(`extension proxy server listening at ${KHULNASOFT_API}`);
 
   const result = await execa(extensionPath, args, {
     cwd,
@@ -65,11 +65,11 @@ export async function execExtension(
     stdio: 'inherit',
     env: {
       ...process.env,
-      VERCEL_API,
+      KHULNASOFT_API,
       // TODO:
-      //   VERCEL_SCOPE
-      //   VERCEL_DEBUG
-      //   VERCEL_HELP
+      //   KHULNASOFT_SCOPE
+      //   KHULNASOFT_DEBUG
+      //   KHULNASOFT_HELP
     },
   });
 

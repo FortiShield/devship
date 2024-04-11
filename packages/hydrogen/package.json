@@ -20,13 +20,13 @@
     "edge-entry.js"
   ],
   "dependencies": {
-    "@khulnasoft/static-config": "3.0.2",
+    "@khulnasoft/static-config": "workspace:*",
     "ts-morph": "12.0.0"
   },
   "devDependencies": {
+    "@khulnasoft/build-utils": "workspace:*",
     "@types/jest": "27.5.1",
     "@types/node": "14.18.33",
-    "@khulnasoft/build-utils": "workspace:*",
     "execa": "3.2.0",
     "fs-extra": "11.1.0",
     "jest-junit": "16.0.0"

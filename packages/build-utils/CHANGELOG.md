@@ -28,7 +28,7 @@
 
 ### Minor Changes
 
-- Remove `VERCEL_ENABLE_NPM_DEFAULT` env var check ([#11242](https://github.com/khulnasoft/devship/pull/11242))
+- Remove `KHULNASOFT_ENABLE_NPM_DEFAULT` env var check ([#11242](https://github.com/khulnasoft/devship/pull/11242))
 
 ### Patch Changes
 
@@ -156,7 +156,7 @@
 
 ### Patch Changes
 
-- Fix `getPrefixedEnvVars()` to handle `VERCEL_BRANCH_URL` ([#10315](https://github.com/khulnasoft/devship/pull/10315))
+- Fix `getPrefixedEnvVars()` to handle `KHULNASOFT_BRANCH_URL` ([#10315](https://github.com/khulnasoft/devship/pull/10315))
 
 ## 6.8.2
 

@@ -835,7 +835,7 @@ export async function startDevServer(
   );
 
   const env = cloneEnv(process.env, meta.env, {
-    VERCEL_DEV_PORT_FILE: portFile,
+    KHULNASOFT_DEV_PORT_FILE: portFile,
   });
 
   const executable = `./vercel-dev-server-go${

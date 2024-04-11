@@ -70,7 +70,7 @@ const nodeServerSrcPromise = fs.readFile(
 );
 
 // Minimum supported version of the `@khulnasoft/remix` package
-const VERCEL_REMIX_MIN_VERSION = '1.10.0';
+const KHULNASOFT_REMIX_MIN_VERSION = '1.10.0';
 
 // Minimum supported version of the `@vercel/remix-run-dev` forked compiler
 const REMIX_RUN_DEV_MIN_VERSION = '1.15.0';
@@ -287,7 +287,7 @@ export const build: BuildV2 = async ({
       // 3. Users app is on something greater than our latest version of the fork -> we install
       //    the latest known published version of `@khulnasoft/remix`.
       const vercelRemixVersion = resolveSemverMinMax(
-        VERCEL_REMIX_MIN_VERSION,
+        KHULNASOFT_REMIX_MIN_VERSION,
         REMIX_RUN_DEV_MAX_VERSION,
         remixVersion
       );
@@ -303,7 +303,7 @@ export const build: BuildV2 = async ({
     // env vars that are considered to be CI
     const nonCiEnv = { ...spawnOpts.env };
     delete nonCiEnv.CI;
-    delete nonCiEnv.VERCEL;
+    delete nonCiEnv.KHULNASOFT;
     delete nonCiEnv.NOW_BUILDER;
 
     // Purposefully not passing `meta` here to avoid

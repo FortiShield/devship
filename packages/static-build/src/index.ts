@@ -398,7 +398,7 @@ export const build: BuildV2 = async ({
         await GatsbyUtils.injectPlugins(detectedVersion, entrypointDir);
       }
 
-      if (process.env.VERCEL_ANALYTICS_ID) {
+      if (process.env.KHULNASOFT_ANALYTICS_ID) {
         const frameworkDirectory = path.join(
           workPath,
           path.dirname(entrypoint)

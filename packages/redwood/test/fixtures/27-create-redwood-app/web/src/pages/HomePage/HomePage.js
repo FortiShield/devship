@@ -5,7 +5,7 @@ const HomePage = () => {
     <>
       <h1>HomePage</h1>
       <p>
-        Deployment URL is <em>{process.env.REDWOOD_ENV_VERCEL_URL}</em>
+        Deployment URL is <em>{process.env.REDWOOD_ENV_KHULNASOFT_URL}</em>
       </p>
       <p>
         My default route is named <code>home</code>, link to me with `

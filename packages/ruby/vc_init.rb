@@ -82,7 +82,7 @@ def vc__handler(event:, context:)
   path = payload['path']
   headers = payload['headers']
 
-  if ENV['VERCEL_DEBUG']
+  if ENV['KHULNASOFT_DEBUG']
     puts 'Request Headers: '
     puts headers
   end

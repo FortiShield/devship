@@ -206,7 +206,7 @@ afterAll(async () => {
   }
 
   // Make sure the token gets revoked unless it's passed in via environment
-  if (!process.env.VERCEL_TOKEN) {
+  if (!process.env.KHULNASOFT_TOKEN) {
     await execCli(binaryPath, ['logout']);
   }
 
@@ -512,7 +512,7 @@ test('should prefill "project name" prompt with now.json `name`', async () => {
   await remove(path.join(directory, 'vercel.json'));
 });
 
-test('deploy with unknown `VERCEL_PROJECT_ID` should fail', async () => {
+test('deploy with unknown `KHULNASOFT_PROJECT_ID` should fail', async () => {
   if (!token) {
     throw new Error('Shared state "token" not set.');
   }
@@ -522,8 +522,8 @@ test('deploy with unknown `VERCEL_PROJECT_ID` should fail', async () => {
 
   const output = await execCli(binaryPath, [directory], {
     env: {
-      VERCEL_ORG_ID: user.id,
-      VERCEL_PROJECT_ID: 'asdf',
+      KHULNASOFT_ORG_ID: user.id,
+      KHULNASOFT_PROJECT_ID: 'asdf',
     },
   });
 
@@ -531,7 +531,7 @@ test('deploy with unknown `VERCEL_PROJECT_ID` should fail', async () => {
   expect(output.stderr).toContain('Project not found');
 });
 
-test('deploy with `VERCEL_ORG_ID` but without `VERCEL_PROJECT_ID` should fail', async () => {
+test('deploy with `KHULNASOFT_ORG_ID` but without `KHULNASOFT_PROJECT_ID` should fail', async () => {
   if (!token) {
     throw new Error('Shared state "token" not set.');
   }
@@ -540,29 +540,29 @@ test('deploy with `VERCEL_ORG_ID` but without `VERCEL_PROJECT_ID` should fail', 
   const user = await fetchTokenInformation(token);
 
   const output = await execCli(binaryPath, [directory], {
-    env: { VERCEL_ORG_ID: user.id },
+    env: { KHULNASOFT_ORG_ID: user.id },
   });
 
   expect(output.exitCode, formatOutput(output)).toBe(1);
   expect(output.stderr).toContain(
-    'You specified `VERCEL_ORG_ID` but you forgot to specify `VERCEL_PROJECT_ID`. You need to specify both to deploy to a custom project.'
+    'You specified `KHULNASOFT_ORG_ID` but you forgot to specify `KHULNASOFT_PROJECT_ID`. You need to specify both to deploy to a custom project.'
   );
 });
 
-test('deploy with `VERCEL_PROJECT_ID` but without `VERCEL_ORG_ID` should fail', async () => {
+test('deploy with `KHULNASOFT_PROJECT_ID` but without `KHULNASOFT_ORG_ID` should fail', async () => {
   const directory = await setupE2EFixture('static-deployment');
 
   const output = await execCli(binaryPath, [directory], {
-    env: { VERCEL_PROJECT_ID: 'asdf' },
+    env: { KHULNASOFT_PROJECT_ID: 'asdf' },
   });
 
   expect(output.exitCode, formatOutput(output)).toBe(1);
   expect(output.stderr).toContain(
-    'You specified `VERCEL_PROJECT_ID` but you forgot to specify `VERCEL_ORG_ID`. You need to specify both to deploy to a custom project.'
+    'You specified `KHULNASOFT_PROJECT_ID` but you forgot to specify `KHULNASOFT_ORG_ID`. You need to specify both to deploy to a custom project.'
   );
 });
 
-test('deploy with `VERCEL_ORG_ID` and `VERCEL_PROJECT_ID`', async () => {
+test('deploy with `KHULNASOFT_ORG_ID` and `KHULNASOFT_PROJECT_ID`', async () => {
   const directory = await setupE2EFixture('static-deployment');
 
   // generate `.vercel`
@@ -573,8 +573,8 @@ test('deploy with `VERCEL_ORG_ID` and `VERCEL_PROJECT_ID`', async () => {
 
   const output = await execCli(binaryPath, [directory], {
     env: {
-      VERCEL_ORG_ID: link.orgId,
-      VERCEL_PROJECT_ID: link.projectId,
+      KHULNASOFT_ORG_ID: link.orgId,
+      KHULNASOFT_PROJECT_ID: link.projectId,
     },
   });
 
@@ -658,18 +658,18 @@ test('use `rootDirectory` from project when deploying', async () => {
   });
 });
 
-test('vercel deploy with unknown `VERCEL_ORG_ID` or `VERCEL_PROJECT_ID` should error', async () => {
+test('vercel deploy with unknown `KHULNASOFT_ORG_ID` or `KHULNASOFT_PROJECT_ID` should error', async () => {
   const output = await execCli(binaryPath, ['deploy'], {
-    env: { VERCEL_ORG_ID: 'asdf', VERCEL_PROJECT_ID: 'asdf' },
+    env: { KHULNASOFT_ORG_ID: 'asdf', KHULNASOFT_PROJECT_ID: 'asdf' },
   });
 
   expect(output.exitCode, formatOutput(output)).toBe(1);
   expect(output.stderr).toContain('Project not found');
 });
 
-test('vercel env with unknown `VERCEL_ORG_ID` or `VERCEL_PROJECT_ID` should error', async () => {
+test('vercel env with unknown `KHULNASOFT_ORG_ID` or `KHULNASOFT_PROJECT_ID` should error', async () => {
   const output = await execCli(binaryPath, ['env'], {
-    env: { VERCEL_ORG_ID: 'asdf', VERCEL_PROJECT_ID: 'asdf' },
+    env: { KHULNASOFT_ORG_ID: 'asdf', KHULNASOFT_PROJECT_ID: 'asdf' },
   });
 
   expect(output.exitCode, formatOutput(output)).toBe(1);
@@ -706,8 +706,8 @@ test('add a sensitive env var', async () => {
     ['env', 'add', 'envVarName', 'production', '--sensitive'],
     {
       env: {
-        VERCEL_ORG_ID: link.orgId,
-        VERCEL_PROJECT_ID: link.projectId,
+        KHULNASOFT_ORG_ID: link.orgId,
+        KHULNASOFT_PROJECT_ID: link.projectId,
       },
     }
   );
@@ -749,8 +749,8 @@ test('override an existing env var', async () => {
   const link = require(path.join(dir, '.vercel/project.json'));
   const options = {
     env: {
-      VERCEL_ORG_ID: link.orgId,
-      VERCEL_PROJECT_ID: link.projectId,
+      KHULNASOFT_ORG_ID: link.orgId,
+      KHULNASOFT_PROJECT_ID: link.projectId,
     },
   };
 
@@ -789,7 +789,7 @@ test('override an existing env var', async () => {
   );
 });
 
-test('whoami with `VERCEL_ORG_ID` should favor `--scope` and should error', async () => {
+test('whoami with `KHULNASOFT_ORG_ID` should favor `--scope` and should error', async () => {
   if (!token) {
     throw new Error('Shared state "token" not set.');
   }
@@ -797,7 +797,7 @@ test('whoami with `VERCEL_ORG_ID` should favor `--scope` and should error', asyn
   const user = await fetchTokenInformation(token);
 
   const output = await execCli(binaryPath, ['whoami', '--scope', 'asdf'], {
-    env: { VERCEL_ORG_ID: user.id },
+    env: { KHULNASOFT_ORG_ID: user.id },
   });
 
   expect(output.exitCode, formatOutput(output)).toBe(1);

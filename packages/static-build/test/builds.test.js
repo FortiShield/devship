@@ -10,7 +10,7 @@ const FOUR_MINUTES = 240000;
 const warnSpy = jest.spyOn(console, 'warn');
 
 beforeAll(() => {
-  process.env.VERCEL_ANALYTICS_ID = 'test';
+  process.env.KHULNASOFT_ANALYTICS_ID = 'test';
 });
 
 beforeEach(() => jest.clearAllMocks());

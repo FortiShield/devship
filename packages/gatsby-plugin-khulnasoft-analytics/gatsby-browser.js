@@ -4,7 +4,7 @@ export const onClientEntry = (_, pluginOptions = {}) => {
   let options = {
     debug: false,
     ...pluginOptions,
-    analyticsId: process.env.GATSBY_VERCEL_ANALYTICS_ID,
+    analyticsId: process.env.GATSBY_KHULNASOFT_ANALYTICS_ID,
   };
 
   if (!options.analyticsId) {

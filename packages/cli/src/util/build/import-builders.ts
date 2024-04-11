@@ -9,7 +9,7 @@ import { isStaticRuntime } from '@khulnasoft/fs-detectors';
 import { BuilderV2, BuilderV3, PackageJson } from '@khulnasoft/build-utils';
 import execa from 'execa';
 import * as staticBuilder from './static-builder';
-import { VERCEL_DIR } from '../projects/link';
+import { KHULNASOFT_DIR } from '../projects/link';
 import { Output } from '../output';
 import readJSONFile from '../read-json-file';
 import { CantParseJSONFile } from '../errors-ts';
@@ -41,7 +41,7 @@ export async function importBuilders(
   cwd: string,
   output: Output
 ): Promise<Map<string, BuilderWithPkg>> {
-  const buildersDir = join(cwd, VERCEL_DIR, 'builders');
+  const buildersDir = join(cwd, KHULNASOFT_DIR, 'builders');
 
   let importResult = await resolveBuilders(buildersDir, builderSpecs, output);
 

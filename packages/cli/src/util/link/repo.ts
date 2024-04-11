@@ -8,7 +8,7 @@ import { normalizePath, traverseUpDirectories } from '@khulnasoft/build-utils';
 import { lstat, readJSON, outputJSON } from 'fs-extra';
 import confirm from '../input/confirm';
 import toHumanPath from '../humanize-path';
-import { VERCEL_DIR, VERCEL_DIR_REPO, writeReadme } from '../projects/link';
+import { KHULNASOFT_DIR, KHULNASOFT_DIR_REPO, writeReadme } from '../projects/link';
 import { getRemoteUrls } from '../create-git-meta';
 import link from '../output/link';
 import { emoji, prependEmoji } from '../emoji';
@@ -70,7 +70,7 @@ export async function getRepoLink(
   if (!rootPath) return undefined;
 
   // Read the `repo.json`, if this repo has already been linked
-  const repoConfigPath = join(rootPath, VERCEL_DIR, VERCEL_DIR_REPO);
+  const repoConfigPath = join(rootPath, KHULNASOFT_DIR, KHULNASOFT_DIR_REPO);
   const repoConfig: RepoProjectsConfig = await readJSON(repoConfigPath).catch(
     err => {
       if (err.code !== 'ENOENT') throw err;
@@ -334,7 +334,7 @@ export async function ensureRepoLink(
           'Project',
           selected.length,
           true
-        )} under ${chalk.bold(org.slug)} (created ${VERCEL_DIR}${
+        )} under ${chalk.bold(org.slug)} (created ${KHULNASOFT_DIR}${
           isGitIgnoreUpdated ? ' and added it to .gitignore' : ''
         })`,
         emoji('link')
@@ -359,7 +359,7 @@ export async function findRepoRoot(
   start: string
 ): Promise<string | undefined> {
   const { debug } = client.output;
-  const REPO_JSON_PATH = join(VERCEL_DIR, VERCEL_DIR_REPO);
+  const REPO_JSON_PATH = join(KHULNASOFT_DIR, KHULNASOFT_DIR_REPO);
   /**
    * If the current repo is a git submodule or git worktree '.git' is a file
    * with a pointer to the "parent" git repository instead of a directory.

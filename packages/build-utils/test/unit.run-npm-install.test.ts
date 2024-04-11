@@ -33,7 +33,7 @@ function getNodeVersion(major: number) {
   return { major, range: `${major}.x`, runtime: `nodejs${major}.x` };
 }
 
-it('should not include peer dependencies when missing VERCEL_NPM_LEGACY_PEER_DEPS on node16', async () => {
+it('should not include peer dependencies when missing KHULNASOFT_NPM_LEGACY_PEER_DEPS on node16', async () => {
   const fixture = path.join(__dirname, 'fixtures', '20-npm-7');
   const meta: Meta = {};
   const spawnOpts = getTestSpawnOpts({});
@@ -51,10 +51,10 @@ it('should not include peer dependencies when missing VERCEL_NPM_LEGACY_PEER_DEP
   });
 });
 
-it('should include peer dependencies when VERCEL_NPM_LEGACY_PEER_DEPS=1 on node16', async () => {
+it('should include peer dependencies when KHULNASOFT_NPM_LEGACY_PEER_DEPS=1 on node16', async () => {
   const fixture = path.join(__dirname, 'fixtures', '20-npm-7');
   const meta: Meta = {};
-  const spawnOpts = getTestSpawnOpts({ VERCEL_NPM_LEGACY_PEER_DEPS: '1' });
+  const spawnOpts = getTestSpawnOpts({ KHULNASOFT_NPM_LEGACY_PEER_DEPS: '1' });
   const nodeVersion = getNodeVersion(16);
   await runNpmInstall(fixture, [], spawnOpts, meta, nodeVersion);
   expect(spawnMock.mock.calls.length).toBe(1);
@@ -74,10 +74,10 @@ it('should include peer dependencies when VERCEL_NPM_LEGACY_PEER_DEPS=1 on node1
   });
 });
 
-it('should include peer dependencies when VERCEL_NPM_LEGACY_PEER_DEPS=1 on node14 and npm7+', async () => {
+it('should include peer dependencies when KHULNASOFT_NPM_LEGACY_PEER_DEPS=1 on node14 and npm7+', async () => {
   const fixture = path.join(__dirname, 'fixtures', '20-npm-7');
   const meta: Meta = {};
-  const spawnOpts = getTestSpawnOpts({ VERCEL_NPM_LEGACY_PEER_DEPS: '1' });
+  const spawnOpts = getTestSpawnOpts({ KHULNASOFT_NPM_LEGACY_PEER_DEPS: '1' });
 
   const nodeVersion = getNodeVersion(14);
   await runNpmInstall(fixture, [], spawnOpts, meta, nodeVersion);
@@ -98,10 +98,10 @@ it('should include peer dependencies when VERCEL_NPM_LEGACY_PEER_DEPS=1 on node1
   });
 });
 
-it('should not include peer dependencies when VERCEL_NPM_LEGACY_PEER_DEPS=1 on node14 and npm6', async () => {
+it('should not include peer dependencies when KHULNASOFT_NPM_LEGACY_PEER_DEPS=1 on node14 and npm6', async () => {
   const fixture = path.join(__dirname, 'fixtures', '14-npm-6-legacy-peer-deps');
   const meta: Meta = {};
-  const spawnOpts = getTestSpawnOpts({ VERCEL_NPM_LEGACY_PEER_DEPS: '1' });
+  const spawnOpts = getTestSpawnOpts({ KHULNASOFT_NPM_LEGACY_PEER_DEPS: '1' });
 
   const nodeVersion = getNodeVersion(14);
   await runNpmInstall(fixture, [], spawnOpts, meta, nodeVersion);
@@ -117,11 +117,11 @@ it('should not include peer dependencies when VERCEL_NPM_LEGACY_PEER_DEPS=1 on n
   });
 });
 
-it('should not include peer dependencies when VERCEL_NPM_LEGACY_PEER_DEPS=1 on node16 with corepack enabled', async () => {
+it('should not include peer dependencies when KHULNASOFT_NPM_LEGACY_PEER_DEPS=1 on node16 with corepack enabled', async () => {
   const fixture = path.join(__dirname, 'fixtures', '20-npm-7');
   const meta: Meta = {};
   const spawnOpts = getTestSpawnOpts({
-    VERCEL_NPM_LEGACY_PEER_DEPS: '1',
+    KHULNASOFT_NPM_LEGACY_PEER_DEPS: '1',
     ENABLE_EXPERIMENTAL_COREPACK: '1',
   });
   const nodeVersion = getNodeVersion(16);

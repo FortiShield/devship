@@ -6,8 +6,8 @@ import {
   getLinkedProject,
   linkFolderToProject,
   getVercelDirectory,
-  VERCEL_DIR_README,
-  VERCEL_DIR_PROJECT,
+  KHULNASOFT_DIR_README,
+  KHULNASOFT_DIR_PROJECT,
 } from '../projects/link';
 import createProject from '../projects/create-project';
 import Client from '../client';
@@ -73,8 +73,8 @@ export default async function setupAndLink(
 
   if (forceDelete) {
     const vercelDir = getVercelDirectory(path);
-    remove(join(vercelDir, VERCEL_DIR_README));
-    remove(join(vercelDir, VERCEL_DIR_PROJECT));
+    remove(join(vercelDir, KHULNASOFT_DIR_README));
+    remove(join(vercelDir, KHULNASOFT_DIR_PROJECT));
   }
 
   if (!isTTY && !autoConfirm) {

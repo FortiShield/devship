@@ -24,8 +24,8 @@ func main() {
 	file := os.NewFile(3, "pipe")
 	_, err2 := file.Write(portBytes)
 	if err2 != nil {
-		portFile := os.Getenv("VERCEL_DEV_PORT_FILE")
-		os.Unsetenv("VERCEL_DEV_PORT_FILE")
+		portFile := os.Getenv("KHULNASOFT_DEV_PORT_FILE")
+		os.Unsetenv("KHULNASOFT_DEV_PORT_FILE")
 		err3 := ioutil.WriteFile(portFile, portBytes, 0644)
 		if err3 != nil {
 			panic(err3)

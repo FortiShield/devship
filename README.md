@@ -23,7 +23,7 @@ Vercel’s Frontend Cloud provides the developer experience and infrastructure t
 
 ## Deploy
 
-Get started by [importing a project](https://vercel.com/new) or using the [Vercel CLI](https://khulnasoft.com/docs/cli). Then, `git push` to deploy.
+Get started by [importing a project](https://vercel.com/new) or using the [Khulnasoft CLI](https://khulnasoft.com/docs/cli). Then, `git push` to deploy.
 
 ## Documentation
 
@@ -33,7 +33,7 @@ For details on how to use Vercel, check out our [documentation](https://khulnaso
 
 This project uses [pnpm](https://pnpm.io/) to install dependencies and run scripts.
 
-You can use the `dev` script to run local changes as if you were invoking Vercel CLI. For example, `vercel deploy --cwd=/path/to/project` could be run with local changes with `pnpm dev deploy --cwd=/path/to/project`.
+You can use the `dev` script to run local changes as if you were invoking Khulnasoft CLI. For example, `vercel deploy --cwd=/path/to/project` could be run with local changes with `pnpm dev deploy --cwd=/path/to/project`.
 
 When contributing to this repository, please first discuss the change you wish to make via [GitHub Discussions](https://github.com/khulnasoft/devship/discussions/new) with the owners of this repository before submitting a Pull Request.
 
@@ -47,7 +47,7 @@ To get started, execute the following:
 
 ```
 git clone https://github.com/khulnasoft/devship
-cd vercel
+cd devship
 corepack enable
 pnpm install
 pnpm build
@@ -57,9 +57,9 @@ pnpm test-unit
 
 Make sure all the tests pass before making changes.
 
-#### Running Vercel CLI Changes
+#### Running Khulnasoft CLI Changes
 
-You can use `pnpm dev` from the `cli` package to invoke Vercel CLI with local changes:
+You can use `pnpm dev` from the `cli` package to invoke Khulnasoft CLI with local changes:
 
 ```
 cd ./packages/cli
@@ -122,7 +122,7 @@ While running the full integration suite locally is not recommended, it's someti
 1. Create an access token. Follow the insructions here https://khulnasoft.com/docs/rest-api#creating-an-access-token. Ensure the token scope is for your personal
    account.
 2. Grab the team ID from the Vercel dashboard at `https://vercel.com/<MY-TEAM>/~/settings`.
-3. Source these into your shell rc file: `echo 'export VERCEL_TOKEN=<MY-TOKEN> VERCEL_TEAM_ID=<MY-TEAM-ID>' >> ~/.zshrc`
+3. Source these into your shell rc file: `echo 'export KHULNASOFT_TOKEN=<MY-TOKEN> KHULNASOFT_TEAM_ID=<MY-TEAM-ID>' >> ~/.zshrc`
 
 From there, you should be able to trigger an integration test. Choose one
 that's already isolated to check that things work:

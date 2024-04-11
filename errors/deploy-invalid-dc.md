@@ -19,7 +19,7 @@ and DCs have to be in _lowercase_.
 - `gru`
 - `iad`
 
-In Vercel CLI, they currently are transformed to
+In Khulnasoft CLI, they currently are transformed to
 DC identifiers before being sent to our APIs.
 
 **Valid DC identifiers**:

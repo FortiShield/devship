@@ -24,7 +24,7 @@ function getGlobalArgs() {
 }
 
 /**
- * Execute Vercel CLI subcommands.
+ * Execute Khulnasoft CLI subcommands.
  */
 export function execCli(
   file: string,

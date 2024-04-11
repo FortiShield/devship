@@ -47,8 +47,8 @@ export async function injectPlugins(
     }
   }
 
-  if (process.env.VERCEL_ANALYTICS_ID) {
-    process.env.GATSBY_VERCEL_ANALYTICS_ID = process.env.VERCEL_ANALYTICS_ID;
+  if (process.env.KHULNASOFT_ANALYTICS_ID) {
+    process.env.GATSBY_KHULNASOFT_ANALYTICS_ID = process.env.KHULNASOFT_ANALYTICS_ID;
     plugins.add('@khulnasoft/gatsby-plugin-khulnasoft-analytics');
     console.warn(
       'Vercel Speed Insights auto-injection is deprecated in favor of @khulnasoft/speed-insights package. Learn more: https://vercel.link/upgrate-to-speed-insights-package'

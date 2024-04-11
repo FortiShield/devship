@@ -1,1 +1,1 @@
-export default () => process.env.NEXT_PUBLIC_VERCEL_URL;
+export default () => process.env.NEXT_PUBLIC_KHULNASOFT_URL;

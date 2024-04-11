@@ -28,11 +28,11 @@ import type { RepoProjectConfig } from '../link/repo';
 const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
 
-export const VERCEL_DIR = '.vercel';
-export const VERCEL_DIR_FALLBACK = '.now';
-export const VERCEL_DIR_README = 'README.txt';
-export const VERCEL_DIR_PROJECT = 'project.json';
-export const VERCEL_DIR_REPO = 'repo.json';
+export const KHULNASOFT_DIR = '.vercel';
+export const KHULNASOFT_DIR_FALLBACK = '.now';
+export const KHULNASOFT_DIR_README = 'README.txt';
+export const KHULNASOFT_DIR_PROJECT = 'project.json';
+export const KHULNASOFT_DIR_REPO = 'repo.json';
 
 const linkSchema = {
   type: 'object',
@@ -56,7 +56,7 @@ const linkSchema = {
  * Throws an error if *both* `.vercel` and `.now` directories exist.
  */
 export function getVercelDirectory(cwd: string): string {
-  const possibleDirs = [join(cwd, VERCEL_DIR), join(cwd, VERCEL_DIR_FALLBACK)];
+  const possibleDirs = [join(cwd, KHULNASOFT_DIR), join(cwd, KHULNASOFT_DIR_FALLBACK)];
   const existingDirs = possibleDirs.filter(d => isDirectory(d));
   if (existingDirs.length > 1) {
     throw new NowBuildError({
@@ -120,7 +120,7 @@ export async function getLinkFromDir<T = ProjectLink>(
   dir: string
 ): Promise<T | null> {
   try {
-    const json = await readFile(join(dir, VERCEL_DIR_PROJECT), 'utf8');
+    const json = await readFile(join(dir, KHULNASOFT_DIR_PROJECT), 'utf8');
 
     const ajv = new AJV();
     const link: T = JSON.parse(json);
@@ -171,11 +171,11 @@ async function hasProjectLink(
   path: string
 ): Promise<boolean> {
   // "linked" via env vars?
-  const VERCEL_ORG_ID = getPlatformEnv('ORG_ID');
-  const VERCEL_PROJECT_ID = getPlatformEnv('PROJECT_ID');
+  const KHULNASOFT_ORG_ID = getPlatformEnv('ORG_ID');
+  const KHULNASOFT_PROJECT_ID = getPlatformEnv('PROJECT_ID');
   if (
-    VERCEL_ORG_ID === projectLink.orgId &&
-    VERCEL_PROJECT_ID === projectLink.projectId
+    KHULNASOFT_ORG_ID === projectLink.orgId &&
+    KHULNASOFT_PROJECT_ID === projectLink.projectId
   ) {
     return true;
   }
@@ -207,24 +207,24 @@ export async function getLinkedProject(
   path = client.cwd
 ): Promise<ProjectLinkResult> {
   const { output } = client;
-  const VERCEL_ORG_ID = getPlatformEnv('ORG_ID');
-  const VERCEL_PROJECT_ID = getPlatformEnv('PROJECT_ID');
-  const shouldUseEnv = Boolean(VERCEL_ORG_ID && VERCEL_PROJECT_ID);
+  const KHULNASOFT_ORG_ID = getPlatformEnv('ORG_ID');
+  const KHULNASOFT_PROJECT_ID = getPlatformEnv('PROJECT_ID');
+  const shouldUseEnv = Boolean(KHULNASOFT_ORG_ID && KHULNASOFT_PROJECT_ID);
 
-  if ((VERCEL_ORG_ID || VERCEL_PROJECT_ID) && !shouldUseEnv) {
+  if ((KHULNASOFT_ORG_ID || KHULNASOFT_PROJECT_ID) && !shouldUseEnv) {
     output.error(
       `You specified ${
-        VERCEL_ORG_ID ? '`VERCEL_ORG_ID`' : '`VERCEL_PROJECT_ID`'
+        KHULNASOFT_ORG_ID ? '`KHULNASOFT_ORG_ID`' : '`KHULNASOFT_PROJECT_ID`'
       } but you forgot to specify ${
-        VERCEL_ORG_ID ? '`VERCEL_PROJECT_ID`' : '`VERCEL_ORG_ID`'
+        KHULNASOFT_ORG_ID ? '`KHULNASOFT_PROJECT_ID`' : '`KHULNASOFT_ORG_ID`'
       }. You need to specify both to deploy to a custom project.\n`
     );
     return { status: 'error', exitCode: 1 };
   }
 
   const link =
-    VERCEL_ORG_ID && VERCEL_PROJECT_ID
-      ? { orgId: VERCEL_ORG_ID, projectId: VERCEL_PROJECT_ID }
+    KHULNASOFT_ORG_ID && KHULNASOFT_PROJECT_ID
+      ? { orgId: KHULNASOFT_ORG_ID, projectId: KHULNASOFT_PROJECT_ID }
       : await getProjectLink(client, path);
 
   if (!link) {
@@ -248,7 +248,7 @@ export async function getLinkedProject(
       } else {
         throw new NowBuildError({
           message: `Could not retrieve Project Settings. To link your Project, remove the ${outputCode(
-            VERCEL_DIR
+            KHULNASOFT_DIR
           )} directory and deploy again.`,
           code: 'PROJECT_UNAUTHORIZED',
           link: 'https://vercel.link/cannot-load-project-settings',
@@ -266,8 +266,8 @@ export async function getLinkedProject(
     if (shouldUseEnv) {
       output.error(
         `Project not found (${JSON.stringify({
-          VERCEL_PROJECT_ID,
-          VERCEL_ORG_ID,
+          KHULNASOFT_PROJECT_ID,
+          KHULNASOFT_ORG_ID,
         })})\n`
       );
       return { status: 'error', exitCode: 1 };
@@ -287,8 +287,8 @@ export async function getLinkedProject(
 
 export async function writeReadme(path: string) {
   await writeFile(
-    join(path, VERCEL_DIR, VERCEL_DIR_README),
-    await readFile(join(__dirname, 'VERCEL_DIR_README.txt'), 'utf8')
+    join(path, KHULNASOFT_DIR, KHULNASOFT_DIR_README),
+    await readFile(join(__dirname, 'KHULNASOFT_DIR_README.txt'), 'utf8')
   );
 }
 
@@ -306,7 +306,7 @@ export async function linkFolderToProject(
   }
 
   try {
-    await ensureDir(join(path, VERCEL_DIR));
+    await ensureDir(join(path, KHULNASOFT_DIR));
   } catch (err: unknown) {
     if (isErrnoException(err) && err.code === 'ENOTDIR') {
       // folder couldn't be created because
@@ -317,7 +317,7 @@ export async function linkFolderToProject(
   }
 
   await writeFile(
-    join(path, VERCEL_DIR, VERCEL_DIR_PROJECT),
+    join(path, KHULNASOFT_DIR, KHULNASOFT_DIR_PROJECT),
     JSON.stringify(projectLink)
   );
 
@@ -330,7 +330,7 @@ export async function linkFolderToProject(
     prependEmoji(
       `Linked to ${chalk.bold(
         `${orgSlug}/${projectName}`
-      )} (created ${VERCEL_DIR}${
+      )} (created ${KHULNASOFT_DIR}${
         isGitIgnoreUpdated ? ' and added it to .gitignore' : ''
       })`,
       emoji(successEmoji)

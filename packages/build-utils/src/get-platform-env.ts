@@ -1,11 +1,11 @@
 import { NowBuildError } from './errors';
 
 /**
- * Helper function to support both `VERCEL_` and legacy `NOW_` env vars.
+ * Helper function to support both `KHULNASOFT_` and legacy `NOW_` env vars.
  * Throws an error if *both* env vars are defined.
  */
 export const getPlatformEnv = (name: string): string | undefined => {
-  const vName = `VERCEL_${name}`;
+  const vName = `KHULNASOFT_${name}`;
   const nName = `NOW_${name}`;
   const v = process.env[vName];
   const n = process.env[nName];

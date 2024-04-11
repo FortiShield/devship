@@ -12,7 +12,7 @@
 
 ### Patch Changes
 
-- Remove `VERCEL_ALLOW_RUBY32` env var check ([#10910](https://github.com/khulnasoft/devship/pull/10910))
+- Remove `KHULNASOFT_ALLOW_RUBY32` env var check ([#10910](https://github.com/khulnasoft/devship/pull/10910))
 
 - Use Ruby 3.2 in test fixtures ([#10909](https://github.com/khulnasoft/devship/pull/10909))
 

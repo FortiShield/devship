@@ -11,7 +11,7 @@ import {
 } from '@khulnasoft/build-utils';
 import { BuildConfig, ImagesConfig, isObjectEmpty } from './_shared';
 
-const VERCEL_BUILD_OUTPUT = '.vercel_build_output';
+const KHULNASOFT_BUILD_OUTPUT = '.vercel_build_output';
 
 /**
  * Reads the .vercel_build_output directory and returns and object
@@ -54,23 +54,23 @@ export async function readBuildOutputDirectory({
   };
 
   if (outputs.functions) {
-    console.log(`Detected Serverless Functions in "${VERCEL_BUILD_OUTPUT}"`);
+    console.log(`Detected Serverless Functions in "${KHULNASOFT_BUILD_OUTPUT}"`);
   }
 
   if (outputs.staticFiles) {
-    console.log(`Detected Static Assets in "${VERCEL_BUILD_OUTPUT}"`);
+    console.log(`Detected Static Assets in "${KHULNASOFT_BUILD_OUTPUT}"`);
   }
 
   if (outputs.routes) {
-    console.log(`Detected Routes Configuration in "${VERCEL_BUILD_OUTPUT}"`);
+    console.log(`Detected Routes Configuration in "${KHULNASOFT_BUILD_OUTPUT}"`);
   }
 
   if (outputs.images) {
-    console.log(`Detected Images Configuration in "${VERCEL_BUILD_OUTPUT}"`);
+    console.log(`Detected Images Configuration in "${KHULNASOFT_BUILD_OUTPUT}"`);
   }
 
   if (outputs.build) {
-    console.log(`Detected Build Configuration in "${VERCEL_BUILD_OUTPUT}"`);
+    console.log(`Detected Build Configuration in "${KHULNASOFT_BUILD_OUTPUT}"`);
   }
 
   return outputs;
@@ -81,7 +81,7 @@ async function readStaticFiles({
 }: {
   workPath: string;
 }): Promise<Files> {
-  const staticFilePath = path.join(workPath, VERCEL_BUILD_OUTPUT, 'static');
+  const staticFilePath = path.join(workPath, KHULNASOFT_BUILD_OUTPUT, 'static');
   const staticFiles = await glob('**', {
     cwd: staticFilePath,
   });
@@ -103,7 +103,7 @@ async function readFunctions({
   const functionsConfig = await readFunctionsConfig({ workPath });
 
   // Find all entrypoints and create a Lambda for each of them.
-  let functionsPath = path.join(workPath, VERCEL_BUILD_OUTPUT, 'functions');
+  let functionsPath = path.join(workPath, KHULNASOFT_BUILD_OUTPUT, 'functions');
   let functionEntrypoints = await glob('*/index{,.*}', { cwd: functionsPath });
   let isLegacyFunctions = false;
 
@@ -184,7 +184,7 @@ async function readFunctions({
 async function readFunctionsConfig({ workPath }: { workPath: string }) {
   const data = await fs
     .readFile(
-      path.join(workPath, VERCEL_BUILD_OUTPUT, 'config', 'functions.json'),
+      path.join(workPath, KHULNASOFT_BUILD_OUTPUT, 'config', 'functions.json'),
       'utf8'
     )
     .then(raw => {
@@ -271,7 +271,7 @@ export async function readBuildOutputConfig<Config>({
 }): Promise<Config | undefined> {
   const configPath = path.join(
     workPath,
-    VERCEL_BUILD_OUTPUT,
+    KHULNASOFT_BUILD_OUTPUT,
     'config',
     configFileName
   );

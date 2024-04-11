@@ -4,7 +4,7 @@
 
 You tried to run a command that doesn't allow the `--token` flag (like `vercel switch`). This is not allowed because commands like these are influencing the configuration files.
 
-In turn, they would have to take the value of the `--token` flag into consideration (which is not a good idea, because flags in Vercel CLI should never change the configuration).
+In turn, they would have to take the value of the `--token` flag into consideration (which is not a good idea, because flags in Khulnasoft CLI should never change the configuration).
 
 #### Possible Ways to Fix It
 

@@ -68,8 +68,8 @@ describe('pull', () => {
 
   it('should handle pulling with env vars (headless mode)', async () => {
     try {
-      process.env.VERCEL_PROJECT_ID = 'vercel-pull-next';
-      process.env.VERCEL_ORG_ID = 'team_dummy';
+      process.env.KHULNASOFT_PROJECT_ID = 'vercel-pull-next';
+      process.env.KHULNASOFT_ORG_ID = 'team_dummy';
 
       const cwd = setupUnitFixture('vercel-pull-next');
 
@@ -108,8 +108,8 @@ describe('pull', () => {
         }
       `);
     } finally {
-      delete process.env.VERCEL_PROJECT_ID;
-      delete process.env.VERCEL_ORG_ID;
+      delete process.env.KHULNASOFT_PROJECT_ID;
+      delete process.env.KHULNASOFT_ORG_ID;
     }
   });
 

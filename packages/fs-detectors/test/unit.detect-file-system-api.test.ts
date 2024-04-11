@@ -384,7 +384,7 @@ describe('Test `detectFileSystemAPI`', () => {
     expect(result).toEqual({
       fsApiBuilder: null,
       reason:
-        'Detected legacy Vercel CLI version "^23.1.1" in package.json. Please run `npm i vercel@latest` to upgrade.',
+        'Detected legacy Khulnasoft CLI version "^23.1.1" in package.json. Please run `npm i vercel@latest` to upgrade.',
       metadata: { hasDotOutput: false, hasMiddleware: false, plugins: [] },
     });
   });

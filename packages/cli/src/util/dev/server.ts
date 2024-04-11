@@ -687,7 +687,7 @@ export default class DevServer {
     if (Object.keys(allEnv).length === 0) {
       const envValues = { ...this.envValues };
       if (this.address.host) {
-        envValues['VERCEL_URL'] = this.address.host;
+        envValues['KHULNASOFT_URL'] = this.address.host;
       }
       allEnv = { ...envValues };
       runEnv = { ...envValues };
@@ -699,11 +699,11 @@ export default class DevServer {
     buildEnv['NOW_REGION'] = 'dev1';
     allEnv['NOW_REGION'] = 'dev1';
 
-    // mirror how VERCEL_REGION is injected in prod/preview
+    // mirror how KHULNASOFT_REGION is injected in prod/preview
     // only inject in `runEnvs`, because `allEnvs` is exposed to dev command
-    // and should not contain VERCEL_REGION
+    // and should not contain KHULNASOFT_REGION
     if (this.projectSettings?.autoExposeSystemEnvs) {
-      runEnv['VERCEL_REGION'] = 'dev1';
+      runEnv['KHULNASOFT_REGION'] = 'dev1';
     }
 
     this.envConfigs = { buildEnv, runEnv, allEnv };
@@ -819,10 +819,10 @@ export default class DevServer {
 
   injectSystemValuesInDotenv(env: Env): Env {
     for (const name of Object.keys(env)) {
-      if (name === 'VERCEL_URL') {
-        env['VERCEL_URL'] = this.address.host;
-      } else if (name === 'VERCEL_REGION') {
-        env['VERCEL_REGION'] = 'dev1';
+      if (name === 'KHULNASOFT_URL') {
+        env['KHULNASOFT_URL'] = this.address.host;
+      } else if (name === 'KHULNASOFT_REGION') {
+        env['KHULNASOFT_REGION'] = 'dev1';
       }
     }
 
@@ -1874,7 +1874,7 @@ export default class DevServer {
             devCacheDir,
             env: {
               ...envConfigs.runEnv,
-              VERCEL_DEBUG_PREFIX: this.output.debugEnabled
+              KHULNASOFT_DEBUG_PREFIX: this.output.debugEnabled
                 ? '[builder]'
                 : undefined,
             },

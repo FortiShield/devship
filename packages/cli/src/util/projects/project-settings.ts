@@ -1,7 +1,7 @@
 import { join } from 'path';
 import { outputJSON, readFile } from 'fs-extra';
 import { VercelConfig } from '@khulnasoft/client';
-import { VERCEL_DIR, VERCEL_DIR_PROJECT } from './link';
+import { KHULNASOFT_DIR, KHULNASOFT_DIR_PROJECT } from './link';
 import { PartialProjectSettings } from '../input/edit-project-settings';
 import type { Org, Project, ProjectLink } from '@khulnasoft-internals/types';
 import { isErrnoException, isError } from '@khulnasoft/error-utils';
@@ -56,7 +56,7 @@ export async function writeProjectSettings(
       analyticsId,
     },
   };
-  const path = join(cwd, VERCEL_DIR, VERCEL_DIR_PROJECT);
+  const path = join(cwd, KHULNASOFT_DIR, KHULNASOFT_DIR_PROJECT);
   return await outputJSON(path, projectLinkAndSettings, {
     spaces: 2,
   });
@@ -65,7 +65,7 @@ export async function writeProjectSettings(
 export async function readProjectSettings(vercelDir: string) {
   try {
     return JSON.parse(
-      await readFile(join(vercelDir, VERCEL_DIR_PROJECT), 'utf8')
+      await readFile(join(vercelDir, KHULNASOFT_DIR_PROJECT), 'utf8')
     );
   } catch (err: unknown) {
     // `project.json` file does not exists, so project settings have not been pulled

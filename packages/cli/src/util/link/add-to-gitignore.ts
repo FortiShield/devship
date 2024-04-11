@@ -1,9 +1,9 @@
 import os from 'os';
 import { join } from 'path';
 import { readFile, writeFile } from 'fs-extra';
-import { VERCEL_DIR } from '../projects/link';
+import { KHULNASOFT_DIR } from '../projects/link';
 
-export async function addToGitIgnore(path: string, ignore = VERCEL_DIR) {
+export async function addToGitIgnore(path: string, ignore = KHULNASOFT_DIR) {
   let isGitIgnoreUpdated = false;
   try {
     const gitIgnorePath = join(path, '.gitignore');

@@ -2810,7 +2810,7 @@ interface EdgeFunctionMatcher {
   originalSource?: string;
 }
 
-const vercelFunctionRegionsVar = process.env.VERCEL_FUNCTION_REGIONS;
+const vercelFunctionRegionsVar = process.env.KHULNASOFT_FUNCTION_REGIONS;
 let vercelFunctionRegions: string[] | undefined;
 if (vercelFunctionRegionsVar) {
   vercelFunctionRegions = vercelFunctionRegionsVar.split(',');
@@ -2833,7 +2833,7 @@ function normalizeRegions(regions: Regions): undefined | string | string[] {
     // Explicitly mentioned as `home` is one of the explicit values for preferredRegion in Next.js.
     if (region === 'home') {
       if (vercelFunctionRegions) {
-        // Includes the regions from the VERCEL_FUNCTION_REGIONS env var.
+        // Includes the regions from the KHULNASOFT_FUNCTION_REGIONS env var.
         newRegions.push(...vercelFunctionRegions);
       }
       continue;

@@ -23,7 +23,7 @@ const COMMAND_CONFIG = {
 };
 
 export default async function main(client: Client) {
-  if (process.env.__VERCEL_DEV_RUNNING) {
+  if (process.env.__KHULNASOFT_DEV_RUNNING) {
     client.output.error(
       `${cmd(
         `${packageName} dev`
@@ -36,7 +36,7 @@ export default async function main(client: Client) {
     );
     return 1;
   } else {
-    process.env.__VERCEL_DEV_RUNNING = '1';
+    process.env.__KHULNASOFT_DEV_RUNNING = '1';
   }
 
   let argv;

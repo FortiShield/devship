@@ -9,7 +9,7 @@ import { json } from '@remix-run/node';
 export async function loader() {
   const hi = await new Promise<string>((resolve, reject) => {
     exec(
-      `echo hi from the B page running in ${process.env.VERCEL_REGION}`,
+      `echo hi from the B page running in ${process.env.KHULNASOFT_REGION}`,
       (err, stdout) => {
         if (err) return reject(err);
         resolve(stdout);

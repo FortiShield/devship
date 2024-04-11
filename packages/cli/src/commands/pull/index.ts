@@ -9,7 +9,7 @@ import type {
 import { emoji, prependEmoji } from '../../util/emoji';
 import getArgs from '../../util/get-args';
 import stamp from '../../util/output/stamp';
-import { VERCEL_DIR, VERCEL_DIR_PROJECT } from '../../util/projects/link';
+import { KHULNASOFT_DIR, KHULNASOFT_DIR_PROJECT } from '../../util/projects/link';
 import { writeProjectSettings } from '../../util/projects/project-settings';
 import envPull from '../env/pull';
 import {
@@ -121,7 +121,7 @@ export default async function main(client: Client) {
   client.output.print(
     `${prependEmoji(
       `Downloaded project settings to ${chalk.bold(
-        humanizePath(join(cwd, VERCEL_DIR, VERCEL_DIR_PROJECT))
+        humanizePath(join(cwd, KHULNASOFT_DIR, KHULNASOFT_DIR_PROJECT))
       )} ${chalk.gray(settingsStamp())}`,
       emoji('success')
     )}\n`

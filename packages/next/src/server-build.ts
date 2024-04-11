@@ -383,7 +383,7 @@ export async function serverBuild({
 
     const useBundledServer =
       semver.gte(nextVersion, BUNDLED_SERVER_NEXT_VERSION) &&
-      process.env.VERCEL_NEXT_BUNDLED_SERVER === '1';
+      process.env.KHULNASOFT_NEXT_BUNDLED_SERVER === '1';
 
     if (useBundledServer) {
       debug('Using bundled Next.js server');
@@ -1093,7 +1093,7 @@ export async function serverBuild({
       let launcherData = group.isAppRouter ? appLauncher : launcher;
       let preloadChunks: string[] = [];
 
-      if (process.env.VERCEL_NEXT_PRELOAD_COMMON === '1') {
+      if (process.env.KHULNASOFT_NEXT_PRELOAD_COMMON === '1') {
         const nextPackageDir = path.dirname(
           resolveFrom(projectDir, 'next/package.json')
         );

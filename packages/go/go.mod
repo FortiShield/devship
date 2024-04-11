@@ -6,7 +6,7 @@ go 1.20
 // such as `util/analyze.go`.
 
 // You can do this by creating a VS Code Launcher Configuration
-// replacing `YOUR_VERCEL_DIR` with your vercel directory, like:
+// replacing `YOUR_KHULNASOFT_DIR` with your vercel directory, like:
 // {
 //   "name": "Debug Go",
 //   "type": "go",
@@ -14,7 +14,7 @@ go 1.20
 //   "mode": "auto",
 //   "program": "${fileDirname}",
 //   "args": [
-//     "-modpath=YOUR_VERCEL_DIR/packages/go/test/fixtures/24-bad-handler/api/",
-//     "YOUR_VERCEL_DIR/packages/go/test/fixtures/24-bad-handler/api/index.go"
+//     "-modpath=YOUR_KHULNASOFT_DIR/packages/go/test/fixtures/24-bad-handler/api/",
+//     "YOUR_KHULNASOFT_DIR/packages/go/test/fixtures/24-bad-handler/api/index.go"
 //   ]
 // }

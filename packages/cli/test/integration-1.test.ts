@@ -195,7 +195,7 @@ afterAll(async () => {
   }
 
   // Make sure the token gets revoked unless it's passed in via environment
-  if (!process.env.VERCEL_TOKEN) {
+  if (!process.env.KHULNASOFT_TOKEN) {
     await execCli(binaryPath, ['logout']);
   }
 
@@ -800,7 +800,7 @@ test('Deploy `api-env` fixture and test `vercel env` command', async () => {
     expect(stderr).toMatch(/Created .env.local file/gm);
 
     const contents = fs.readFileSync(path.join(target, '.env.local'), 'utf8');
-    expect(contents).toMatch(/^# Created by Vercel CLI\n/);
+    expect(contents).toMatch(/^# Created by Khulnasoft CLI\n/);
     expect(contents).toMatch(/MY_NEW_ENV_VAR="my plaintext value"/);
     expect(contents).toMatch(/MY_STDIN_VAR="{"expect":"quotes"}"/);
     expect(contents).toMatch(/MY_DECRYPTABLE_SECRET_ENV="decryptable value"/);
@@ -912,8 +912,8 @@ test('Deploy `api-env` fixture and test `vercel env` command', async () => {
     expect(homeJson['MY_DECRYPTABLE_SECRET_ENV']).toBe('decryptable value');
 
     // system env vars are automatically exposed
-    expect(apiJson['VERCEL']).toBe('1');
-    expect(homeJson['VERCEL']).toBe('1');
+    expect(apiJson['KHULNASOFT']).toBe('1');
+    expect(homeJson['KHULNASOFT']).toBe('1');
 
     // sleep before kill, otherwise the dev process doesn't clean up and exit properly
     await sleep(100);
@@ -954,11 +954,11 @@ test('Deploy `api-env` fixture and test `vercel env` command', async () => {
 
     const lines = new Set(contents.split('\n'));
 
-    expect(lines).toContain('VERCEL="1"');
-    expect(lines).toContain('VERCEL_URL=""');
-    expect(lines).toContain('VERCEL_ENV="development"');
-    expect(lines).toContain('VERCEL_GIT_PROVIDER=""');
-    expect(lines).toContain('VERCEL_GIT_REPO_SLUG=""');
+    expect(lines).toContain('KHULNASOFT="1"');
+    expect(lines).toContain('KHULNASOFT_URL=""');
+    expect(lines).toContain('KHULNASOFT_ENV="development"');
+    expect(lines).toContain('KHULNASOFT_GIT_PROVIDER=""');
+    expect(lines).toContain('KHULNASOFT_GIT_REPO_SLUG=""');
   }
 
   async function vcDevAndFetchSystemVars() {
@@ -973,22 +973,22 @@ test('Deploy `api-env` fixture and test `vercel env` command', async () => {
     const localhostNoProtocol = localhost[0].slice('http://'.length);
 
     const apiJson = await apiRes.json();
-    expect(apiJson['VERCEL']).toBe('1');
-    expect(apiJson['VERCEL_URL']).toBe(localhostNoProtocol);
-    expect(apiJson['VERCEL_ENV']).toBe('development');
-    expect(apiJson['VERCEL_REGION']).toBe('dev1');
-    expect(apiJson['VERCEL_GIT_PROVIDER']).toBe('');
-    expect(apiJson['VERCEL_GIT_REPO_SLUG']).toBe('');
+    expect(apiJson['KHULNASOFT']).toBe('1');
+    expect(apiJson['KHULNASOFT_URL']).toBe(localhostNoProtocol);
+    expect(apiJson['KHULNASOFT_ENV']).toBe('development');
+    expect(apiJson['KHULNASOFT_REGION']).toBe('dev1');
+    expect(apiJson['KHULNASOFT_GIT_PROVIDER']).toBe('');
+    expect(apiJson['KHULNASOFT_GIT_REPO_SLUG']).toBe('');
 
     const homeUrl = localhost[0];
     const homeRes = await fetch(homeUrl);
     const homeJson = await homeRes.json();
-    expect(homeJson['VERCEL']).toBe('1');
-    expect(homeJson['VERCEL_URL']).toBe(localhostNoProtocol);
-    expect(homeJson['VERCEL_ENV']).toBe('development');
-    expect(homeJson['VERCEL_REGION']).toBe(undefined);
-    expect(homeJson['VERCEL_GIT_PROVIDER']).toBe('');
-    expect(homeJson['VERCEL_GIT_REPO_SLUG']).toBe('');
+    expect(homeJson['KHULNASOFT']).toBe('1');
+    expect(homeJson['KHULNASOFT_URL']).toBe(localhostNoProtocol);
+    expect(homeJson['KHULNASOFT_ENV']).toBe('development');
+    expect(homeJson['KHULNASOFT_REGION']).toBe(undefined);
+    expect(homeJson['KHULNASOFT_GIT_PROVIDER']).toBe('');
+    expect(homeJson['KHULNASOFT_GIT_REPO_SLUG']).toBe('');
 
     // sleep before kill, otherwise the dev process doesn't clean up and exit properly
     await sleep(100);

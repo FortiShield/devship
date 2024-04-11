@@ -12,7 +12,7 @@ _Live Example: https://zola-template.vercel.app_
 
 ### Deploying From Your Terminal
 
-You can deploy your new Zola project with a single command from your terminal using [Vercel CLI](https://vercel.com/download):
+You can deploy your new Zola project with a single command from your terminal using [Khulnasoft CLI](https://vercel.com/download):
 
 ```shell
 $ vercel

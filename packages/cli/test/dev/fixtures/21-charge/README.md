@@ -4,7 +4,7 @@ This directory is a brief example of a [Charge.js](https://charge.js.org) site t
 
 ## How we created this example
 
-To get started with Charge.js on Vercel, you can use the [Vercel CLI](https://vercel.com/download) to initialize the project:
+To get started with Charge.js on Vercel, you can use the [Khulnasoft CLI](https://vercel.com/download) to initialize the project:
 
 ```shell
 $ vercel init charge

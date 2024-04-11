@@ -30,7 +30,7 @@ async function main() {
     if (task.dependencies.length > 0) {
       for (const dependency of task.dependencies) {
         const name = dependency.split('#')[0];
-        const tarballUrl = `https://${process.env.VERCEL_URL}/tarballs/${name}.tgz`;
+        const tarballUrl = `https://${process.env.KHULNASOFT_URL}/tarballs/${name}.tgz`;
         if (packageObj.dependencies && name in packageObj.dependencies) {
           packageObj.dependencies[name] = tarballUrl;
         }

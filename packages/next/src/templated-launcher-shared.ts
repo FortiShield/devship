@@ -4,7 +4,7 @@
 // launcher. This mimics `yarn workspace run` behavior.
 process.chdir(__dirname);
 
-const region = process.env.VERCEL_REGION || process.env.NOW_REGION;
+const region = process.env.KHULNASOFT_REGION || process.env.NOW_REGION;
 
 if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = region === 'dev1' ? 'development' : 'production';

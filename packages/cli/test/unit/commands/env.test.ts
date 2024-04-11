@@ -218,7 +218,7 @@ describe('env', () => {
 
       const productionFileHasVercelEnv = rawDevEnv
         .toString()
-        .includes('VERCEL_ENV="development"');
+        .includes('KHULNASOFT_ENV="development"');
       expect(productionFileHasVercelEnv).toBeTruthy();
     });
 
@@ -428,7 +428,7 @@ describe('env', () => {
       expect(gitignoreAfter).toBe(gitignoreBefore);
     });
 
-    it('should not pull VERCEL_ANALYTICS_ID', async () => {
+    it('should not pull KHULNASOFT_ANALYTICS_ID', async () => {
       useUser();
       useTeams('team_dummy');
       useProject(
@@ -445,7 +445,7 @@ describe('env', () => {
           {
             type: 'encrypted',
             id: '781dt89g8r2h789g',
-            key: 'VERCEL_ANALYTICS_ID',
+            key: 'KHULNASOFT_ANALYTICS_ID',
             value: 'VC-ANALYTICS-ID',
             target: ['development'],
             configurationId: null,
@@ -466,7 +466,7 @@ describe('env', () => {
 
       const rawDevEnv = await fs.readFile(path.join(cwd, '.env.local'));
 
-      expect(rawDevEnv.toString().includes('VERCEL_ANALYTICS_ID')).toBeFalsy();
+      expect(rawDevEnv.toString().includes('KHULNASOFT_ANALYTICS_ID')).toBeFalsy();
     });
   });
 });

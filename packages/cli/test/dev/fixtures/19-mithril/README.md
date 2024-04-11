@@ -4,7 +4,7 @@ This directory is a brief example of a [Mithril](https://mithril.js.org/) app th
 
 ## How we created this example
 
-To get started with Mithril on Vercel, you can use the [Vercel CLI](https://vercel.com/download) to initialize the project:
+To get started with Mithril on Vercel, you can use the [Khulnasoft CLI](https://vercel.com/download) to initialize the project:
 
 ```shell
 $ vercel init mithril

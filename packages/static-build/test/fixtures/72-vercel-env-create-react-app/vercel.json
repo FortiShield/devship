@@ -7,5 +7,5 @@
       "config": { "zeroConfig": true, "framework": "create-react-app" }
     }
   ],
-  "probes": [{ "path": "/index.json", "mustContain": "REACT_APP_VERCEL_URL" }]
+  "probes": [{ "path": "/index.json", "mustContain": "REACT_APP_KHULNASOFT_URL" }]
 }

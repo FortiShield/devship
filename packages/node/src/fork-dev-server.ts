@@ -50,9 +50,9 @@ export function forkDevServer(options: {
     cwd: options.workPath,
     execArgv: [],
     env: cloneEnv(process.env, options.meta.env, {
-      VERCEL_DEV_ENTRYPOINT: options.entrypoint,
-      VERCEL_DEV_CONFIG: JSON.stringify(options.config),
-      VERCEL_DEV_BUILD_ENV: JSON.stringify(options.meta.buildEnv || {}),
+      KHULNASOFT_DEV_ENTRYPOINT: options.entrypoint,
+      KHULNASOFT_DEV_CONFIG: JSON.stringify(options.config),
+      KHULNASOFT_DEV_BUILD_ENV: JSON.stringify(options.meta.buildEnv || {}),
       TS_NODE_TRANSPILE_ONLY: '1',
       TS_NODE_COMPILER_OPTIONS: options.tsConfig?.compilerOptions
         ? JSON.stringify(options.tsConfig.compilerOptions)

@@ -2,7 +2,7 @@ import { delimiter, join } from 'path';
 import { PackageJson, spawnAsync } from '@khulnasoft/build-utils';
 import fs from 'fs-extra';
 import { CantParseJSONFile } from '../errors-ts';
-import { VERCEL_DIR } from '../projects/link';
+import { KHULNASOFT_DIR } from '../projects/link';
 import readJSONFile from '../read-json-file';
 
 export async function initCorepack({
@@ -31,7 +31,7 @@ export async function initCorepack({
     console.log(
       `Detected ENABLE_EXPERIMENTAL_COREPACK=1 and "${pkg.packageManager}" in package.json`
     );
-    const corepackRootDir = join(repoRootPath, VERCEL_DIR, 'cache', 'corepack');
+    const corepackRootDir = join(repoRootPath, KHULNASOFT_DIR, 'cache', 'corepack');
     const corepackHomeDir = join(corepackRootDir, 'home');
     const corepackShimDir = join(corepackRootDir, 'shim');
     await fs.mkdirp(corepackHomeDir);

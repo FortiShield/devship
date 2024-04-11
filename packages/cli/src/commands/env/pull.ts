@@ -26,7 +26,7 @@ import { isErrnoException } from '@khulnasoft/error-utils';
 import { addToGitIgnore } from '../../util/link/add-to-gitignore';
 import JSONparse from 'json-parse-better-errors';
 
-const CONTENTS_PREFIX = '# Created by Vercel CLI\n';
+const CONTENTS_PREFIX = '# Created by Khulnasoft CLI\n';
 
 type Options = {
   '--debug': boolean;
@@ -56,9 +56,9 @@ function tryReadHeadSync(path: string, length: number) {
 }
 
 const VARIABLES_TO_IGNORE = [
-  'VERCEL_ANALYTICS_ID',
-  'VERCEL_SPEED_INSIGHTS_ID',
-  'VERCEL_WEB_ANALYTICS_ID',
+  'KHULNASOFT_ANALYTICS_ID',
+  'KHULNASOFT_SPEED_INSIGHTS_ID',
+  'KHULNASOFT_WEB_ANALYTICS_ID',
 ];
 
 export default async function pull(

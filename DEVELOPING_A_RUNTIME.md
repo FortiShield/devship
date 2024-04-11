@@ -117,13 +117,13 @@ export async function shouldServe(options: ShouldServeOptions) {
 }
 ```
 
-If this function is not defined, Vercel CLI will use the [default
+If this function is not defined, Khulnasoft CLI will use the [default
 implementation](https://github.com/khulnasoft/devship/blob/52994bfe26c5f4f179bdb49783ee57ce19334631/packages/now-build-utils/src/should-serve.ts).
 
 ### `startDevServer()`
 
 An **optional** exported function that is only used by `vercel dev` in [Vercel
-CLI](https://vercel.com/download). If this function is defined, Vercel CLI will
+CLI](https://vercel.com/download). If this function is defined, Khulnasoft CLI will
 **not** invoke the `build()` function, and instead invoke this function for every
 HTTP request. It is an opportunity to provide an optimized development experience
 rather than going through the entire `build()` process that is used in production.

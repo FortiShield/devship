@@ -315,7 +315,7 @@ async function compile(
       !file.match(libPathRegEx)
   );
   const babelCompileEnabled =
-    !isEdgeFunction || process.env.VERCEL_EDGE_NO_BABEL !== '1';
+    !isEdgeFunction || process.env.KHULNASOFT_EDGE_NO_BABEL !== '1';
   if (babelCompileEnabled && esmPaths.length) {
     const babelCompile = require('./babel').compile;
     for (const path of esmPaths) {

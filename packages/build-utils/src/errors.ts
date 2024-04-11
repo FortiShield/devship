@@ -62,14 +62,14 @@ export function getPrettyError(obj: {
     }
 
     return new NowBuildError({
-      code: 'INVALID_VERCEL_CONFIG',
+      code: 'INVALID_KHULNASOFT_CONFIG',
       message: message,
       link: prop ? `${docsUrl}#${prop.toLowerCase()}` : docsUrl,
       action: 'View Documentation',
     });
   } catch (e) {
     return new NowBuildError({
-      code: 'INVALID_VERCEL_CONFIG',
+      code: 'INVALID_KHULNASOFT_CONFIG',
       message: `Failed to validate configuration.`,
       link: docsUrl,
       action: 'View Documentation',

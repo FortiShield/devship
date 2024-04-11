@@ -53,7 +53,7 @@ import {
   ProjectLinkAndSettings,
   readProjectSettings,
 } from '../../util/projects/project-settings';
-import { getProjectLink, VERCEL_DIR } from '../../util/projects/link';
+import { getProjectLink, KHULNASOFT_DIR } from '../../util/projects/link';
 import confirm from '../../util/input/confirm';
 import { emoji, prependEmoji } from '../../util/emoji';
 import stamp from '../../util/output/stamp';
@@ -117,7 +117,7 @@ export default async function main(client: Client): Promise<number> {
   const { output } = client;
 
   // Ensure that `vc build` is not being invoked recursively
-  if (process.env.__VERCEL_BUILD_RUNNING) {
+  if (process.env.__KHULNASOFT_BUILD_RUNNING) {
     output.error(
       `${cmd(
         `${cli.packageName} build`
@@ -130,7 +130,7 @@ export default async function main(client: Client): Promise<number> {
     );
     return 1;
   } else {
-    process.env.__VERCEL_BUILD_RUNNING = '1';
+    process.env.__KHULNASOFT_BUILD_RUNNING = '1';
   }
 
   // Parse CLI args
@@ -167,7 +167,7 @@ export default async function main(client: Client): Promise<number> {
   // TODO: read project settings from the API, fall back to local `project.json` if that fails
 
   // Read project settings, and pull them from Vercel if necessary
-  const vercelDir = join(cwd, projectRootDirectory, VERCEL_DIR);
+  const vercelDir = join(cwd, projectRootDirectory, KHULNASOFT_DIR);
   let project = await readProjectSettings(vercelDir);
   const isTTY = process.stdin.isTTY;
   while (!project?.settings) {
@@ -228,13 +228,13 @@ export default async function main(client: Client): Promise<number> {
     argv: scrubArgv(process.argv),
   };
 
-  const envToUnset = new Set<string>(['VERCEL', 'NOW_BUILDER']);
+  const envToUnset = new Set<string>(['KHULNASOFT', 'NOW_BUILDER']);
 
   try {
     const envPath = join(
       cwd,
       projectRootDirectory,
-      VERCEL_DIR,
+      KHULNASOFT_DIR,
       `.env.${target}.local`
     );
     // TODO (maybe?): load env vars from the API, fall back to the local file if that fails
@@ -255,12 +255,12 @@ export default async function main(client: Client): Promise<number> {
 
     // For Vercel Legacy speed Insights support
     if (project.settings.analyticsId) {
-      envToUnset.add('VERCEL_ANALYTICS_ID');
-      process.env.VERCEL_ANALYTICS_ID = project.settings.analyticsId;
+      envToUnset.add('KHULNASOFT_ANALYTICS_ID');
+      process.env.KHULNASOFT_ANALYTICS_ID = project.settings.analyticsId;
     }
 
     // Some build processes use these env vars to platform detect Vercel
-    process.env.VERCEL = '1';
+    process.env.KHULNASOFT = '1';
     process.env.NOW_BUILDER = '1';
 
     await doBuild(client, project, buildsJson, cwd, outputDir);
@@ -333,7 +333,7 @@ async function doBuild(
   };
 
   if (
-    process.env.VERCEL_BUILD_MONOREPO_SUPPORT === '1' &&
+    process.env.KHULNASOFT_BUILD_MONOREPO_SUPPORT === '1' &&
     pkg?.scripts?.['khulnasoft-build'] === undefined &&
     projectSettings.rootDirectory !== null &&
     projectSettings.rootDirectory !== '.'
@@ -491,7 +491,7 @@ async function doBuild(
         const value = projectSettings[key];
         if (typeof value === 'string') {
           const envKey =
-            `VERCEL_PROJECT_SETTINGS_` +
+            `KHULNASOFT_PROJECT_SETTINGS_` +
             key.replace(/[A-Z]/g, letter => `_${letter}`).toUpperCase();
           process.env[envKey] = value;
           output.debug(`Setting env ${envKey} to "${value}"`);

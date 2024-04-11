@@ -12,7 +12,7 @@
 
 Vercel's frontend cloud gives developers frameworks, workflows, and infrastructure to build a faster, more personalized web.
 
-To install the latest version of Vercel CLI, run this command:
+To install the latest version of Khulnasoft CLI, run this command:
 
 ```bash
 npm i -g vercel
@@ -30,15 +30,15 @@ Finally, [connect your Git repository to Vercel](https://khulnasoft.com/docs/git
 
 ## Documentation
 
-For details on how to use Vercel CLI, check out our [documentation](https://khulnasoft.com/docs/cli).
+For details on how to use Khulnasoft CLI, check out our [documentation](https://khulnasoft.com/docs/cli).
 
 ## Local Development
 
-To develop Vercel CLI, first check out the source code, install dependencies, and build all packages:
+To develop Khulnasoft CLI, first check out the source code, install dependencies, and build all packages:
 
 ```bash
 git clone https://github.com/khulnasoft/devship.git
-cd vercel
+cd devship
 pnpm install
 pnpm build
 ```
@@ -51,7 +51,7 @@ cd packages/cli
 
 ### `pnpm dev <cli-commands...>`
 
-From within the `packages/cli` directory, you can use the "dev" script to quickly execute Vercel CLI from its TypeScript source code directly (without having to manually compile first). For example:
+From within the `packages/cli` directory, you can use the "dev" script to quickly execute Khulnasoft CLI from its TypeScript source code directly (without having to manually compile first). For example:
 
 ```bash
 pnpm dev deploy

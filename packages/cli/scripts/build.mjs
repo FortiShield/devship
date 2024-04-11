@@ -41,8 +41,8 @@ await esbuild({
 // Copy a few static files into `dist`
 const distRoot = new URL('dist/', repoRoot);
 copyFileSync(
-  new URL('src/util/projects/VERCEL_DIR_README.txt', repoRoot),
-  new URL('VERCEL_DIR_README.txt', distRoot)
+  new URL('src/util/projects/KHULNASOFT_DIR_README.txt', repoRoot),
+  new URL('KHULNASOFT_DIR_README.txt', distRoot)
 );
 copyFileSync(
   new URL('src/util/dev/builder-worker.js', repoRoot),

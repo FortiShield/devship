@@ -3,7 +3,7 @@ import { Command } from '../help';
 export const deployCommand: Command = {
   name: 'deploy',
   description:
-    'Deploy your project to Vercel. The `deploy` command is the default command for the Vercel CLI, and can be omitted (`vc deploy my-app` equals `vc my-app`).',
+    'Deploy your project to Vercel. The `deploy` command is the default command for the Khulnasoft CLI, and can be omitted (`vc deploy my-app` equals `vc my-app`).',
   arguments: [
     {
       name: 'project-path',

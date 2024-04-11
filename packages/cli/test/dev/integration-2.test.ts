@@ -223,8 +223,8 @@ test(
       expect(env.NOW_REGION).toMatch(/^[a-z]{3}\d$/);
       if (isDev) {
         // Only dev is tested because in production these are opt-in.
-        expect(env.VERCEL_URL).toBe(host);
-        expect(env.VERCEL_REGION).toBe('dev1');
+        expect(env.KHULNASOFT_URL).toBe(host);
+        expect(env.KHULNASOFT_REGION).toBe('dev1');
       }
     });
   })

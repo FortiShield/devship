@@ -1,8 +1,8 @@
-const entrypoint = process.env.VERCEL_DEV_ENTRYPOINT;
-delete process.env.VERCEL_DEV_ENTRYPOINT;
+const entrypoint = process.env.KHULNASOFT_DEV_ENTRYPOINT;
+delete process.env.KHULNASOFT_DEV_ENTRYPOINT;
 
 if (!entrypoint) {
-  throw new Error('`VERCEL_DEV_ENTRYPOINT` must be defined');
+  throw new Error('`KHULNASOFT_DEV_ENTRYPOINT` must be defined');
 }
 
 import { join } from 'path';
@@ -82,11 +82,11 @@ let handlerEventError: Error;
 let onExit: (() => Promise<void>) | undefined;
 
 async function main() {
-  const config = JSON.parse(process.env.VERCEL_DEV_CONFIG || '{}');
-  delete process.env.VERCEL_DEV_CONFIG;
+  const config = JSON.parse(process.env.KHULNASOFT_DEV_CONFIG || '{}');
+  delete process.env.KHULNASOFT_DEV_CONFIG;
 
-  const buildEnv = JSON.parse(process.env.VERCEL_DEV_BUILD_ENV || '{}');
-  delete process.env.VERCEL_DEV_BUILD_ENV;
+  const buildEnv = JSON.parse(process.env.KHULNASOFT_DEV_BUILD_ENV || '{}');
+  delete process.env.KHULNASOFT_DEV_BUILD_ENV;
 
   const shouldAddHelpers = !(
     config.helpers === false || buildEnv.NODEJS_HELPERS === '0'

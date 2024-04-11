@@ -117,7 +117,7 @@ async function exec(directory, args = []) {
   const token = await fetchCachedToken();
   console.log(
     `exec() ${binaryPath} dev ${directory} -t ***${
-      process.env.VERCEL_TEAM_ID ? ' --scope ***' : ''
+      process.env.KHULNASOFT_TEAM_ID ? ' --scope ***' : ''
     } ${args.join(' ')}`
   );
   return execa(
@@ -127,15 +127,15 @@ async function exec(directory, args = []) {
       directory,
       '-t',
       token,
-      ...(process.env.VERCEL_TEAM_ID
-        ? ['--scope', process.env.VERCEL_TEAM_ID]
+      ...(process.env.KHULNASOFT_TEAM_ID
+        ? ['--scope', process.env.KHULNASOFT_TEAM_ID]
         : []),
       ...args,
     ],
     {
       reject: false,
       shell: true,
-      env: { __VERCEL_SKIP_DEV_CMD: 1 },
+      env: { __KHULNASOFT_SKIP_DEV_CMD: 1 },
     }
   );
 }
@@ -208,7 +208,7 @@ async function testFixture(directory, opts = {}, args = []) {
   const token = await fetchCachedToken();
   console.log(
     `testFixture() ${binaryPath} dev ${directory} -t ***${
-      process.env.VERCEL_TEAM_ID ? ' --scope ***' : ''
+      process.env.KHULNASOFT_TEAM_ID ? ' --scope ***' : ''
     } -l ${port} ${args.join(' ')}`
   );
   const dev = execa(
@@ -218,8 +218,8 @@ async function testFixture(directory, opts = {}, args = []) {
       directory,
       '-t',
       token,
-      ...(process.env.VERCEL_TEAM_ID
-        ? ['--scope', process.env.VERCEL_TEAM_ID]
+      ...(process.env.KHULNASOFT_TEAM_ID
+        ? ['--scope', process.env.KHULNASOFT_TEAM_ID]
         : []),
       '-l',
       String(port),
@@ -230,7 +230,7 @@ async function testFixture(directory, opts = {}, args = []) {
       shell: true,
       stdio: 'pipe',
       ...opts,
-      env: { ...opts.env, __VERCEL_SKIP_DEV_CMD: 1 },
+      env: { ...opts.env, __KHULNASOFT_SKIP_DEV_CMD: 1 },
     }
   );
 
@@ -332,8 +332,8 @@ function testFixtureStdio(
           [
             '-t',
             token,
-            ...(process.env.VERCEL_TEAM_ID
-              ? ['--scope', process.env.VERCEL_TEAM_ID]
+            ...(process.env.KHULNASOFT_TEAM_ID
+              ? ['--scope', process.env.KHULNASOFT_TEAM_ID]
               : []),
             'link',
             '--yes',
@@ -351,8 +351,8 @@ function testFixtureStdio(
           const { projectId } = await fs.readJson(projectJsonPath);
           const res = await fetchWithRetry(
             `https://api.vercel.com/v2/projects/${projectId}${
-              process.env.VERCEL_TEAM_ID
-                ? `?teamId=${process.env.VERCEL_TEAM_ID}`
+              process.env.KHULNASOFT_TEAM_ID
+                ? `?teamId=${process.env.KHULNASOFT_TEAM_ID}`
                 : ''
             }`,
             {
@@ -374,14 +374,14 @@ function testFixtureStdio(
           [
             '-t',
             token,
-            ...(process.env.VERCEL_TEAM_ID
-              ? ['--scope', process.env.VERCEL_TEAM_ID]
+            ...(process.env.KHULNASOFT_TEAM_ID
+              ? ['--scope', process.env.KHULNASOFT_TEAM_ID]
               : []),
             'deploy',
-            ...(process.env.VERCEL_CLI_VERSION
+            ...(process.env.KHULNASOFT_CLI_VERSION
               ? [
                   '--build-env',
-                  `VERCEL_CLI_VERSION=${process.env.VERCEL_CLI_VERSION}`,
+                  `KHULNASOFT_CLI_VERSION=${process.env.KHULNASOFT_CLI_VERSION}`,
                 ]
               : []),
             '--public',
@@ -432,11 +432,11 @@ function testFixtureStdio(
 
       console.log(
         `testFixtureStdio() ${binaryPath} dev -l ${port} -t ***${
-          process.env.VERCEL_TEAM_ID ? ' --scope ***' : ''
+          process.env.KHULNASOFT_TEAM_ID ? ' --scope ***' : ''
         } --debug`
       );
       const env = skipDeploy
-        ? { ...process.env, __VERCEL_SKIP_DEV_CMD: 1 }
+        ? { ...process.env, __KHULNASOFT_SKIP_DEV_CMD: 1 }
         : process.env;
       dev = execa(
         binaryPath,
@@ -446,8 +446,8 @@ function testFixtureStdio(
           port,
           '-t',
           token,
-          ...(process.env.VERCEL_TEAM_ID
-            ? ['--scope', process.env.VERCEL_TEAM_ID]
+          ...(process.env.KHULNASOFT_TEAM_ID
+            ? ['--scope', process.env.KHULNASOFT_TEAM_ID]
             : []),
           '--debug',
         ],

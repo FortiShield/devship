@@ -200,7 +200,7 @@ export async function detectFileSystemAPI({
         return {
           metadata,
           fsApiBuilder: null,
-          reason: `Detected legacy Vercel CLI version "${vercelCliVersion}" in package.json. Please run \`npm i vercel@latest\` to upgrade.`,
+          reason: `Detected legacy Khulnasoft CLI version "${vercelCliVersion}" in package.json. Please run \`npm i vercel@latest\` to upgrade.`,
         };
       }
     }

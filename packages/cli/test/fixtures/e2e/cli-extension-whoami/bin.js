@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 const { get } = require('http');
 
-const { VERCEL_API } = process.env;
+const { KHULNASOFT_API } = process.env;
 console.log('Hello from a CLI extension!');
-console.log(`VERCEL_API: ${VERCEL_API}`);
+console.log(`KHULNASOFT_API: ${KHULNASOFT_API}`);
 
-get(`${VERCEL_API}/v2/user`, async (res) => {
+get(`${KHULNASOFT_API}/v2/user`, async (res) => {
     let body = '';
     res.setEncoding('utf8');
     for await (const chunk of res) {

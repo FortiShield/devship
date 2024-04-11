@@ -210,7 +210,7 @@ afterAll(async () => {
   }
 
   // Make sure the token gets revoked unless it's passed in via environment
-  if (!process.env.VERCEL_TOKEN) {
+  if (!process.env.KHULNASOFT_TOKEN) {
     await execCli(binaryPath, ['logout']);
   }
 
@@ -422,9 +422,9 @@ test('domains inspect', async () => {
 
 // eslint-disable-next-line jest/no-disabled-tests
 test('try to purchase a domain', async () => {
-  if (process.env.VERCEL_TOKEN || process.env.NOW_TOKEN) {
+  if (process.env.KHULNASOFT_TOKEN || process.env.NOW_TOKEN) {
     console.log(
-      'Skipping test `try to purchase a domain` because a personal VERCEL_TOKEN was provided.'
+      'Skipping test `try to purchase a domain` because a personal KHULNASOFT_TOKEN was provided.'
     );
     return;
   }
@@ -1316,7 +1316,7 @@ test('should invoke CLI extension', async () => {
   const output = await execCli(binaryPath, ['mywhoami'], { cwd: fixture });
   const formatted = formatOutput(output);
   expect(output.stdout, formatted).toContain('Hello from a CLI extension!');
-  expect(output.stdout, formatted).toContain('VERCEL_API: http://127.0.0.1:');
+  expect(output.stdout, formatted).toContain('KHULNASOFT_API: http://127.0.0.1:');
   expect(output.stdout, formatted).toContain(`Username: ${contextName}`);
 });
 

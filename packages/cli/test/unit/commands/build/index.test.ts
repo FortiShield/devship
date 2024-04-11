@@ -17,7 +17,7 @@ const fixture = (name: string) =>
 
 describe('build', () => {
   beforeEach(() => {
-    delete process.env.__VERCEL_BUILD_RUNNING;
+    delete process.env.__KHULNASOFT_BUILD_RUNNING;
   });
 
   it('should build with `@khulnasoft/static`', async () => {
@@ -787,7 +787,7 @@ describe('build', () => {
     expect(files.sort()).toEqual(['index.html', 'package.json']);
   });
 
-  it('should set `VERCEL_ANALYTICS_ID` environment variable', async () => {
+  it('should set `KHULNASOFT_ANALYTICS_ID` environment variable', async () => {
     const cwd = fixture('vercel-analytics');
     const output = join(cwd, '.vercel/output');
     client.cwd = cwd;
@@ -795,7 +795,7 @@ describe('build', () => {
     expect(exitCode).toEqual(0);
 
     const env = await fs.readJSON(join(output, 'static', 'env.json'));
-    expect(Object.keys(env).includes('VERCEL_ANALYTICS_ID')).toEqual(true);
+    expect(Object.keys(env).includes('KHULNASOFT_ANALYTICS_ID')).toEqual(true);
   });
 
   it('should load environment variables from `.vercel/.env.preview.local`', async () => {
@@ -881,7 +881,7 @@ describe('build', () => {
     expect(contents.trim()).toEqual('3');
   });
 
-  it('should set VERCEL_PROJECT_SETTINGS_ environment variables', async () => {
+  it('should set KHULNASOFT_PROJECT_SETTINGS_ environment variables', async () => {
     const cwd = fixture('project-settings-env-vars');
     const output = join(cwd, '.vercel/output');
     client.cwd = cwd;
@@ -890,10 +890,10 @@ describe('build', () => {
 
     const contents = await fs.readJSON(join(output, 'static/env.json'));
     expect(contents).toMatchObject({
-      VERCEL_PROJECT_SETTINGS_BUILD_COMMAND: `node build.cjs`,
-      VERCEL_PROJECT_SETTINGS_INSTALL_COMMAND: '',
-      VERCEL_PROJECT_SETTINGS_OUTPUT_DIRECTORY: 'out',
-      VERCEL_PROJECT_SETTINGS_NODE_VERSION: '18.x',
+      KHULNASOFT_PROJECT_SETTINGS_BUILD_COMMAND: `node build.cjs`,
+      KHULNASOFT_PROJECT_SETTINGS_INSTALL_COMMAND: '',
+      KHULNASOFT_PROJECT_SETTINGS_OUTPUT_DIRECTORY: 'out',
+      KHULNASOFT_PROJECT_SETTINGS_NODE_VERSION: '18.x',
     });
   });
 
@@ -936,7 +936,7 @@ describe('build', () => {
         'Invalid vercel.json - `rewrites[2]` should NOT have additional property `src`. Did you mean `source`?',
       stack: expect.stringContaining('at Module.validateConfig'),
       hideStackTrace: true,
-      code: 'INVALID_VERCEL_CONFIG',
+      code: 'INVALID_KHULNASOFT_CONFIG',
       link: 'https://khulnasoft.com/docs/concepts/projects/project-configuration#rewrites',
       action: 'View Documentation',
     });
@@ -984,7 +984,7 @@ describe('build', () => {
     let output: string;
 
     beforeAll(async function () {
-      delete process.env.__VERCEL_BUILD_RUNNING;
+      delete process.env.__KHULNASOFT_BUILD_RUNNING;
 
       const cwd = fixture('import-from-main-keys');
       output = join(cwd, '.vercel/output');
@@ -1096,7 +1096,7 @@ describe('build', () => {
     const output = join(cwd, '.vercel/output');
     client.cwd = cwd;
     let exitCode = await build(client);
-    delete process.env.__VERCEL_BUILD_RUNNING;
+    delete process.env.__KHULNASOFT_BUILD_RUNNING;
     expect(exitCode).toEqual(0);
 
     let config = await fs.readJSON(join(output, 'config.json'));
@@ -1197,7 +1197,7 @@ describe('build', () => {
     client.setArgv('build', '--yes');
     let exitCode = await build(client);
     expect(exitCode).toEqual(0);
-    delete process.env.__VERCEL_BUILD_RUNNING;
+    delete process.env.__KHULNASOFT_BUILD_RUNNING;
 
     let files = await fs.readdir(join(output, 'static'));
     expect(files.sort()).toEqual(['index.txt']);
@@ -1219,7 +1219,7 @@ describe('build', () => {
     client.setArgv('build', '--yes');
     exitCode = await build(client);
     expect(exitCode).toEqual(0);
-    delete process.env.__VERCEL_BUILD_RUNNING;
+    delete process.env.__KHULNASOFT_BUILD_RUNNING;
 
     files = await fs.readdir(join(output, 'static'));
     expect(files.sort()).toEqual(['index.txt']);
@@ -1241,7 +1241,7 @@ describe('build', () => {
     client.setArgv('build', '--yes');
     exitCode = await build(client);
     expect(exitCode).toEqual(0);
-    delete process.env.__VERCEL_BUILD_RUNNING;
+    delete process.env.__KHULNASOFT_BUILD_RUNNING;
 
     files = await fs.readdir(join(output, 'static'));
     expect(files.sort()).toEqual(['index.txt']);

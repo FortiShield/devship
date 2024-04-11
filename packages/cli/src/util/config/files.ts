@@ -12,9 +12,9 @@ import { VercelConfig } from '../dev/types';
 import { AuthConfig, GlobalConfig } from '@khulnasoft-internals/types';
 import { isErrnoException, isError } from '@khulnasoft/error-utils';
 
-const VERCEL_DIR = getGlobalPathConfig();
-const CONFIG_FILE_PATH = join(VERCEL_DIR, 'config.json');
-const AUTH_CONFIG_FILE_PATH = join(VERCEL_DIR, 'auth.json');
+const KHULNASOFT_DIR = getGlobalPathConfig();
+const CONFIG_FILE_PATH = join(KHULNASOFT_DIR, 'config.json');
+const AUTH_CONFIG_FILE_PATH = join(KHULNASOFT_DIR, 'auth.json');
 
 // reads "global config" file atomically
 export const readConfigFile = (): GlobalConfig => {

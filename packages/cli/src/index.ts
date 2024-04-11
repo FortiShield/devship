@@ -57,9 +57,9 @@ import { execExtension } from './util/extension/exec';
 import { help } from './args';
 import { updateCurrentTeamAfterLogin } from './util/login/update-current-team-after-login';
 
-const VERCEL_DIR = getGlobalPathConfig();
-const VERCEL_CONFIG_PATH = configFiles.getConfigFilePath();
-const VERCEL_AUTH_CONFIG_PATH = configFiles.getAuthConfigFilePath();
+const KHULNASOFT_DIR = getGlobalPathConfig();
+const KHULNASOFT_CONFIG_PATH = configFiles.getConfigFilePath();
+const KHULNASOFT_AUTH_CONFIG_PATH = configFiles.getAuthConfigFilePath();
 
 const GLOBAL_COMMANDS = new Set(['help']);
 
@@ -179,11 +179,11 @@ const main = async () => {
 
   // Ensure that the Vercel global configuration directory exists
   try {
-    await mkdirp(VERCEL_DIR);
+    await mkdirp(KHULNASOFT_DIR);
   } catch (err: unknown) {
     output.error(
       `An unexpected error occurred while trying to create the global directory "${hp(
-        VERCEL_DIR
+        KHULNASOFT_DIR
       )}" ${errorToString(err)}`
     );
     return 1;
@@ -200,7 +200,7 @@ const main = async () => {
       } catch (err: unknown) {
         output.error(
           `An unexpected error occurred while trying to save the config to "${hp(
-            VERCEL_CONFIG_PATH
+            KHULNASOFT_CONFIG_PATH
           )}" ${errorToString(err)}`
         );
         return 1;
@@ -208,7 +208,7 @@ const main = async () => {
     } else {
       output.error(
         `An unexpected error occurred while trying to read the config in "${hp(
-          VERCEL_CONFIG_PATH
+          KHULNASOFT_CONFIG_PATH
         )}" ${errorToString(err)}`
       );
       return 1;
@@ -226,7 +226,7 @@ const main = async () => {
       } catch (err: unknown) {
         output.error(
           `An unexpected error occurred while trying to write the auth config to "${hp(
-            VERCEL_AUTH_CONFIG_PATH
+            KHULNASOFT_AUTH_CONFIG_PATH
           )}" ${errorToString(err)}`
         );
         return 1;
@@ -234,7 +234,7 @@ const main = async () => {
     } else {
       output.error(
         `An unexpected error occurred while trying to read the auth config in "${hp(
-          VERCEL_AUTH_CONFIG_PATH
+          KHULNASOFT_AUTH_CONFIG_PATH
         )}" ${errorToString(err)}`
       );
       return 1;
@@ -344,7 +344,7 @@ const main = async () => {
       configFiles.writeToAuthConfigFile(client.authConfig);
       configFiles.writeToConfigFile(client.config);
 
-      output.debug(`Saved credentials in "${hp(VERCEL_DIR)}"`);
+      output.debug(`Saved credentials in "${hp(KHULNASOFT_DIR)}"`);
     } else {
       output.prettyError({
         message:

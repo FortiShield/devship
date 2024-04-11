@@ -12,7 +12,7 @@ import toHost from './to-host';
 /**
  * Retrieves a deployment by id or URL.
  *
- * @param client - The Vercel CLI client instance.
+ * @param client - The Khulnasoft CLI client instance.
  * @param contextName - The scope context/team name.
  * @param hostOrId - A deployment host or id.
  * @returns The deployment information.

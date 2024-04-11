@@ -42,7 +42,7 @@ describe('gatsby utilities', () => {
 
   afterEach(() => {
     // clear these after each test so they can be accurately set for each test case
-    delete process.env.VERCEL_ANALYTICS_ID;
+    delete process.env.KHULNASOFT_ANALYTICS_ID;
   });
 
   afterAll(() => {
@@ -56,7 +56,7 @@ describe('gatsby utilities', () => {
   });
 
   it('should not inject builder plugin when gatsby version is <v4', async () => {
-    process.env.VERCEL_ANALYTICS_ID = '1';
+    process.env.KHULNASOFT_ANALYTICS_ID = '1';
     const fixture = await prepareFixture(path.join(fixturesPath, 'gatsby-v3'));
     const version = await detectVersion(fixture);
     await injectPlugins(version, fixture);
@@ -70,7 +70,7 @@ describe('gatsby utilities', () => {
   });
 
   it('should inject plugins and create gatsby-node.js and gatsby-config.js', async () => {
-    process.env.VERCEL_ANALYTICS_ID = '1';
+    process.env.KHULNASOFT_ANALYTICS_ID = '1';
     const fixture = await prepareFixture(path.join(fixturesPath, 'gatsby-v4'));
     const version = await detectVersion(fixture);
     await injectPlugins(version, fixture);
@@ -89,7 +89,7 @@ describe('gatsby utilities', () => {
   });
 
   it('should inject builder plugin and update gatsby-node.js and gatsby-config.js', async () => {
-    process.env.VERCEL_ANALYTICS_ID = '1';
+    process.env.KHULNASOFT_ANALYTICS_ID = '1';
     const fixture = await prepareFixture(
       path.join(fixturesPath, 'gatsby-v4-existing-files-js')
     );
@@ -164,7 +164,7 @@ describe('gatsby utilities', () => {
   });
 
   it('should inject builder plugin and update gatsby-node.ts and gatsby-config.ts', async () => {
-    process.env.VERCEL_ANALYTICS_ID = '1';
+    process.env.KHULNASOFT_ANALYTICS_ID = '1';
     const fixture = await prepareFixture(
       path.join(fixturesPath, 'gatsby-v4-existing-files-ts')
     );
@@ -241,7 +241,7 @@ describe('gatsby utilities', () => {
   });
 
   it('should inject builder plugin and update gatsby-node.mjs and gatsby-config.mjs', async () => {
-    process.env.VERCEL_ANALYTICS_ID = '1';
+    process.env.KHULNASOFT_ANALYTICS_ID = '1';
     const fixture = await prepareFixture(
       path.join(fixturesPath, 'gatsby-v4-existing-files-mjs')
     );

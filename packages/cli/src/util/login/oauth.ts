@@ -84,7 +84,7 @@ async function getVerificationTokenInBand(
           resolve(query);
 
           // Redirect the user's web browser back to
-          // the Vercel CLI login notification page
+          // the Khulnasoft CLI login notification page
           const location = new URL(
             'https://vercel.com/notifications/cli-login-'
           );

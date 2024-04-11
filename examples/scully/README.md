@@ -14,7 +14,7 @@ _Live Example: https://scully-template.vercel.app_
 
 ### How We Created This Example
 
-To get started deploying Scully with Vercel, you can use the [Vercel CLI](https://vercel.com/download) to initialize the project:
+To get started deploying Scully with Vercel, you can use the [Khulnasoft CLI](https://vercel.com/download) to initialize the project:
 
 ```shell
 $ vercel init scully

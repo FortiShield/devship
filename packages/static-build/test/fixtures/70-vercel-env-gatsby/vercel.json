@@ -8,7 +8,7 @@
     }
   ],
   "probes": [
-    { "path": "/index.json", "mustContain": "GATSBY_VERCEL_URL" },
+    { "path": "/index.json", "mustContain": "GATSBY_KHULNASOFT_URL" },
     {
       "path": "/index.json",
       "mustContain": "TURBO_CI_VENDOR_ENV_KEY"
