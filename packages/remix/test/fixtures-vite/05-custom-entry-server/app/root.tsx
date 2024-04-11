@@ -5,7 +5,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@khulnasoft/analytics/react";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

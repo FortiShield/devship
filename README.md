@@ -137,12 +137,12 @@ Run the test:
 pnpm test test/fixtures/00-server-build/index.test.js
 ```
 
-#### @vercel/nft
+#### @khulnasoft/nft
 
-Some of the Builders use `@vercel/nft` to tree-shake files before deployment. If you suspect an error with this tree-shaking mechanism, you can create the following script in your project:
+Some of the Builders use `@khulnasoft/nft` to tree-shake files before deployment. If you suspect an error with this tree-shaking mechanism, you can create the following script in your project:
 
 ```js
-const { nodeFileTrace } = require('@vercel/nft');
+const { nodeFileTrace } = require('@khulnasoft/nft');
 nodeFileTrace(['path/to/entrypoint.js'], {
   ts: true,
   mixedModules: true,
@@ -151,7 +151,7 @@ nodeFileTrace(['path/to/entrypoint.js'], {
   .then(e => console.error(e));
 ```
 
-When you run this script, you'll see all the imported files. If anything file is missing, the bug is in [@vercel/nft](https://github.com/vercel/nft) and not the Builder.
+When you run this script, you'll see all the imported files. If anything file is missing, the bug is in [@khulnasoft/nft](https://github.com/vercel/nft) and not the Builder.
 
 ### Deploy a Builder with existing project
 

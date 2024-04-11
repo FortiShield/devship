@@ -3,7 +3,7 @@ import { join } from 'path';
 import ini from 'ini';
 import git from 'git-last-commit';
 import { exec } from 'child_process';
-import { GitMetadata, Project } from '@vercel-internals/types';
+import { GitMetadata, Project } from '@khulnasoft-internals/types';
 import { Output } from './output';
 import { errorToString, normalizeError } from '@khulnasoft/error-utils';
 

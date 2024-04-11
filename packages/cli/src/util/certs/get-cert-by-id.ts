@@ -1,4 +1,4 @@
-import type { Cert } from '@vercel-internals/types';
+import type { Cert } from '@khulnasoft-internals/types';
 import Client from '../client';
 import * as ERRORS from '../errors-ts';
 

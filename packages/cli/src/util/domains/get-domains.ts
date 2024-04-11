@@ -1,4 +1,4 @@
-import { Domain, PaginationOptions } from '@vercel-internals/types';
+import { Domain, PaginationOptions } from '@khulnasoft-internals/types';
 import Client from '../client';
 
 type Response = {

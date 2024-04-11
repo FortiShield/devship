@@ -33,7 +33,7 @@ import {
   BuildV2,
   PrepareCache,
 } from '@khulnasoft/build-utils';
-import { nodeFileTrace } from '@vercel/nft';
+import { nodeFileTrace } from '@khulnasoft/nft';
 import { getTransformedRoutes, Route } from '@khulnasoft/routing-utils';
 
 interface RedwoodToml {

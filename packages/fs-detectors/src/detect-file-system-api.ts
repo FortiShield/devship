@@ -216,7 +216,7 @@ export async function detectFileSystemAPI({
   const withTag = tag ? `@${tag}` : '';
 
   const fsApiBuilder = {
-    use: `@vercelruntimes/file-system-api${withTag}`,
+    use: `@khulnasoftruntimes/file-system-api${withTag}`,
     src: '**',
     config: {
       ...config,

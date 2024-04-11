@@ -6,7 +6,7 @@ import { setupUnitFixture } from '../../helpers/setup-unit-fixture';
 import { useDeployment } from '../../mocks/deployment';
 import { useTeams } from '../../mocks/team';
 import { useUser } from '../../mocks/user';
-import { Deployment } from '@vercel-internals/types';
+import { Deployment } from '@khulnasoft-internals/types';
 
 describe('redeploy', () => {
   it('should error if missing deployment url', async () => {

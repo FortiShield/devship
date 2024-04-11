@@ -23,7 +23,7 @@ import type {
   Stdio,
   ReadableTTY,
   PaginationOptions,
-} from '@vercel-internals/types';
+} from '@khulnasoft-internals/types';
 import { sharedPromise } from './promise';
 import { APIError } from './errors-ts';
 import { normalizeError } from '@khulnasoft/error-utils';

@@ -1,4 +1,4 @@
-import type { DNSRecordData } from '@vercel-internals/types';
+import type { DNSRecordData } from '@khulnasoft-internals/types';
 
 export default function parseAddArgs(
   args: string[]

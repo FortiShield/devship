@@ -16,7 +16,7 @@ import selectOrg from '../input/select-org';
 import { addToGitIgnore } from './add-to-gitignore';
 import type Client from '../client';
 import type { Framework } from '@khulnasoft/frameworks';
-import type { Project } from '@vercel-internals/types';
+import type { Project } from '@khulnasoft-internals/types';
 import createProject from '../projects/create-project';
 import { detectProjects } from '../projects/detect-projects';
 import { repoInfoToUrl } from '../git/repo-info-to-url';

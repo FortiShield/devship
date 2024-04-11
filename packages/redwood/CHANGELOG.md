@@ -4,19 +4,19 @@
 
 ### Patch Changes
 
-- bump `@vercel/nft@0.26.4` ([#11155](https://github.com/khulnasoft/devship/pull/11155))
+- bump `@khulnasoft/nft@0.26.4` ([#11155](https://github.com/khulnasoft/devship/pull/11155))
 
 ## 2.0.7
 
 ### Patch Changes
 
-- [node][next][redwood][remix] bump `@vercel/nft@0.26.3` ([#11115](https://github.com/khulnasoft/devship/pull/11115))
+- [node][next][redwood][remix] bump `@khulnasoft/nft@0.26.3` ([#11115](https://github.com/khulnasoft/devship/pull/11115))
 
 ## 2.0.6
 
 ### Patch Changes
 
-- [next][node][redwood][remix] Bump `@vercel/nft@0.26.1` ([#11009](https://github.com/khulnasoft/devship/pull/11009))
+- [next][node][redwood][remix] Bump `@khulnasoft/nft@0.26.1` ([#11009](https://github.com/khulnasoft/devship/pull/11009))
 
 ## 2.0.5
 
@@ -29,15 +29,15 @@
 
 ### Patch Changes
 
-- Revert "[next][node][redwood][remix] Update @vercel/nft (#10540)" ([#10633](https://github.com/khulnasoft/devship/pull/10633))
+- Revert "[next][node][redwood][remix] Update @khulnasoft/nft (#10540)" ([#10633](https://github.com/khulnasoft/devship/pull/10633))
 
-- Update `@vercel/nft` to 0.24.2 ([#10644](https://github.com/khulnasoft/devship/pull/10644))
+- Update `@khulnasoft/nft` to 0.24.2 ([#10644](https://github.com/khulnasoft/devship/pull/10644))
 
 ## 2.0.3
 
 ### Patch Changes
 
-- Update `@vercel/nft` to v0.24.1. ([#10540](https://github.com/khulnasoft/devship/pull/10540))
+- Update `@khulnasoft/nft` to v0.24.1. ([#10540](https://github.com/khulnasoft/devship/pull/10540))
 
 ## 2.0.2
 

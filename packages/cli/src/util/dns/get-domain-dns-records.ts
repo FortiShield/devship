@@ -1,4 +1,4 @@
-import { DNSRecord, PaginationOptions } from '@vercel-internals/types';
+import { DNSRecord, PaginationOptions } from '@khulnasoft-internals/types';
 import { DomainNotFound, isAPIError } from '../errors-ts';
 import { Output } from '../output';
 import Client from '../client';

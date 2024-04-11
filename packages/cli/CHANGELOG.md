@@ -195,11 +195,11 @@
 
 ### Minor Changes
 
-- chore: deprecate next/nuxt/gastby Speed Insights injection in favor of @vercel/speed-insights ([#11048](https://github.com/khulnasoft/devship/pull/11048))
+- chore: deprecate next/nuxt/gastby Speed Insights injection in favor of @khulnasoft/speed-insights ([#11048](https://github.com/khulnasoft/devship/pull/11048))
 
 ### Patch Changes
 
-- fix error when @vercel/analytics is a transitive dependency of the deployed application ([#10892](https://github.com/khulnasoft/devship/pull/10892))
+- fix error when @khulnasoft/analytics is a transitive dependency of the deployed application ([#10892](https://github.com/khulnasoft/devship/pull/10892))
 
 - [cli] Add documentation string for `skip-domain` option ([#11051](https://github.com/khulnasoft/devship/pull/11051))
 
@@ -225,7 +225,7 @@
 - Updated dependencies [[`98040ec24`](https://github.com/khulnasoft/devship/commit/98040ec24e1ee585865d11eb216b6525d39d209e)]:
   - @khulnasoft/build-utils@7.5.0
   - @khulnasoft/static-build@2.0.17
-  - @vercel/hydrogen@1.0.2
+  - @khulnasoft/hydrogen@1.0.2
   - @khulnasoft/remix-builder@2.0.17
   - @khulnasoft/node@3.0.16
 
@@ -304,13 +304,13 @@
 
 ### Patch Changes
 
-- Revert "forbids globally installed @vercel/speed-insights and @vercel/analytics (#10848)" ([#10895](https://github.com/khulnasoft/devship/pull/10895))
+- Revert "forbids globally installed @khulnasoft/speed-insights and @khulnasoft/analytics (#10848)" ([#10895](https://github.com/khulnasoft/devship/pull/10895))
 
 ## 32.6.0
 
 ### Minor Changes
 
-- forbids globally installed @vercel/speed-insights and @vercel/analytics ([#10848](https://github.com/khulnasoft/devship/pull/10848))
+- forbids globally installed @khulnasoft/speed-insights and @khulnasoft/analytics ([#10848](https://github.com/khulnasoft/devship/pull/10848))
 
 ### Patch Changes
 
@@ -383,7 +383,7 @@
 
 ### Minor Changes
 
-- Indicates whether @vercel/speed-insights or @vercel/analytics are used ([#10623](https://github.com/khulnasoft/devship/pull/10623))
+- Indicates whether @khulnasoft/speed-insights or @khulnasoft/analytics are used ([#10623](https://github.com/khulnasoft/devship/pull/10623))
 
 - [cli] update env var validation rule to allow name start with underscore ([#10697](https://github.com/khulnasoft/devship/pull/10697))
 
@@ -494,7 +494,7 @@
 
 ### Patch Changes
 
-- Update @vercel/fun@1.1.0 ([#10477](https://github.com/khulnasoft/devship/pull/10477))
+- Update @khulnasoft/fun@1.1.0 ([#10477](https://github.com/khulnasoft/devship/pull/10477))
 
 - [node] upgrade edge-runtime ([#10451](https://github.com/khulnasoft/devship/pull/10451))
 
@@ -502,7 +502,7 @@
   - @khulnasoft/go@3.0.1
   - @khulnasoft/redwood@2.0.2
   - @khulnasoft/remix-builder@2.0.4
-  - @vercel/hydrogen@1.0.1
+  - @khulnasoft/hydrogen@1.0.1
   - @khulnasoft/static-build@2.0.5
   - @khulnasoft/build-utils@7.2.0
   - @khulnasoft/next@4.0.3
@@ -614,7 +614,7 @@
 - Updated dependencies [[`37f5c6270`](https://github.com/khulnasoft/devship/commit/37f5c6270058336072ca733673ea72dd6c56bd6a), [`09174df6c`](https://github.com/khulnasoft/devship/commit/09174df6cfbe697ea13e75468b9cd3c6ec7ad01c)]:
   - @khulnasoft/build-utils@7.0.0
   - @khulnasoft/go@3.0.0
-  - @vercel/hydrogen@1.0.0
+  - @khulnasoft/hydrogen@1.0.0
   - @khulnasoft/next@4.0.0
   - @khulnasoft/node@3.0.0
   - @khulnasoft/python@4.0.0
@@ -901,7 +901,7 @@
 
 ### Patch Changes
 
-- [cli] vc build ignore '.env\*' & ignore files for '@vercel/static' ([#10056](https://github.com/khulnasoft/devship/pull/10056))
+- [cli] vc build ignore '.env\*' & ignore files for '@khulnasoft/static' ([#10056](https://github.com/khulnasoft/devship/pull/10056))
 
 - [cli] Ensure .npmrc does not contain use-node-version ([#10049](https://github.com/khulnasoft/devship/pull/10049))
 

@@ -21,8 +21,8 @@ import {
 } from 'path';
 import { Project } from 'ts-morph';
 import once from '@tootallnate/once';
-import { nodeFileTrace } from '@vercel/nft';
-import nftResolveDependency from '@vercel/nft/out/resolve-dependency';
+import { nodeFileTrace } from '@khulnasoft/nft';
+import nftResolveDependency from '@khulnasoft/nft/out/resolve-dependency';
 import {
   glob,
   download,

@@ -19,7 +19,7 @@ import {
   scanParentDirs,
 } from '@khulnasoft/build-utils';
 import { getConfig } from '@khulnasoft/static-config';
-import { nodeFileTrace } from '@vercel/nft';
+import { nodeFileTrace } from '@khulnasoft/nft';
 import type {
   BuildV2,
   Files,
@@ -69,14 +69,14 @@ const nodeServerSrcPromise = fs.readFile(
   'utf-8'
 );
 
-// Minimum supported version of the `@vercel/remix` package
+// Minimum supported version of the `@khulnasoft/remix` package
 const VERCEL_REMIX_MIN_VERSION = '1.10.0';
 
 // Minimum supported version of the `@vercel/remix-run-dev` forked compiler
 const REMIX_RUN_DEV_MIN_VERSION = '1.15.0';
 
 // Maximum version of `@vercel/remix-run-dev` fork
-// (and also `@vercel/remix` since they get published at the same time)
+// (and also `@khulnasoft/remix` since they get published at the same time)
 const REMIX_RUN_DEV_MAX_VERSION = remixRunDevForkVersion.slice(
   remixRunDevForkVersion.lastIndexOf('@') + 1
 );
@@ -279,19 +279,19 @@ export const build: BuildV2 = async ({
       join(DEFAULTS_PATH, 'entry.server.jsx'),
       join(appDirectory, 'entry.server.jsx')
     );
-    if (!pkg.dependencies['@vercel/remix']) {
+    if (!pkg.dependencies['@khulnasoft/remix']) {
       // Dependency version resolution logic
-      // 1. Users app is on 1.9.0 -> we install the 1.10.0 (minimum) version of `@vercel/remix`.
+      // 1. Users app is on 1.9.0 -> we install the 1.10.0 (minimum) version of `@khulnasoft/remix`.
       // 2. Users app is on 1.11.0 (a version greater than 1.10.0 and less than the known max
-      //    published version) -> we install the (matching) 1.11.0 version of `@vercel/remix`.
+      //    published version) -> we install the (matching) 1.11.0 version of `@khulnasoft/remix`.
       // 3. Users app is on something greater than our latest version of the fork -> we install
-      //    the latest known published version of `@vercel/remix`.
+      //    the latest known published version of `@khulnasoft/remix`.
       const vercelRemixVersion = resolveSemverMinMax(
         VERCEL_REMIX_MIN_VERSION,
         REMIX_RUN_DEV_MAX_VERSION,
         remixVersion
       );
-      pkg.dependencies['@vercel/remix'] = vercelRemixVersion;
+      pkg.dependencies['@khulnasoft/remix'] = vercelRemixVersion;
       depsModified = true;
     }
   }
@@ -636,7 +636,7 @@ async function createRenderNodeFunction(
     );
   }
 
-  // Trace the handler with `@vercel/nft`
+  // Trace the handler with `@khulnasoft/nft`
   const trace = await nodeFileTrace([handlerPath], {
     base: rootDir,
     processCwd: entrypointDir,
@@ -701,7 +701,7 @@ async function createRenderEdgeFunction(
 
   let remixRunVercelPkgJson: string | undefined;
 
-  // Trace the handler with `@vercel/nft`
+  // Trace the handler with `@khulnasoft/nft`
   const trace = await nodeFileTrace([handlerPath], {
     base: rootDir,
     processCwd: entrypointDir,

@@ -4,7 +4,7 @@ import ms from 'ms';
 import bytes from 'bytes';
 import { delimiter, dirname, join } from 'path';
 import { fork, ChildProcess } from 'child_process';
-import { createFunction } from '@vercel/fun';
+import { createFunction } from '@khulnasoft/fun';
 import {
   Builder,
   BuildOptions,
@@ -409,7 +409,7 @@ export async function getBuildMatches(
   }
 
   const noMatches: Builder[] = [];
-  const builds = vercelConfig.builds || [{ src: '**', use: '@vercel/static' }];
+  const builds = vercelConfig.builds || [{ src: '**', use: '@khulnasoft/static' }];
   const builderSpecs = new Set(builds.map(b => b.use).filter(Boolean));
   const buildersWithPkgs = await importBuilders(builderSpecs, cwd, output);
 

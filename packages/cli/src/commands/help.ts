@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import { LOGO, NAME } from '@vercel-internals/constants';
+import { LOGO, NAME } from '@khulnasoft-internals/constants';
 import Table, { CellOptions } from 'cli-table3';
 import { noBorderChars } from '../util/output/table';
 

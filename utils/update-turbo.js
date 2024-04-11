@@ -35,7 +35,7 @@ module.exports = async ({ github, context }) => {
     'utf-8'
   );
 
-  exec('git', ['config', '--global', 'user.email', 'infra+release@vercel.com']);
+  exec('git', ['config', '--global', 'user.email', 'infra+release@khulnasoft.com']);
   exec('git', ['config', '--global', 'user.name', 'vercel-release-bot']);
   exec('git', ['checkout', '-b', branch]);
   exec('pnpm', ['install', '--lockfile-only']);

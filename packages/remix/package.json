@@ -24,7 +24,7 @@
   "dependencies": {
     "@khulnasoft/static-config": "3.0.0",
     "@khulnasoft/error-utils": "workspace:*",
-    "@vercel/nft": "0.26.4",
+    "@khulnasoft/nft": "0.24.2",
     "ts-morph": "12.0.0"
   },
   "devDependencies": {

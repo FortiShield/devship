@@ -5,7 +5,7 @@ import type {
   Project,
   ProjectEnvTarget,
   ProjectLinked,
-} from '@vercel-internals/types';
+} from '@khulnasoft-internals/types';
 import { emoji, prependEmoji } from '../../util/emoji';
 import getArgs from '../../util/get-args';
 import stamp from '../../util/output/stamp';

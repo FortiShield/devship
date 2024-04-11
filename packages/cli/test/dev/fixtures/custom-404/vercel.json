@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     { "src": "*.js", "use": "@khulnasoft/node" },
-    { "src": "*.html", "use": "@vercel/static" }
+    { "src": "*.html", "use": "@khulnasoft/static" }
   ],
   "routes": [
     { "src": "/error.js", "dest": "/error.js", "status": 404 },

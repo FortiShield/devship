@@ -82,7 +82,7 @@
 
 ### Minor Changes
 
-- chore: deprecate next/nuxt/gastby Speed Insights injection in favor of @vercel/speed-insights ([#11048](https://github.com/khulnasoft/devship/pull/11048))
+- chore: deprecate next/nuxt/gastby Speed Insights injection in favor of @khulnasoft/speed-insights ([#11048](https://github.com/khulnasoft/devship/pull/11048))
 
 ### Patch Changes
 

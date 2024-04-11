@@ -10,7 +10,7 @@ import formatDate from '../../util/format-date';
 import link from '../../util/output/link';
 import getArgs from '../../util/get-args';
 import Client from '../../util/client';
-import { Deployment } from '@vercel-internals/types';
+import { Deployment } from '@khulnasoft-internals/types';
 import { normalizeURL } from '../../util/bisect/normalize-url';
 import getScope from '../../util/get-scope';
 import getDeployment from '../../util/get-deployment';

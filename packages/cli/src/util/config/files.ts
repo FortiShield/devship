@@ -9,7 +9,7 @@ import { NowError } from '../now-error';
 import error from '../output/error';
 import highlight from '../output/highlight';
 import { VercelConfig } from '../dev/types';
-import { AuthConfig, GlobalConfig } from '@vercel-internals/types';
+import { AuthConfig, GlobalConfig } from '@khulnasoft-internals/types';
 import { isErrnoException, isError } from '@khulnasoft/error-utils';
 
 const VERCEL_DIR = getGlobalPathConfig();

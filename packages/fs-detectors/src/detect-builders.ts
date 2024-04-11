@@ -267,7 +267,7 @@ export async function detectBuilders(
     // we'll default to the root directory.
     if (hasUsedOutputDirectory && outputDirectory !== '') {
       frontendBuilder = {
-        use: '@vercel/static',
+        use: '@khulnasoft/static',
         src: `${usedOutputDirectory}/**/*`,
         config: {
           zeroConfig: true,
@@ -278,7 +278,7 @@ export async function detectBuilders(
       // Everything besides the api directory
       // and package.json can be served as static files
       frontendBuilder = {
-        use: '@vercel/static',
+        use: '@khulnasoft/static',
         src: '!{api/**,package.json,middleware.[jt]s}',
         config: {
           zeroConfig: true,

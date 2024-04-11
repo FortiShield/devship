@@ -38,7 +38,7 @@
 
 - [next] Add flag for experimental grouping ([#11177](https://github.com/khulnasoft/devship/pull/11177))
 
-- bump `@vercel/nft@0.26.4` ([#11155](https://github.com/khulnasoft/devship/pull/11155))
+- bump `@khulnasoft/nft@0.26.4` ([#11155](https://github.com/khulnasoft/devship/pull/11155))
 
 - fix: missing experimental field ([#11184](https://github.com/khulnasoft/devship/pull/11184))
 
@@ -46,7 +46,7 @@
 
 ### Patch Changes
 
-- [node][next][redwood][remix] bump `@vercel/nft@0.26.3` ([#11115](https://github.com/khulnasoft/devship/pull/11115))
+- [node][next][redwood][remix] bump `@khulnasoft/nft@0.26.3` ([#11115](https://github.com/khulnasoft/devship/pull/11115))
 
 - Load common chunks on module initialization ([#11126](https://github.com/khulnasoft/devship/pull/11126))
 
@@ -60,7 +60,7 @@
 
 ### Minor Changes
 
-- fix error when @vercel/analytics is a transitive dependency of the deployed application ([#10892](https://github.com/khulnasoft/devship/pull/10892))
+- fix error when @khulnasoft/analytics is a transitive dependency of the deployed application ([#10892](https://github.com/khulnasoft/devship/pull/10892))
 
 ### Patch Changes
 
@@ -72,7 +72,7 @@
 
 - Ensure rewrites handle RSC requests ([#11005](https://github.com/khulnasoft/devship/pull/11005))
 
-- [next][node][redwood][remix] Bump `@vercel/nft@0.26.1` ([#11009](https://github.com/khulnasoft/devship/pull/11009))
+- [next][node][redwood][remix] Bump `@khulnasoft/nft@0.26.1` ([#11009](https://github.com/khulnasoft/devship/pull/11009))
 
 ## 4.0.16
 
@@ -135,9 +135,9 @@
 
 - [next] fix lambda creation for i18n edge pages ([#10630](https://github.com/khulnasoft/devship/pull/10630))
 
-- Revert "[next][node][redwood][remix] Update @vercel/nft (#10540)" ([#10633](https://github.com/khulnasoft/devship/pull/10633))
+- Revert "[next][node][redwood][remix] Update @khulnasoft/nft (#10540)" ([#10633](https://github.com/khulnasoft/devship/pull/10633))
 
-- Update `@vercel/nft` to 0.24.2 ([#10644](https://github.com/khulnasoft/devship/pull/10644))
+- Update `@khulnasoft/nft` to 0.24.2 ([#10644](https://github.com/khulnasoft/devship/pull/10644))
 
 ## 4.0.8
 
@@ -151,7 +151,7 @@
 
 - Internal variants ([#10549](https://github.com/khulnasoft/devship/pull/10549))
 
-- Update `@vercel/nft` to v0.24.1. ([#10540](https://github.com/khulnasoft/devship/pull/10540))
+- Update `@khulnasoft/nft` to v0.24.1. ([#10540](https://github.com/khulnasoft/devship/pull/10540))
 
 - Build package using "esbuild" ([#10482](https://github.com/khulnasoft/devship/pull/10482))
 

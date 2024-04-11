@@ -1,6 +1,6 @@
 import chalk from 'chalk';
 import type Client from '../client';
-import type { Deployment } from '@vercel-internals/types';
+import type { Deployment } from '@khulnasoft-internals/types';
 
 import { isDeploying } from '../../util/deploy/is-deploying';
 import linkStyle from '../output/link';

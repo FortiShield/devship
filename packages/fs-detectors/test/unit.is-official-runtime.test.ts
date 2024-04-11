@@ -3,7 +3,7 @@ import { isOfficialRuntime, isStaticRuntime } from '../src';
 
 describe('Test `isOfficialRuntime()`', () => {
   it('should be correct', () => {
-    assert.equal(true, isOfficialRuntime('static', '@vercel/static'));
+    assert.equal(true, isOfficialRuntime('static', '@khulnasoft/static'));
     assert.equal(true, isOfficialRuntime('static', '@now/static'));
     assert.equal(false, isOfficialRuntime('static', '@khulnasoft/static-build'));
     assert.equal(false, isOfficialRuntime('static', '@now/static-build'));
@@ -24,14 +24,14 @@ describe('Test `isOfficialRuntime()`', () => {
       true,
       isOfficialRuntime('static-build', '@khulnasoft/static-build@1.0.0')
     );
-    assert.equal(false, isOfficialRuntime('static-build', '@vercel/static'));
+    assert.equal(false, isOfficialRuntime('static-build', '@khulnasoft/static'));
     assert.equal(false, isOfficialRuntime('static-build', '@now/static'));
   });
 });
 
 describe('Test `isStaticRuntime()`', () => {
   it('should be correct', () => {
-    assert.equal(true, isStaticRuntime('@vercel/static'));
+    assert.equal(true, isStaticRuntime('@khulnasoft/static'));
     assert.equal(true, isStaticRuntime('@now/static'));
     assert.equal(false, isStaticRuntime('@khulnasoft/static-build'));
     assert.equal(false, isStaticRuntime('@now/static-build'));

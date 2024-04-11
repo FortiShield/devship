@@ -20,7 +20,7 @@ describe('build', () => {
     delete process.env.__VERCEL_BUILD_RUNNING;
   });
 
-  it('should build with `@vercel/static`', async () => {
+  it('should build with `@khulnasoft/static`', async () => {
     const cwd = fixture('static');
     const output = join(cwd, '.vercel/output');
 
@@ -28,16 +28,16 @@ describe('build', () => {
     const exitCode = await build(client);
     expect(exitCode).toEqual(0);
 
-    // `builds.json` says that "@vercel/static" was run
+    // `builds.json` says that "@khulnasoft/static" was run
     const builds = await fs.readJSON(join(output, 'builds.json'));
     expect(builds).toMatchObject({
       target: 'preview',
       builds: [
         {
-          require: '@vercel/static',
+          require: '@khulnasoft/static',
           apiVersion: 2,
           src: '**',
-          use: '@vercel/static',
+          use: '@khulnasoft/static',
         },
       ],
     });
@@ -150,16 +150,16 @@ describe('build', () => {
     const exitCode = await build(client);
     expect(exitCode).toEqual(0);
 
-    // `builds.json` says that "@vercel/static" was run
+    // `builds.json` says that "@khulnasoft/static" was run
     const builds = await fs.readJSON(join(output, 'builds.json'));
     expect(builds).toMatchObject({
       target: 'preview',
       builds: [
         {
-          require: '@vercel/static',
+          require: '@khulnasoft/static',
           apiVersion: 2,
           src: '**',
-          use: '@vercel/static',
+          use: '@khulnasoft/static',
         },
       ],
     });
@@ -247,9 +247,9 @@ describe('build', () => {
           },
         },
         {
-          require: '@vercel/static',
+          require: '@khulnasoft/static',
           apiVersion: 2,
-          use: '@vercel/static',
+          use: '@khulnasoft/static',
           src: '!{api/**,package.json,middleware.[jt]s}',
           config: {
             zeroConfig: true,
@@ -307,9 +307,9 @@ describe('build', () => {
           },
         },
         {
-          require: '@vercel/static',
+          require: '@khulnasoft/static',
           apiVersion: 2,
-          use: '@vercel/static',
+          use: '@khulnasoft/static',
           src: '!{api/**,package.json,middleware.[jt]s}',
           config: {
             zeroConfig: true,
@@ -429,9 +429,9 @@ describe('build', () => {
           },
         },
         {
-          require: '@vercel/static',
+          require: '@khulnasoft/static',
           apiVersion: 2,
-          use: '@vercel/static',
+          use: '@khulnasoft/static',
           src: '!{api/**,package.json,middleware.[jt]s}',
           config: {
             zeroConfig: true,
@@ -473,7 +473,7 @@ describe('build', () => {
     const exitCode = await build(client);
     expect(exitCode).toEqual(0);
 
-    // `builds.json` says that "@vercel/static" was run
+    // `builds.json` says that "@khulnasoft/static" was run
     const builds = await fs.readJSON(join(output, 'builds.json'));
     expect(builds).toMatchObject({
       target: 'preview',
@@ -489,9 +489,9 @@ describe('build', () => {
           },
         },
         {
-          require: '@vercel/static',
+          require: '@khulnasoft/static',
           apiVersion: 2,
-          use: '@vercel/static',
+          use: '@khulnasoft/static',
           src: '!{api/**,package.json,middleware.[jt]s}',
           config: {
             zeroConfig: true,
@@ -549,9 +549,9 @@ describe('build', () => {
           },
         },
         {
-          require: '@vercel/static',
+          require: '@khulnasoft/static',
           apiVersion: 2,
-          use: '@vercel/static',
+          use: '@khulnasoft/static',
           src: '!{api/**,package.json,middleware.[jt]s}',
           config: {
             zeroConfig: true,
@@ -595,16 +595,16 @@ describe('build', () => {
       const exitCode = await build(client);
       expect(exitCode).toEqual(0);
 
-      // `builds.json` says that "@vercel/static" was run
+      // `builds.json` says that "@khulnasoft/static" was run
       const builds = await fs.readJSON(join(output, 'builds.json'));
       expect(builds).toMatchObject({
         target: 'preview',
         builds: [
           {
-            require: '@vercel/static',
+            require: '@khulnasoft/static',
             apiVersion: 2,
             src: '**',
-            use: '@vercel/static',
+            use: '@khulnasoft/static',
           },
         ],
       });
@@ -768,16 +768,16 @@ describe('build', () => {
     const exitCode = await build(client);
     expect(exitCode).toEqual(0);
 
-    // `builds.json` says that "@vercel/static" was run
+    // `builds.json` says that "@khulnasoft/static" was run
     const builds = await fs.readJSON(join(output, 'builds.json'));
     expect(builds).toMatchObject({
       target: 'preview',
       builds: [
         {
-          require: '@vercel/static',
+          require: '@khulnasoft/static',
           apiVersion: 2,
           src: '**',
-          use: '@vercel/static',
+          use: '@khulnasoft/static',
         },
       ],
     });
@@ -1135,7 +1135,7 @@ describe('build', () => {
       const exitCode = await build(client);
       expect(exitCode).toEqual(0);
 
-      // `builds.json` says that "@vercel/static" was run
+      // `builds.json` says that "@khulnasoft/static" was run
       const builds = await fs.readJSON(join(output, 'builds.json'));
       expect(builds).toMatchObject({
         target: 'preview',

@@ -204,7 +204,7 @@ describe('importBuilders()', () => {
     let err: Error | undefined;
     const cwd = await getWriteableDirectory();
     try {
-      const spec = '@vercel/does-not-exist@0.0.1';
+      const spec = '@khulnasoft/does-not-exist@0.0.1';
       const specs = new Set([spec]);
       await importBuilders(specs, cwd, client.output);
     } catch (_err: unknown) {
@@ -218,7 +218,7 @@ describe('importBuilders()', () => {
     }
 
     expect(err.message).toEqual(
-      'The package `@vercel/does-not-exist` is not published on the npm registry'
+      'The package `@khulnasoft/does-not-exist` is not published on the npm registry'
     );
     expect((err as any).link).toEqual(
       'https://vercel.link/builder-dependencies-install-failed'
@@ -228,17 +228,17 @@ describe('importBuilders()', () => {
 
 describe('resolveBuilders()', () => {
   it('should return builders to install when missing', async () => {
-    const specs = new Set(['@vercel/does-not-exist']);
+    const specs = new Set(['@khulnasoft/does-not-exist']);
     const result = await resolveBuilders(process.cwd(), specs, client.output);
     if (!('buildersToAdd' in result)) {
       throw new Error('Expected `buildersToAdd` to be defined');
     }
-    expect([...result.buildersToAdd]).toEqual(['@vercel/does-not-exist']);
+    expect([...result.buildersToAdd]).toEqual(['@khulnasoft/does-not-exist']);
   });
 
   it('should throw error when `MODULE_NOT_FOUND` on 2nd pass', async () => {
     let err: Error | undefined;
-    const specs = new Set(['@vercel/does-not-exist']);
+    const specs = new Set(['@khulnasoft/does-not-exist']);
 
     // The empty Map represents `resolveBuilders()` being invoked after the install step
     try {
@@ -252,7 +252,7 @@ describe('resolveBuilders()', () => {
     }
 
     expect(
-      err.message.startsWith('Importing "@vercel/does-not-exist": Cannot')
+      err.message.startsWith('Importing "@khulnasoft/does-not-exist": Cannot')
     ).toEqual(true);
   });
 });

@@ -182,7 +182,7 @@ describe('Test `detectFileSystemAPI`', () => {
     });
     expect(result).toEqual({
       fsApiBuilder: {
-        use: '@vercelruntimes/file-system-api',
+        use: '@khulnasoftruntimes/file-system-api',
         src: '**',
         config: {
           fileSystemAPI: true,
@@ -213,7 +213,7 @@ describe('Test `detectFileSystemAPI`', () => {
     });
     expect(result).toEqual({
       fsApiBuilder: {
-        use: '@vercelruntimes/file-system-api',
+        use: '@khulnasoftruntimes/file-system-api',
         src: '**',
         config: {
           fileSystemAPI: true,
@@ -244,7 +244,7 @@ describe('Test `detectFileSystemAPI`', () => {
     });
     expect(result).toEqual({
       fsApiBuilder: {
-        use: '@vercelruntimes/file-system-api',
+        use: '@khulnasoftruntimes/file-system-api',
         src: '**',
         config: {
           fileSystemAPI: true,
@@ -401,7 +401,7 @@ describe('Test `detectFileSystemAPI`', () => {
     });
     expect(result).toEqual({
       fsApiBuilder: {
-        use: '@vercelruntimes/file-system-api',
+        use: '@khulnasoftruntimes/file-system-api',
         src: '**',
         config: {
           fileSystemAPI: true,
@@ -428,7 +428,7 @@ describe('Test `detectFileSystemAPI`', () => {
     });
     expect(result).toEqual({
       fsApiBuilder: {
-        use: '@vercelruntimes/file-system-api',
+        use: '@khulnasoftruntimes/file-system-api',
         src: '**',
         config: {
           fileSystemAPI: true,

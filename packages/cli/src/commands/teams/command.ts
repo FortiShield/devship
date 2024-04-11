@@ -67,7 +67,7 @@ export const teamsCommand: Command = {
     },
     {
       name: 'Invite multiple members simultaneously',
-      value: `${packageName} teams invite abc@vercel.com xyz@vercel.com`,
+      value: `${packageName} teams invite abc@khulnasoft.com xyz@khulnasoft.com`,
     },
     {
       name: 'Paginate results, where `1584722256178` is the time in milliseconds since the UNIX epoch.',

@@ -1,5 +1,5 @@
 {
-  "name": "@vercel/hydrogen",
+  "name": "@khulnasoft/hydrogen",
   "version": "1.0.2",
   "license": "Apache-2.0",
   "main": "./dist/index.js",

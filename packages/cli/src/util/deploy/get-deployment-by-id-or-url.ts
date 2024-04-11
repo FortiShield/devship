@@ -3,7 +3,7 @@ import getDeployment from '../get-deployment';
 import getTeamById from '../teams/get-team-by-id';
 import { isValidName } from '../is-valid-name';
 import type Client from '../client';
-import type { Deployment, Team } from '@vercel-internals/types';
+import type { Deployment, Team } from '@khulnasoft-internals/types';
 
 /**
  * Renders feedback while retrieving a deployment, then validates the

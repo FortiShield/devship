@@ -1,5 +1,5 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
-import type { LinksFunction } from "@vercel/remix";
+import type { LinksFunction } from "@khulnasoft/remix";
 import {
   Links,
   LiveReload,

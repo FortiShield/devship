@@ -45,7 +45,7 @@ export async function initCorepack({
     // yarn & pnpm even though those versions are not specified by the user.
     // See https://github.com/nodejs/corepack#known-good-releases
     // Finally, we use `--install-directory` so we can cache the result to
-    // reuse for subsequent builds. See `@vercel/vc-build` for `prepareCache`.
+    // reuse for subsequent builds. See `@khulnasoft/vc-build` for `prepareCache`.
     await spawnAsync(
       'corepack',
       ['enable', pkgManagerName, '--install-directory', corepackShimDir],

@@ -1,4 +1,4 @@
-import type { ReadableTTY } from '@vercel-internals/types';
+import type { ReadableTTY } from '@khulnasoft-internals/types';
 
 export default async function readStandardInput(
   stdin: ReadableTTY

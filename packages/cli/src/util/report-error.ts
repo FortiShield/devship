@@ -2,7 +2,7 @@ import Client from './client';
 import getScope from './get-scope';
 import getArgs from './get-args';
 import { isError } from '@khulnasoft/error-utils';
-import type { Team, User } from '@vercel-internals/types';
+import type { Team, User } from '@khulnasoft-internals/types';
 
 export default async function reportError(
   sentry: typeof import('@sentry/node'),

@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import retry from 'async-retry';
 import { DomainAlreadyExists, InvalidDomain, isAPIError } from '../errors-ts';
-import type { Domain } from '@vercel-internals/types';
+import type { Domain } from '@khulnasoft-internals/types';
 import Client from '../client';
 
 type Response = {

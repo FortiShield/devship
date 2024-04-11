@@ -389,7 +389,7 @@ test('mergeRoutes ensure `handle: error` comes last', () => {
       ],
     },
     {
-      use: '@vercel/zero-config-routes',
+      use: '@khulnasoft/zero-config-routes',
       entrypoint: '/',
       routes: [
         {

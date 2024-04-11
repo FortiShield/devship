@@ -1,5 +1,5 @@
 import Client from './client';
-import type { User } from '@vercel-internals/types';
+import type { User } from '@khulnasoft-internals/types';
 import { APIError, InvalidToken, MissingUser } from './errors-ts';
 
 export default async function getUser(client: Client) {

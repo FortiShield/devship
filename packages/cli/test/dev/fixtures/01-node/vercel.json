@@ -1,7 +1,7 @@
 {
   "version": 2,
   "builds": [
-    { "src": "www/**/*", "use": "@vercel/static" },
+    { "src": "www/**/*", "use": "@khulnasoft/static" },
     { "src": "api/**/*.js", "use": "@khulnasoft/node" }
   ],
   "routes": [{ "src": "/", "dest": "www/index.html" }]

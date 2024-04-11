@@ -1,5 +1,5 @@
 import Client from '../client';
-import { Cert, PaginationOptions } from '@vercel-internals/types';
+import { Cert, PaginationOptions } from '@khulnasoft-internals/types';
 
 type Response = {
   certs: Cert[];

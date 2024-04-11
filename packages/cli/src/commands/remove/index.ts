@@ -17,7 +17,7 @@ import getArgs from '../../util/get-args';
 import handleError from '../../util/handle-error';
 import type Client from '../../util/client';
 import { Output } from '../../util/output';
-import { Alias, Deployment, Project } from '@vercel-internals/types';
+import { Alias, Deployment, Project } from '@khulnasoft-internals/types';
 import { NowError } from '../../util/now-error';
 import { help } from '../help';
 import { removeCommand } from './command';

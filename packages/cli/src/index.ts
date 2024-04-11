@@ -49,7 +49,7 @@ import getUpdateCommand from './util/get-update-command';
 import { metrics, shouldCollectMetrics } from './util/metrics';
 import { getCommandName, getTitleName } from './util/pkg-name';
 import doLoginPrompt from './util/login/prompt';
-import type { AuthConfig, GlobalConfig } from '@vercel-internals/types';
+import type { AuthConfig, GlobalConfig } from '@khulnasoft-internals/types';
 import { VercelConfig } from '@khulnasoft/client';
 import { ProxyAgent } from 'proxy-agent';
 import box from './util/output/box';

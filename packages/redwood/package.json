@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@khulnasoft/routing-utils": "workspace:*",
-    "@vercel/nft": "0.26.4",
+    "@khulnasoft/nft": "0.24.2",
     "semver": "6.3.1"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 import Client from '../client';
-import type { Project, ProjectSettings } from '@vercel-internals/types';
+import type { Project, ProjectSettings } from '@khulnasoft-internals/types';
 
 export default async function createProject(
   client: Client,

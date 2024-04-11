@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": 1,
-      "use": "@vercel/static",
+      "use": "@khulnasoft/static",
       "config": {
         "zeroConfig": true
       }

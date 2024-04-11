@@ -2,6 +2,6 @@
   "version": 2,
   "builds": [
     { "src": "*.js", "use": "@khulnasoft/node" },
-    { "src": "*.txt", "use": "@vercel/static" }
+    { "src": "*.txt", "use": "@khulnasoft/static" }
   ]
 }

@@ -1,4 +1,4 @@
-# @vercel-internals/constants
+# @khulnasoft-internals/constants
 
 ## 1.0.4
 

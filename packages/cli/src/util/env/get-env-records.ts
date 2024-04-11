@@ -3,7 +3,7 @@ import Client from '../client';
 import type {
   ProjectEnvVariable,
   ProjectEnvTarget,
-} from '@vercel-internals/types';
+} from '@khulnasoft-internals/types';
 import { URLSearchParams } from 'url';
 
 /** The CLI command that was used that needs the environment variables. */

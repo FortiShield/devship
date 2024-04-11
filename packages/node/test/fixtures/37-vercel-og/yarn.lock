@@ -25,9 +25,9 @@
   resolved "https://registry.yarnpkg.com/@types/yoga-layout/-/yoga-layout-1.9.2.tgz#efaf9e991a7390dc081a0b679185979a83a9639a"
   integrity sha512-S9q47ByT2pPvD65IvrWp7qppVMpk9WGMbVq9wbWZOHg6tnXSD4vyhao6nOSBwwfDdV2p3Kx9evA9vI+XWTfDvw==
 
-"@vercel/og@0.0.22":
+"@khulnasoft/og@0.0.22":
   version "0.0.22"
-  resolved "https://registry.yarnpkg.com/@vercel/og/-/og-0.0.22.tgz#f17a6b0dceca4c58ea92499e6957598df5ce392e"
+  resolved "https://registry.yarnpkg.com/@khulnasoft/og/-/og-0.0.22.tgz#f17a6b0dceca4c58ea92499e6957598df5ce392e"
   integrity sha512-HJjYfjpuNVnxwH7GnEv5QxzdIV4xytjY2RkVmhaOAKlms4X071WSPR9Jp6vjZ3Zmjz0tKSiRnrT5uN/PkW/q9Q==
   dependencies:
     "@resvg/resvg-wasm" "2.0.0-alpha.4"

@@ -1,4 +1,4 @@
-import { Deployment } from '@vercel-internals/types';
+import { Deployment } from '@khulnasoft-internals/types';
 
 export const deploymentInProgressStates: Deployment['readyState'][] = [
   'QUEUED',

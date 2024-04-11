@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@vercel/remix";
+import type { MetaFunction } from "@khulnasoft/remix";
 
 export const config = { runtime: "edge" };
 

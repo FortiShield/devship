@@ -5,7 +5,7 @@
     "test": "rm -rf dist && tsc && cat dist/api/index.js"
   },
   "dependencies": {
-    "@vercel/og": "0.0.22"
+    "@khulnasoft/og": "0.0.22"
   },
   "devDependencies": {
     "@types/node": "18.11.18",

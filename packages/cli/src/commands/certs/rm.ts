@@ -2,7 +2,7 @@ import chalk from 'chalk';
 import ms from 'ms';
 import plural from 'pluralize';
 import table from '../../util/output/table';
-import type { Cert } from '@vercel-internals/types';
+import type { Cert } from '@khulnasoft-internals/types';
 import * as ERRORS from '../../util/errors-ts';
 import { Output } from '../../util/output';
 import deleteCertById from '../../util/certs/delete-cert-by-id';

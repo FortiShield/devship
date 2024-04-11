@@ -1,4 +1,4 @@
-import type { Team } from '@vercel-internals/types';
+import type { Team } from '@khulnasoft-internals/types';
 import Client from '../client';
 
 export default async function createTeam(

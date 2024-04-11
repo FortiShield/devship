@@ -14,7 +14,7 @@ const getRevertAliasConfigFile = () => {
     builds: [
       {
         src: '*.json',
-        use: '@vercel/static',
+        use: '@khulnasoft/static',
       },
     ],
   });
@@ -30,11 +30,11 @@ module.exports = async function prepare(session, binaryPath, tmpFixturesDir) {
     },
     'empty-directory': {},
     'config-scope-property-email': {
-      'now.json': `{ "scope": "${session}@zeit.pub", "builds": [ { "src": "*.html", "use": "@vercel/static" } ] }`,
+      'now.json': `{ "scope": "${session}@zeit.pub", "builds": [ { "src": "*.html", "use": "@khulnasoft/static" } ] }`,
       'index.html': '<span>test scope email</span',
     },
     'config-scope-property-username': {
-      'now.json': `{ "scope": "${session}", "builds": [ { "src": "*.html", "use": "@vercel/static" } ] }`,
+      'now.json': `{ "scope": "${session}", "builds": [ { "src": "*.html", "use": "@khulnasoft/static" } ] }`,
       'index.html': '<span>test scope username</span',
     },
     'builds-wrong': {
@@ -186,12 +186,12 @@ module.exports = async function prepare(session, binaryPath, tmpFixturesDir) {
       [`test-${session}.html`]: '<h1>hello test</h1>',
       'vercel.json': JSON.stringify({
         name: 'original',
-        builds: [{ src: `main-${session}.html`, use: '@vercel/static' }],
+        builds: [{ src: `main-${session}.html`, use: '@khulnasoft/static' }],
         routes: [{ src: '/another-main', dest: `/main-${session}.html` }],
       }),
       'vercel-test.json': JSON.stringify({
         name: 'secondary',
-        builds: [{ src: `test-${session}.html`, use: '@vercel/static' }],
+        builds: [{ src: `test-${session}.html`, use: '@khulnasoft/static' }],
         routes: [{ src: '/another-test', dest: `/test-${session}.html` }],
       }),
     },
@@ -251,7 +251,7 @@ module.exports = async function prepare(session, binaryPath, tmpFixturesDir) {
       'pages/index.js':
         'export default () => <div><h1>Vercel CLI test</h1><p>Zero-config + Next.js</p></div>',
       'vercel.json':
-        '{"version":2,"functions":{"pages/index.js":{"runtime": "@vercel/php@0.1.0"}}}',
+        '{"version":2,"functions":{"pages/index.js":{"runtime": "@khulnasoft/php@0.1.0"}}}',
       'package.json': JSON.stringify({
         scripts: {
           dev: 'next',
@@ -400,7 +400,7 @@ module.exports = async function prepare(session, binaryPath, tmpFixturesDir) {
     },
     'project-link-legacy': {
       'index.html': 'Hello',
-      'vercel.json': '{"builds":[{"src":"*.html","use":"@vercel/static"}]}',
+      'vercel.json': '{"builds":[{"src":"*.html","use":"@khulnasoft/static"}]}',
     },
     'project-sensitive-env-vars': {
       'package.json': '{}',
@@ -428,10 +428,10 @@ module.exports = async function prepare(session, binaryPath, tmpFixturesDir) {
     'conflicting-now-json-vercel-json': {
       'index.html': '<h1>I am a website.</h1>',
       'vercel.json': JSON.stringify({
-        builds: [{ src: '*.html', use: '@vercel/static' }],
+        builds: [{ src: '*.html', use: '@khulnasoft/static' }],
       }),
       'now.json': JSON.stringify({
-        builds: [{ src: '*.html', use: '@vercel/static' }],
+        builds: [{ src: '*.html', use: '@khulnasoft/static' }],
       }),
     },
     'unauthorized-vercel-config': {
@@ -454,7 +454,7 @@ module.exports = async function prepare(session, binaryPath, tmpFixturesDir) {
           build: 'mkdir -p public && echo hi > public/index.txt',
         },
         dependencies: {
-          '@vercel/speed-insights': '0.0.4',
+          '@khulnasoft/speed-insights': '0.0.4',
         },
       }),
     },
@@ -464,7 +464,7 @@ module.exports = async function prepare(session, binaryPath, tmpFixturesDir) {
         projectId: '.',
         settings: {
           framework: null,
-          installCommand: 'yarn add @vercel/analytics@1.1.1',
+          installCommand: 'yarn add @khulnasoft/analytics@1.1.1',
         },
       }),
       'package.json': JSON.stringify({
@@ -486,7 +486,7 @@ module.exports = async function prepare(session, binaryPath, tmpFixturesDir) {
           build: 'mkdir -p public && echo hi > public/index.txt',
         },
         dependencies: {
-          '@vercel/analytics': '1.0.0',
+          '@khulnasoft/analytics': '1.0.0',
         },
       }),
     },

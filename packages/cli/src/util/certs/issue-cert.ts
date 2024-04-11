@@ -1,5 +1,5 @@
 import retry from 'async-retry';
-import type { Cert } from '@vercel-internals/types';
+import type { Cert } from '@khulnasoft-internals/types';
 import Client from '../client';
 import { isAPIError } from '../errors-ts';
 import { isError } from '@khulnasoft/error-utils';

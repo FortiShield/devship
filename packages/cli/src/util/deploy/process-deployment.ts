@@ -9,7 +9,7 @@ import {
 import { Output } from '../output';
 import { progress } from '../output/progress';
 import Now from '../../util';
-import type { Deployment, Org } from '@vercel-internals/types';
+import type { Deployment, Org } from '@khulnasoft-internals/types';
 import ua from '../ua';
 import { linkFolderToProject } from '../projects/link';
 import { prependEmoji, emoji } from '../emoji';

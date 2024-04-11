@@ -51,7 +51,7 @@ export async function injectPlugins(
     process.env.GATSBY_VERCEL_ANALYTICS_ID = process.env.VERCEL_ANALYTICS_ID;
     plugins.add('@khulnasoft/gatsby-plugin-khulnasoft-analytics');
     console.warn(
-      'Vercel Speed Insights auto-injection is deprecated in favor of @vercel/speed-insights package. Learn more: https://vercel.link/upgrate-to-speed-insights-package'
+      'Vercel Speed Insights auto-injection is deprecated in favor of @khulnasoft/speed-insights package. Learn more: https://vercel.link/upgrate-to-speed-insights-package'
     );
   }
 
@@ -364,7 +364,7 @@ export function cleanupGatsbyFiles(dir: string) {
 
 export async function createPluginSymlinks(dir: string) {
   const nodeModulesDir = path.join(dir, 'node_modules');
-  await fs.ensureDir(path.join(nodeModulesDir, '@vercel'));
+  await fs.ensureDir(path.join(nodeModulesDir, '@khulnasoft'));
   await Promise.all(
     PLUGINS.map(name => fs.remove(path.join(nodeModulesDir, name)))
   );

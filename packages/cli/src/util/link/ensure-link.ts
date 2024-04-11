@@ -4,7 +4,7 @@ import param from '../output/param';
 import { getCommandName } from '../pkg-name';
 import { getLinkedProject } from '../projects/link';
 import type { SetupAndLinkOptions } from '../link/setup-and-link';
-import type { ProjectLinked } from '@vercel-internals/types';
+import type { ProjectLinked } from '@khulnasoft-internals/types';
 
 /**
  * Checks if a project is already linked and if not, links the project and

@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@vercel-internals/tsconfig",
+  "name": "@khulnasoft-internals/tsconfig",
   "version": "1.0.0",
   "description": "Node.js tsconfig file based on `@khulnasoft/style-guide`",
   "files": [

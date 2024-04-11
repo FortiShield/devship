@@ -5,7 +5,7 @@ import { useUser } from '../../mocks/user';
 import { useTeams } from '../../mocks/team';
 import { defaultProject, useProject } from '../../mocks/project';
 import { client } from '../../mocks/client';
-import type { Project } from '@vercel-internals/types';
+import type { Project } from '@khulnasoft-internals/types';
 import { parseSpacedTableRow } from '../../helpers/parse-table';
 
 describe('project', () => {

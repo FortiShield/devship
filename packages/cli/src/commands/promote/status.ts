@@ -5,7 +5,7 @@ import type {
   LastAliasRequest,
   PaginationOptions,
   Project,
-} from '@vercel-internals/types';
+} from '@khulnasoft-internals/types';
 import elapsed from '../../util/output/elapsed';
 import formatDate from '../../util/format-date';
 import getDeployment from '../../util/get-deployment';

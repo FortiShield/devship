@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 module.exports = async ({ github, context }, newVersion) => {
-  execSync('git config --global user.email infra+release@vercel.com');
+  execSync('git config --global user.email infra+release@khulnasoft.com');
   execSync('git config --global user.name vercel-release-bot');
   execSync('git checkout main');
 

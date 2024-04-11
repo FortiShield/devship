@@ -5,7 +5,7 @@ import link from '../output/link';
 import { isAPIError } from '../errors-ts';
 import { Output } from '../output';
 import { Dictionary } from '@khulnasoft/client';
-import type { Org } from '@vercel-internals/types';
+import type { Org } from '@khulnasoft-internals/types';
 
 export interface RepoInfo {
   url: string;

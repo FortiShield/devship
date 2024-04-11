@@ -1,5 +1,5 @@
 import { URLSearchParams } from 'url';
-import type { Deployment } from '@vercel-internals/types';
+import type { Deployment } from '@khulnasoft-internals/types';
 import Client from '../client';
 
 type LegacyDeployment = {

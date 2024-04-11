@@ -9,7 +9,7 @@ import getScope from '../../util/get-scope';
 import { getCommandName } from '../../util/pkg-name';
 import Client from '../../util/client';
 import getDeployment from '../../util/get-deployment';
-import type { Build, Deployment } from '@vercel-internals/types';
+import type { Build, Deployment } from '@khulnasoft-internals/types';
 import title from 'title';
 import { isErrnoException } from '@khulnasoft/error-utils';
 import { URL } from 'url';

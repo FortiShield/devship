@@ -1,7 +1,7 @@
 /** @jsx h */
 import { h } from '../jsx-runtime.js';
 
-import { ImageResponse } from '@vercel/og';
+import { ImageResponse } from '@khulnasoft/og';
 
 export const config = { runtime: 'edge' };
 

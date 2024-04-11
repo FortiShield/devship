@@ -4,7 +4,7 @@ import type {
   ProjectEnvTarget,
   ProjectEnvVariable,
   ProjectEnvType,
-} from '@vercel-internals/types';
+} from '@khulnasoft-internals/types';
 
 export default async function addEnvRecord(
   output: Output,

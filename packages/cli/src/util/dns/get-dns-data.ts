@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import type { DNSRecordData } from '@vercel-internals/types';
+import type { DNSRecordData } from '@khulnasoft-internals/types';
 import textInput from '../input/text';
 import confirm from '../input/confirm';
 import Client from '../client';

@@ -1,7 +1,7 @@
 import { readFileSync, promises as fs, statSync, existsSync } from 'fs';
 import { basename, dirname, join, relative, sep } from 'path';
 import { isErrnoException } from '@khulnasoft/error-utils';
-import { nodeFileTrace } from '@vercel/nft';
+import { nodeFileTrace } from '@khulnasoft/nft';
 import {
   BuildResultV2Typical,
   debug,
@@ -206,7 +206,7 @@ export const build: BuildV2 = async ({
 
   if (!remixBuildResult) {
     throw new Error(
-      'Could not determine build output directory. Please configure the `vercelPreset()` Preset from the `@vercel/remix` npm package'
+      'Could not determine build output directory. Please configure the `vercelPreset()` Preset from the `@khulnasoft/remix` npm package'
     );
   }
 
@@ -327,7 +327,7 @@ async function createRenderNodeFunction(
     );
   }
 
-  // Trace the handler with `@vercel/nft`
+  // Trace the handler with `@khulnasoft/nft`
   const trace = await nodeFileTrace([handlerPath], {
     base: rootDir,
     processCwd: entrypointDir,
@@ -389,7 +389,7 @@ async function createRenderEdgeFunction(
 
   let remixRunVercelPkgJson: string | undefined;
 
-  // Trace the handler with `@vercel/nft`
+  // Trace the handler with `@khulnasoft/nft`
   const trace = await nodeFileTrace([handlerPath], {
     base: rootDir,
     processCwd: entrypointDir,

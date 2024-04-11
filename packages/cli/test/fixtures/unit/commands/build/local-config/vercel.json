@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": "main.html",
-      "use": "@vercel/static"
+      "use": "@khulnasoft/static"
     }
   ],
   "routes": [

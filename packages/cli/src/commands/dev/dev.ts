@@ -5,7 +5,7 @@ import DevServer from '../../util/dev/server';
 import { parseListen } from '../../util/dev/parse-listen';
 import Client from '../../util/client';
 import { getLinkedProject } from '../../util/projects/link';
-import type { ProjectSettings } from '@vercel-internals/types';
+import type { ProjectSettings } from '@khulnasoft-internals/types';
 import setupAndLink from '../../util/link/setup-and-link';
 import { getCommandName } from '../../util/pkg-name';
 import param from '../../util/output/param';

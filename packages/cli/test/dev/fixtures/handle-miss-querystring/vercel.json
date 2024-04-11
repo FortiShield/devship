@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     { "src": "functions/echo.js", "use": "@khulnasoft/node" },
-    { "src": "index.html", "use": "@vercel/static" }
+    { "src": "index.html", "use": "@khulnasoft/static" }
   ],
   "routes": [
     {

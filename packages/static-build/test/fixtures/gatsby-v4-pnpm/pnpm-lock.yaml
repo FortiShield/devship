@@ -2654,7 +2654,7 @@ packages:
       eslint-visitor-keys: 2.1.0
     dev: false
 
-  /@vercel/webpack-asset-relocator-loader@1.7.3:
+  /@khulnasoft/webpack-asset-relocator-loader@1.7.3:
     resolution: {integrity: sha512-vizrI18v8Lcb1PmNNUBz7yxPxxXoOeuaVEjTG9MjvDrphjiSxFZrRJ5tIghk+qdLFRCXI5HBCshgobftbmrC5g==}
     dependencies:
       resolve: 1.22.1
@@ -5763,7 +5763,7 @@ packages:
       '@types/http-proxy': 1.17.9
       '@typescript-eslint/eslint-plugin': 4.33.0(@typescript-eslint/parser@4.33.0)(eslint@7.32.0)(typescript@5.2.2)
       '@typescript-eslint/parser': 4.33.0(eslint@7.32.0)(typescript@5.2.2)
-      '@vercel/webpack-asset-relocator-loader': 1.7.3
+      '@khulnasoft/webpack-asset-relocator-loader': 1.7.3
       acorn-loose: 8.3.0
       acorn-walk: 8.2.0
       address: 1.1.2

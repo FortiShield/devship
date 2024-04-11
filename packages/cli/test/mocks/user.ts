@@ -1,6 +1,6 @@
 import chance from 'chance';
 import { client } from './client';
-import type { User } from '@vercel-internals/types';
+import type { User } from '@khulnasoft-internals/types';
 
 export function useUser(additionalAttrs: Partial<User> = {}) {
   const user = {

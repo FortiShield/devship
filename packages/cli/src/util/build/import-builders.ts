@@ -89,7 +89,7 @@ export async function resolveBuilders(
     }
 
     if (isStaticRuntime(name)) {
-      // `@vercel/static` is a special-case built-in builder
+      // `@khulnasoft/static` is a special-case built-in builder
       builders.set(name, {
         builder: staticBuilder,
         pkg: { name },

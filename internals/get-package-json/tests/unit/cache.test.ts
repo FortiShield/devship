@@ -6,7 +6,7 @@ test('getPackageJSON caches read operations', () => {
   const expected = JSON.parse(
     fs.readFileSync(path.join(__dirname, '../../package.json'), 'utf-8')
   );
-  expect(expected.name).toBe('@vercel-internals/get-package-json');
+  expect(expected.name).toBe('@khulnasoft-internals/get-package-json');
 
   const readFileSyncSpy = jest.spyOn(fs, 'readFileSync');
 

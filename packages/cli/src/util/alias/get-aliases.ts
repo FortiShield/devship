@@ -1,4 +1,4 @@
-import { Alias, PaginationOptions } from '@vercel-internals/types';
+import { Alias, PaginationOptions } from '@khulnasoft-internals/types';
 import Client from '../client';
 
 type Response = {

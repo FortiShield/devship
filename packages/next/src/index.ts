@@ -32,7 +32,7 @@ import {
   convertRedirects,
   convertRewrites,
 } from '@khulnasoft/routing-utils/dist/superstatic';
-import { nodeFileTrace } from '@vercel/nft';
+import { nodeFileTrace } from '@khulnasoft/nft';
 import { Sema } from 'async-sema';
 // escape-string-regexp version must match Next.js version
 import escapeStringRegexp from 'escape-string-regexp';

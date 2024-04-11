@@ -46,7 +46,7 @@ module.exports = async ({ github, context } = {}) => {
       'config',
       '--global',
       'user.email',
-      'infra+release@vercel.com',
+      'infra+release@khulnasoft.com',
     ]);
     exec('git', ['config', '--global', 'user.name', 'vercel-release-bot']);
     exec('git', ['checkout', 'main']);

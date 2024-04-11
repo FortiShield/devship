@@ -1,6 +1,6 @@
 import chalk from 'chalk';
 import type Client from '../client';
-import type { Deployment, Project, Team } from '@vercel-internals/types';
+import type { Deployment, Project, Team } from '@khulnasoft-internals/types';
 import getDeployment from '../get-deployment';
 import getProjectByNameOrId from './get-project-by-id-or-name';
 import getScope from '../get-scope';

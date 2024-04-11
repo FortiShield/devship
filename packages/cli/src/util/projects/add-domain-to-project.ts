@@ -1,6 +1,6 @@
 import chalk from 'chalk';
 import Client from '../client';
-import type { ProjectAliasTarget } from '@vercel-internals/types';
+import type { ProjectAliasTarget } from '@khulnasoft-internals/types';
 import { isAPIError } from '../errors-ts';
 
 export async function addDomainToProject(

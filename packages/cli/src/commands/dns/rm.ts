@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import ms from 'ms';
 import table from '../../util/output/table';
-import type { DNSRecord } from '@vercel-internals/types';
+import type { DNSRecord } from '@khulnasoft-internals/types';
 import { Output } from '../../util/output';
 import Client from '../../util/client';
 import deleteDNSRecordById from '../../util/dns/delete-dns-record-by-id';

@@ -18,7 +18,7 @@ import {
   File,
   FlagDefinitions,
 } from '@khulnasoft/build-utils';
-import { NodeFileTraceReasons } from '@vercel/nft';
+import { NodeFileTraceReasons } from '@khulnasoft/nft';
 import type {
   HasField,
   Header,

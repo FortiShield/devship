@@ -394,7 +394,7 @@ async function doBuild(
     if (detectedBuilders.builders) {
       builds = detectedBuilders.builders;
     } else {
-      builds = [{ src: '**', use: '@vercel/static' }];
+      builds = [{ src: '**', use: '@khulnasoft/static' }];
     }
 
     zeroConfigRoutes.push(...(detectedBuilders.redirectRoutes || []));
@@ -588,7 +588,7 @@ async function doBuild(
   let needBuildsJsonOverride = false;
   const speedInsightsVersion = await readInstalledVersion(
     client,
-    '@vercel/speed-insights'
+    '@khulnasoft/speed-insights'
   );
   if (speedInsightsVersion) {
     buildsJson.features = {
@@ -599,7 +599,7 @@ async function doBuild(
   }
   const webAnalyticsVersion = await readInstalledVersion(
     client,
-    '@vercel/analytics'
+    '@khulnasoft/analytics'
   );
   if (webAnalyticsVersion) {
     buildsJson.features = {
@@ -645,7 +645,7 @@ async function doBuild(
     });
   if (zeroConfigRoutes.length) {
     builderRoutes.unshift({
-      use: '@vercel/zero-config-routes',
+      use: '@khulnasoft/zero-config-routes',
       entrypoint: '/',
       routes: zeroConfigRoutes,
     });

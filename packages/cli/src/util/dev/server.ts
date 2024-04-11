@@ -84,7 +84,7 @@ import {
   HttpHeadersConfig,
   EnvConfigs,
 } from './types';
-import type { ProjectSettings } from '@vercel-internals/types';
+import type { ProjectSettings } from '@khulnasoft-internals/types';
 import { treeKill } from '../tree-kill';
 import { applyOverriddenHeaders, nodeHeadersToFetchHeaders } from './headers';
 import { formatQueryString, parseQueryString } from './parse-query-string';

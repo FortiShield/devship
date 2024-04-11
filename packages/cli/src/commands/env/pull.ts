@@ -6,7 +6,7 @@ import type {
   Project,
   ProjectEnvTarget,
   ProjectLinked,
-} from '@vercel-internals/types';
+} from '@khulnasoft-internals/types';
 import Client from '../../util/client';
 import { emoji, prependEmoji } from '../../util/emoji';
 import confirm from '../../util/input/confirm';

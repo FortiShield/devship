@@ -2,7 +2,7 @@ import { beforeEach } from 'vitest';
 import { URL } from 'url';
 import chance from 'chance';
 import { client } from './client';
-import { Build, Deployment, User } from '@vercel-internals/types';
+import { Build, Deployment, User } from '@khulnasoft-internals/types';
 import type { Request, Response } from 'express';
 import { defaultProject } from './project';
 

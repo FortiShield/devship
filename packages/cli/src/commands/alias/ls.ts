@@ -11,7 +11,7 @@ import {
 import stamp from '../../util/output/stamp';
 import getCommandFlags from '../../util/get-command-flags';
 import { getCommandName } from '../../util/pkg-name';
-import type { Alias } from '@vercel-internals/types';
+import type { Alias } from '@khulnasoft-internals/types';
 
 export default async function ls(
   client: Client,

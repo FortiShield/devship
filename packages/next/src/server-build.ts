@@ -57,7 +57,7 @@ import {
   nodeFileTrace,
   NodeFileTraceReasons,
   NodeFileTraceResult,
-} from '@vercel/nft';
+} from '@khulnasoft/nft';
 import resolveFrom from 'resolve-from';
 import fs, { lstat } from 'fs-extra';
 import escapeStringRegexp from 'escape-string-regexp';

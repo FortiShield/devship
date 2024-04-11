@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import type { Project, ProjectEnvTarget } from '@vercel-internals/types';
+import type { Project, ProjectEnvTarget } from '@khulnasoft-internals/types';
 import { Output } from '../../util/output';
 import Client from '../../util/client';
 import stamp from '../../util/output/stamp';

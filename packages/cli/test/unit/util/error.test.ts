@@ -2,7 +2,7 @@ import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import fetch from 'node-fetch';
 import { listen } from 'async-listen';
 import { createServer, IncomingMessage, Server, ServerResponse } from 'http';
-import type { JSONValue } from '@vercel-internals/types';
+import type { JSONValue } from '@khulnasoft-internals/types';
 import {
   responseError,
   responseErrorMessage,

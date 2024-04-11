@@ -271,7 +271,7 @@ describe('validateConfig', () => {
       builds: [
         {
           src: 'index.html',
-          use: '@vercel/static',
+          use: '@khulnasoft/static',
         },
       ],
       functions: {

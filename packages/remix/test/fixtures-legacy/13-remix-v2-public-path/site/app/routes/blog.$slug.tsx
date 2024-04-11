@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@vercel/remix";
+import type { MetaFunction } from "@khulnasoft/remix";
 
 export const meta: MetaFunction = () => [{ title: "Blog Page | New Remix App" }];
 

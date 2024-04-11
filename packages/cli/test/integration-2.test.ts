@@ -1311,7 +1311,7 @@ test('[vc build] should build project with `@khulnasoft/static-build`', async ()
   expect(builds.builds[0].use).toBe('@khulnasoft/static-build');
 });
 
-test('[vc build] should build project with `@vercel/speed-insights`', async () => {
+test('[vc build] should build project with `@khulnasoft/speed-insights`', async () => {
   const directory = await setupE2EFixture('vc-build-speed-insights');
   const output = await execCli(binaryPath, ['build'], { cwd: directory });
   expect(output.exitCode, formatOutput(output)).toBe(0);
@@ -1322,7 +1322,7 @@ test('[vc build] should build project with `@vercel/speed-insights`', async () =
   expect(builds?.features?.speedInsightsVersion).toEqual('0.0.4');
 });
 
-test('[vc build] should build project with an indirect dependency to `@vercel/analytics`', async () => {
+test('[vc build] should build project with an indirect dependency to `@khulnasoft/analytics`', async () => {
   const directory = await setupE2EFixture('vc-build-indirect-web-analytics');
   const output = await execCli(binaryPath, ['build'], { cwd: directory });
   expect(output.exitCode, formatOutput(output)).toBe(0);
@@ -1333,7 +1333,7 @@ test('[vc build] should build project with an indirect dependency to `@vercel/an
   expect(builds?.features?.webAnalyticsVersion).toEqual('1.1.1');
 });
 
-test('[vc build] should build project with `@vercel/analytics`', async () => {
+test('[vc build] should build project with `@khulnasoft/analytics`', async () => {
   const directory = await setupE2EFixture('vc-build-web-analytics');
   const output = await execCli(binaryPath, ['build'], { cwd: directory });
   expect(output.exitCode, formatOutput(output)).toBe(0);

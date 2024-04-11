@@ -2,7 +2,7 @@ import type { BuilderFunctions } from '@khulnasoft/build-utils';
 import type { Readable, Writable } from 'stream';
 import type * as tty from 'tty';
 import type { Route } from '@khulnasoft/routing-utils';
-import { PROJECT_ENV_TARGET } from '@vercel-internals/constants';
+import { PROJECT_ENV_TARGET } from '@khulnasoft-internals/constants';
 
 export type ProjectEnvTarget = typeof PROJECT_ENV_TARGET[number];
 export type ProjectEnvType =
@@ -581,7 +581,7 @@ export interface Build {
   output: BuildOutput[];
 
   /**
-   * If the Build uses the `@vercel/static` Runtime, it contains a hashed string of all outputs
+   * If the Build uses the `@khulnasoft/static` Runtime, it contains a hashed string of all outputs
    * @example null
    */
   fingerprint?: string | null;

@@ -7,7 +7,7 @@ import {
   DNSConflictingRecord,
   isAPIError,
 } from '../errors-ts';
-import type { DNSRecordData } from '@vercel-internals/types';
+import type { DNSRecordData } from '@khulnasoft-internals/types';
 
 type Response = {
   uid: string;

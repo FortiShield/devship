@@ -15,7 +15,7 @@ import type {
   ProjectLinkResult,
   Org,
   ProjectLink,
-} from '@vercel-internals/types';
+} from '@khulnasoft-internals/types';
 import { prependEmoji, emoji, EmojiLabel } from '../emoji';
 import { isDirectory } from '../config/global-path';
 import { NowBuildError, getPlatformEnv } from '@khulnasoft/build-utils';

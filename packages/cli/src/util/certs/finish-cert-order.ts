@@ -1,6 +1,6 @@
 import chalk from 'chalk';
 
-import type { Cert } from '@vercel-internals/types';
+import type { Cert } from '@khulnasoft-internals/types';
 import * as ERRORS from '../errors-ts';
 import Client from '../client';
 import mapCertError from './map-cert-error';

@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/hydrogen",
+      "use": "@khulnasoft/hydrogen",
       "config": {
         "zeroConfig": true
       }

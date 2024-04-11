@@ -548,7 +548,7 @@ test('[vercel dev] should frontend dev server and routes', async () => {
   }
 });
 
-test('[vercel dev] should support `@vercel/static` routing', async () => {
+test('[vercel dev] should support `@khulnasoft/static` routing', async () => {
   const dir = fixture('static-routes');
   const { dev, port, readyResolver } = await testFixture(dir);
 
@@ -730,7 +730,7 @@ test('[vercel dev] prints `npm install` errors', async () => {
   const result = await exec(dir);
   expect(
     stripAnsi(result.stderr).includes(
-      'Error: The package `@vercel/does-not-exist` is not published on the npm registry'
+      'Error: The package `@khulnasoft/does-not-exist` is not published on the npm registry'
     )
   ).toBeTruthy();
   expect(

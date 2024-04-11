@@ -16,7 +16,7 @@ importers:
       '@remix-run/serve':
         specifier: ^2.0.0
         version: 2.0.0(typescript@5.1.6)
-      '@vercel/remix':
+      '@khulnasoft/remix':
         specifier: ^2.0.0
         version: 2.0.0(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.6)
       isbot:
@@ -1242,7 +1242,7 @@ packages:
     resolution: {integrity: sha512-17kVyLq3ePTKOkveHxXuIJZtGYs+cSoev7BlP+Lf4916qfDhk/HBjvlYDe8egrea7LNPHKwSZJK/bzZC+Q6AwQ==}
     dev: true
 
-  /@vercel/remix@2.0.0(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.6):
+  /@khulnasoft/remix@2.0.0(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.6):
     resolution: {integrity: sha512-nwv1Z0ucVAARp399JOq/+Vf174E457P8BIJuDn63NAudgcKUWPVmqbfg1EP0jIa+FsjNQX1YXyExZ47k3sAfHg==}
     engines: {node: '>=14'}
     peerDependencies:

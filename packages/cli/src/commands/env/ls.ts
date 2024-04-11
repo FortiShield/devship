@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import ms from 'ms';
 import { Output } from '../../util/output';
-import type { Project, ProjectEnvVariable } from '@vercel-internals/types';
+import type { Project, ProjectEnvVariable } from '@khulnasoft-internals/types';
 import Client from '../../util/client';
 import formatTable from '../../util/format-table';
 import getEnvRecords from '../../util/env/get-env-records';

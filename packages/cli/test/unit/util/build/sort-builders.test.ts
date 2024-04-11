@@ -14,7 +14,7 @@ describe('sortBuilders()', () => {
       output: ['@khulnasoft/static-build', '@khulnasoft/node', '@khulnasoft/python'],
     },
     {
-      name: 'should sort @vercel/remix from end to beginning',
+      name: 'should sort @khulnasoft/remix from end to beginning',
       input: ['@khulnasoft/python', '@khulnasoft/node', '@khulnasoft/remix-builder'],
       output: ['@khulnasoft/remix-builder', '@khulnasoft/python', '@khulnasoft/node'],
     },
@@ -24,9 +24,9 @@ describe('sortBuilders()', () => {
       output: ['@khulnasoft/redwood', '@khulnasoft/python', '@khulnasoft/ruby'],
     },
     {
-      name: 'should sort @vercel/hydrogen from end to beginning',
-      input: ['@khulnasoft/python', '@vercel/hydrogen'],
-      output: ['@vercel/hydrogen', '@khulnasoft/python'],
+      name: 'should sort @khulnasoft/hydrogen from end to beginning',
+      input: ['@khulnasoft/python', '@khulnasoft/hydrogen'],
+      output: ['@khulnasoft/hydrogen', '@khulnasoft/python'],
     },
     {
       name: 'should sort @khulnasoft/static-build to beginning with many @khulnasoft/node',

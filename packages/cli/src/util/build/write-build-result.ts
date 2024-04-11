@@ -127,7 +127,7 @@ async function writeBuildResultV2(
   if (!buildResult.output) {
     const configFile = vercelConfig?.[fileNameSymbol];
     const updateMessage = build.use.startsWith('@now/')
-      ? ` Please update from "@now" to "@vercel" in your \`${configFile}\` file.`
+      ? ` Please update from "@now" to "@khulnasoft" in your \`${configFile}\` file.`
       : '';
     throw new Error(
       `The build result from "${build.use}" is missing the "output" property.${updateMessage}`

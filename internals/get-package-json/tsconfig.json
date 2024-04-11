@@ -1,5 +1,5 @@
 {
-  "extends": "@vercel-internals/tsconfig",
+  "extends": "@khulnasoft-internals/tsconfig",
   "compilerOptions": {
     "outDir": "dist",
     "declaration": true,

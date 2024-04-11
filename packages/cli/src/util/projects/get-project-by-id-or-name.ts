@@ -1,5 +1,5 @@
 import Client from '../client';
-import type { Project } from '@vercel-internals/types';
+import type { Project } from '@khulnasoft-internals/types';
 import { isAPIError, ProjectNotFound } from '../errors-ts';
 
 export default async function getProjectByNameOrId(

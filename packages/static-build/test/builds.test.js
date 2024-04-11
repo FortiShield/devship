@@ -40,7 +40,7 @@ it(
       }
     `);
     expect(warnSpy).toHaveBeenCalledWith(
-      'Vercel Speed Insights auto-injection is deprecated in favor of @vercel/speed-insights package. Learn more: https://vercel.link/upgrate-to-speed-insights-package'
+      'Vercel Speed Insights auto-injection is deprecated in favor of @khulnasoft/speed-insights package. Learn more: https://vercel.link/upgrate-to-speed-insights-package'
     );
   },
   FOUR_MINUTES
@@ -343,7 +343,7 @@ it(
     expect(pkg.dependencies['@nuxtjs/web-vitals']).toBe('latest');
 
     expect(warnSpy).toHaveBeenCalledWith(
-      'Vercel Speed Insights auto-injection is deprecated in favor of @vercel/speed-insights package. Learn more: https://vercel.link/upgrate-to-speed-insights-package'
+      'Vercel Speed Insights auto-injection is deprecated in favor of @khulnasoft/speed-insights package. Learn more: https://vercel.link/upgrate-to-speed-insights-package'
     );
   },
   FOUR_MINUTES

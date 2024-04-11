@@ -1,4 +1,4 @@
-# @vercel/hydrogen
+# @khulnasoft/hydrogen
 
 ## 1.0.2
 

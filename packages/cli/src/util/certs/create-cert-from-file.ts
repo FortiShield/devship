@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 import Client from '../client';
-import type { Cert } from '@vercel-internals/types';
+import type { Cert } from '@khulnasoft-internals/types';
 import { isErrnoException } from '@khulnasoft/error-utils';
 import { isAPIError } from '../errors-ts';
 

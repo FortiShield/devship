@@ -3,7 +3,7 @@ import type {
   ProjectEnvTarget,
   Project,
   ProjectEnvVariable,
-} from '@vercel-internals/types';
+} from '@khulnasoft-internals/types';
 import { formatProvider } from '../../src/util/git/connect-git-provider';
 import { parseEnvironment } from '../../src/commands/pull';
 import type { Env } from '@khulnasoft/build-utils';

@@ -3,7 +3,7 @@ import { outputJSON, readFile } from 'fs-extra';
 import { VercelConfig } from '@khulnasoft/client';
 import { VERCEL_DIR, VERCEL_DIR_PROJECT } from './link';
 import { PartialProjectSettings } from '../input/edit-project-settings';
-import type { Org, Project, ProjectLink } from '@vercel-internals/types';
+import type { Org, Project, ProjectLink } from '@khulnasoft-internals/types';
 import { isErrnoException, isError } from '@khulnasoft/error-utils';
 
 export type ProjectLinkAndSettings = Partial<ProjectLink> & {

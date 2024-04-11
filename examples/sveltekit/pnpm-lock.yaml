@@ -151,7 +151,7 @@ packages:
   /@sveltejs/adapter-vercel/1.0.0-next.67:
     resolution: {integrity: sha512-xg85d/vlivbTaZu70zmaPNkrY1YZhDrcxljuwVWO0LCzA4DACIA7CnXI9klUiXM5SPpsB8BhY6dS8sW5cDYWzw==}
     dependencies:
-      '@vercel/nft': 0.21.0
+      '@khulnasoft/nft': 0.21.0
       esbuild: 0.14.54
     transitivePeerDependencies:
       - encoding
@@ -227,7 +227,7 @@ packages:
       '@types/node': 18.7.9
     dev: true
 
-  /@vercel/nft/0.21.0:
+  /@khulnasoft/nft/0.21.0:
     resolution: {integrity: sha512-hFCAETfI5cG8l5iAiLhMC2bReC5K7SIybzrxGorv+eGspIbIFsVw7Vg85GovXm/LxA08pIDrAlrhR6GN36XB/Q==}
     hasBin: true
     dependencies:

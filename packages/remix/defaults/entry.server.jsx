@@ -1,5 +1,5 @@
 import { RemixServer } from '@remix-run/react';
-import { handleRequest } from '@vercel/remix';
+import { handleRequest } from '@khulnasoft/remix';
 
 export default function (
   request,

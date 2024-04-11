@@ -50,7 +50,7 @@
 
 ### Patch Changes
 
-- bump `@vercel/nft@0.26.4` ([#11155](https://github.com/khulnasoft/devship/pull/11155))
+- bump `@khulnasoft/nft@0.26.4` ([#11155](https://github.com/khulnasoft/devship/pull/11155))
 
 ## 3.0.19
 
@@ -67,7 +67,7 @@
 
 ### Patch Changes
 
-- [node][next][redwood][remix] bump `@vercel/nft@0.26.3` ([#11115](https://github.com/khulnasoft/devship/pull/11115))
+- [node][next][redwood][remix] bump `@khulnasoft/nft@0.26.3` ([#11115](https://github.com/khulnasoft/devship/pull/11115))
 
 - Updated dependencies [[`b6ed28b9b`](https://github.com/khulnasoft/devship/commit/b6ed28b9b1712f882c93fe053b70d3eb1df21819), [`8ba0ce932`](https://github.com/khulnasoft/devship/commit/8ba0ce932434c6295fedb5307bee59a804b7e6a8), [`0d034b682`](https://github.com/khulnasoft/devship/commit/0d034b6820c0f3252949c0ffc483048c5aac7f04), [`abaa700ce`](https://github.com/khulnasoft/devship/commit/abaa700cea44c723cfc851baa2dfe9e1ae2e8a5c)]:
   - @khulnasoft/build-utils@7.6.0
@@ -94,7 +94,7 @@
 
 - Await waitUntil promises to resolve before exiting ([#10915](https://github.com/khulnasoft/devship/pull/10915))
 
-- [next][node][redwood][remix] Bump `@vercel/nft@0.26.1` ([#11009](https://github.com/khulnasoft/devship/pull/11009))
+- [next][node][redwood][remix] Bump `@khulnasoft/nft@0.26.1` ([#11009](https://github.com/khulnasoft/devship/pull/11009))
 
 ## 3.0.14
 
@@ -151,9 +151,9 @@
 
 ### Patch Changes
 
-- Revert "[next][node][redwood][remix] Update @vercel/nft (#10540)" ([#10633](https://github.com/khulnasoft/devship/pull/10633))
+- Revert "[next][node][redwood][remix] Update @khulnasoft/nft (#10540)" ([#10633](https://github.com/khulnasoft/devship/pull/10633))
 
-- Update `@vercel/nft` to 0.24.2 ([#10644](https://github.com/khulnasoft/devship/pull/10644))
+- Update `@khulnasoft/nft` to 0.24.2 ([#10644](https://github.com/khulnasoft/devship/pull/10644))
 
 - Updated dependencies [[`2f5b0aeeb`](https://github.com/khulnasoft/devship/commit/2f5b0aeeb183ed3ea8cbc68cb3bc3c949c486ada)]:
   - @khulnasoft/build-utils@7.2.2
@@ -164,7 +164,7 @@
 
 - Use "esbuild" to build package ([#10553](https://github.com/khulnasoft/devship/pull/10553))
 
-- Update `@vercel/nft` to v0.24.1. ([#10540](https://github.com/khulnasoft/devship/pull/10540))
+- Update `@khulnasoft/nft` to v0.24.1. ([#10540](https://github.com/khulnasoft/devship/pull/10540))
 
 - Updated dependencies [[`decdf27fb`](https://github.com/khulnasoft/devship/commit/decdf27fb5ca914fe50a9320c4fd50ef79d2fbb3)]:
   - @khulnasoft/build-utils@7.2.1

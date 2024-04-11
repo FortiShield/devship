@@ -4,7 +4,7 @@ import { client } from '../../mocks/client';
 import { defaultProject, useProject } from '../../mocks/project';
 import { Request, Response } from 'express';
 import rollback from '../../../src/commands/rollback';
-import type { LastAliasRequest } from '@vercel-internals/types';
+import type { LastAliasRequest } from '@khulnasoft-internals/types';
 import { setupUnitFixture } from '../../helpers/setup-unit-fixture';
 import { useDeployment } from '../../mocks/deployment';
 import { useTeams } from '../../mocks/team';
