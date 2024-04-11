@@ -23,7 +23,7 @@
     "@edge-runtime/node-utils": "2.3.0",
     "@edge-runtime/primitives": "4.1.0",
     "@edge-runtime/vm": "3.2.0",
-    "@khulnasoft/static-config": "3.0.0",
+    "@khulnasoft/static-config": "3.0.2",
     "@types/node": "14.18.33",
     "@khulnasoft/build-utils": "workspace:*",
     "@khulnasoft/error-utils": "workspace:*",

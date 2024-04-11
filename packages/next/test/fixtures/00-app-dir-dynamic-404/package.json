@@ -6,6 +6,6 @@
   },
   "ignoreNextjsUpdates": true,
   "scripts": {
-    "vercel-build": "next build"
+    "khulnasoft-build": "next build"
   }
 }

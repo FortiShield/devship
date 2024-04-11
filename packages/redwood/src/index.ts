@@ -120,9 +120,9 @@ export const build: BuildV2 = async ({
       ...spawnOpts,
       cwd: workPath,
     });
-  } else if (hasScript('vercel-build', pkg)) {
-    debug(`Executing "yarn vercel-build"`);
-    await runPackageJsonScript(workPath, 'vercel-build', spawnOpts);
+  } else if (hasScript('khulnasoft-build', pkg)) {
+    debug(`Executing "yarn khulnasoft-build"`);
+    await runPackageJsonScript(workPath, 'khulnasoft-build', spawnOpts);
   } else if (hasScript('build', pkg)) {
     debug(`Executing "yarn build"`);
     await runPackageJsonScript(workPath, 'build', spawnOpts);

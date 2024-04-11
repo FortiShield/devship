@@ -406,7 +406,7 @@ export const build: BuildV3 = async ({
   await runPackageJsonScript(
     entrypointFsDirname,
     // Don't consider "build" script since its intended for frontend code
-    ['vercel-build', 'now-build'],
+    ['khulnasoft-build', 'now-build'],
     spawnOpts
   );
 

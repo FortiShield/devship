@@ -20,7 +20,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@khulnasoft/static-config": "3.0.0",
+    "@khulnasoft/static-config": "3.0.2",
     "@khulnasoft/gatsby-plugin-khulnasoft-analytics": "workspace:*",
     "@khulnasoft/gatsby-plugin-khulnasoft-builder": "workspace:*",
     "ts-morph": "12.0.0"

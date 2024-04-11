@@ -95,7 +95,7 @@ export function useDeploymentMissingProjectSettings() {
               placeholder: '`yarn install`, `pnpm install`, or `npm install`',
             },
             buildCommand: {
-              placeholder: '`npm run vercel-build` or `npm run build`',
+              placeholder: '`npm run khulnasoft-build` or `npm run build`',
               value: null,
             },
             devCommand: { placeholder: 'None', value: null },

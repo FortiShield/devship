@@ -650,14 +650,14 @@ export const build: BuildV2 = async ({
               })
             : await runPackageJsonScript(
                 entrypointDir,
-                ['vercel-build', 'now-build', 'build'],
+                ['khulnasoft-build', 'now-build', 'build'],
                 spawnOpts
               );
 
         if (!found) {
           throw new Error(
             `Missing required "${
-              buildCommand || 'vercel-build'
+              buildCommand || 'khulnasoft-build'
             }" script in "${entrypoint}"`
           );
         }

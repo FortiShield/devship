@@ -106,9 +106,9 @@ export const build: BuildV2 = async ({
     const pkg = await readConfigFile<PackageJson>(
       join(entrypointDir, 'package.json')
     );
-    if (hasScript('vercel-build', pkg)) {
-      debug(`Executing "yarn vercel-build"`);
-      await runPackageJsonScript(entrypointDir, 'vercel-build', spawnOpts);
+    if (hasScript('khulnasoft-build', pkg)) {
+      debug(`Executing "yarn khulnasoft-build"`);
+      await runPackageJsonScript(entrypointDir, 'khulnasoft-build', spawnOpts);
     } else if (hasScript('build', pkg)) {
       debug(`Executing "yarn build"`);
       await runPackageJsonScript(entrypointDir, 'build', spawnOpts);

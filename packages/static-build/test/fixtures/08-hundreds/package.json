@@ -1,5 +1,5 @@
 {
   "scripts": {
-    "vercel-build": "mkdir dist && node build.js"
+    "khulnasoft-build": "mkdir dist && node build.js"
   }
 }

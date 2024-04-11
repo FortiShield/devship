@@ -300,7 +300,7 @@ export const build: BuildV2 = async ({
   }
 
   let buildScriptName = getScriptName(pkg, [
-    'vercel-build',
+    'khulnasoft-build',
     'now-build',
     'build',
   ]);
@@ -309,18 +309,18 @@ export const build: BuildV2 = async ({
   if (!buildScriptName && !buildCommand) {
     console.log(
       'Your application is being built using `next build`. ' +
-        'If you need to define a different build step, please create a `vercel-build` script in your `package.json` ' +
-        '(e.g. `{ "scripts": { "vercel-build": "npm run prepare && next build" } }`).'
+        'If you need to define a different build step, please create a `khulnasoft-build` script in your `package.json` ' +
+        '(e.g. `{ "scripts": { "khulnasoft-build": "npm run prepare && next build" } }`).'
     );
 
     await writePackageJson(entryPath, {
       ...pkg,
       scripts: {
-        'vercel-build': 'next build',
+        'khulnasoft-build': 'next build',
         ...pkg.scripts,
       },
     });
-    buildScriptName = 'vercel-build';
+    buildScriptName = 'khulnasoft-build';
   }
 
   if (process.env.NPM_AUTH_TOKEN) {

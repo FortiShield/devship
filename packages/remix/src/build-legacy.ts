@@ -410,11 +410,11 @@ module.exports = config;`;
         cwd: entrypointFsDirname,
       });
     } else {
-      if (hasScript('vercel-build', pkg)) {
-        debug(`Executing "yarn vercel-build"`);
+      if (hasScript('khulnasoft-build', pkg)) {
+        debug(`Executing "yarn khulnasoft-build"`);
         await runPackageJsonScript(
           entrypointFsDirname,
-          'vercel-build',
+          'khulnasoft-build',
           spawnOpts
         );
       } else if (hasScript('build', pkg)) {

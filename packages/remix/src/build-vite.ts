@@ -129,11 +129,11 @@ export const build: BuildV2 = async ({
       cwd: entrypointFsDirname,
     });
   } else {
-    if (hasScript('vercel-build', packageJson)) {
-      debug(`Executing "vercel-build" script`);
+    if (hasScript('khulnasoft-build', packageJson)) {
+      debug(`Executing "khulnasoft-build" script`);
       await runPackageJsonScript(
         entrypointFsDirname,
-        'vercel-build',
+        'khulnasoft-build',
         spawnOpts
       );
     } else if (hasScript('build', packageJson)) {

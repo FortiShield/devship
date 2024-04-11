@@ -6,7 +6,7 @@ describe('Test `getScriptName()`', () => {
     const pkg = {
       scripts: {
         'vercel-dev': '',
-        'vercel-build': '',
+        'khulnasoft-build': '',
         dev: '',
         build: '',
       },
@@ -16,8 +16,8 @@ describe('Test `getScriptName()`', () => {
       'vercel-dev'
     );
     assert.equal(
-      getScriptName(pkg, ['vercel-build', 'now-build', 'build']),
-      'vercel-build'
+      getScriptName(pkg, ['khulnasoft-build', 'now-build', 'build']),
+      'khulnasoft-build'
     );
     assert.equal(getScriptName(pkg, ['dev']), 'dev');
     assert.equal(getScriptName(pkg, ['build']), 'build');
@@ -37,7 +37,7 @@ describe('Test `getScriptName()`', () => {
       'now-dev'
     );
     assert.equal(
-      getScriptName(pkg, ['vercel-build', 'now-build', 'build']),
+      getScriptName(pkg, ['khulnasoft-build', 'now-build', 'build']),
       'now-build'
     );
     assert.equal(getScriptName(pkg, ['dev']), 'dev');
@@ -67,6 +67,6 @@ describe('Test `getScriptName()`', () => {
       },
     };
     assert.equal(getScriptName(pkg, ['vercel-dev', 'now-dev']), null);
-    assert.equal(getScriptName(pkg, ['vercel-build', 'now-build']), null);
+    assert.equal(getScriptName(pkg, ['khulnasoft-build', 'now-build']), null);
   });
 });

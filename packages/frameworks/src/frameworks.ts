@@ -2024,7 +2024,7 @@ export const frameworks = [
           '`yarn install`, `pnpm install`, `npm install`, or `bun install`',
       },
       buildCommand: {
-        placeholder: '`npm run vercel-build` or `npm run build`',
+        placeholder: '`npm run khulnasoft-build` or `npm run build`',
         value: null,
       },
       devCommand: {
