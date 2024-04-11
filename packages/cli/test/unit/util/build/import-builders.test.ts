@@ -1,14 +1,14 @@
 import { describe, it, expect } from 'vitest';
 import { join } from 'path';
 import { remove } from 'fs-extra';
-import { getWriteableDirectory } from '@vercel/build-utils';
+import { getWriteableDirectory } from '@khulnasoft/build-utils';
 import { client } from '../../../mocks/client';
 import {
   importBuilders,
   resolveBuilders,
 } from '../../../../src/util/build/import-builders';
 import vercelNextPkg from '@vercel/next/package.json';
-import vercelNodePkg from '@vercel/node/package.json';
+import vercelNodePkg from '@khulnasoft/node/package.json';
 import { vi } from 'vitest';
 
 // these tests can take upwards of 190s on macos-latest
@@ -18,18 +18,18 @@ const repoRoot = join(__dirname, '../../../../../..');
 
 describe('importBuilders()', () => {
   it('should import built-in Builders', async () => {
-    const specs = new Set(['@vercel/node', '@vercel/next']);
+    const specs = new Set(['@khulnasoft/node', '@vercel/next']);
     const builders = await importBuilders(specs, process.cwd(), client.output);
     expect(builders.size).toEqual(2);
-    expect(builders.get('@vercel/node')?.pkg).toMatchObject(vercelNodePkg);
+    expect(builders.get('@khulnasoft/node')?.pkg).toMatchObject(vercelNodePkg);
     expect(builders.get('@vercel/next')?.pkg).toMatchObject(vercelNextPkg);
-    expect(builders.get('@vercel/node')?.pkgPath).toEqual(
+    expect(builders.get('@khulnasoft/node')?.pkgPath).toEqual(
       join(repoRoot, 'packages/node/package.json')
     );
     expect(builders.get('@vercel/next')?.pkgPath).toEqual(
       join(repoRoot, 'packages/next/package.json')
     );
-    expect(typeof builders.get('@vercel/node')?.builder.build).toEqual(
+    expect(typeof builders.get('@khulnasoft/node')?.builder.build).toEqual(
       'function'
     );
     expect(typeof builders.get('@vercel/next')?.builder.build).toEqual(
@@ -38,22 +38,22 @@ describe('importBuilders()', () => {
   });
 
   it('should import built-in Builders using `@latest`', async () => {
-    const specs = new Set(['@vercel/node@latest', '@vercel/next@latest']);
+    const specs = new Set(['@khulnasoft/node@latest', '@vercel/next@latest']);
     const builders = await importBuilders(specs, process.cwd(), client.output);
     expect(builders.size).toEqual(2);
-    expect(builders.get('@vercel/node@latest')?.pkg).toMatchObject(
+    expect(builders.get('@khulnasoft/node@latest')?.pkg).toMatchObject(
       vercelNodePkg
     );
     expect(builders.get('@vercel/next@latest')?.pkg).toMatchObject(
       vercelNextPkg
     );
-    expect(builders.get('@vercel/node@latest')?.pkgPath).toEqual(
+    expect(builders.get('@khulnasoft/node@latest')?.pkgPath).toEqual(
       join(repoRoot, 'packages/node/package.json')
     );
     expect(builders.get('@vercel/next@latest')?.pkgPath).toEqual(
       join(repoRoot, 'packages/next/package.json')
     );
-    expect(typeof builders.get('@vercel/node@latest')?.builder.build).toEqual(
+    expect(typeof builders.get('@khulnasoft/node@latest')?.builder.build).toEqual(
       'function'
     );
     expect(typeof builders.get('@vercel/next@latest')?.builder.build).toEqual(
@@ -62,22 +62,22 @@ describe('importBuilders()', () => {
   });
 
   it('should import built-in Builders using `@canary`', async () => {
-    const specs = new Set(['@vercel/node@canary', '@vercel/next@canary']);
+    const specs = new Set(['@khulnasoft/node@canary', '@vercel/next@canary']);
     const builders = await importBuilders(specs, process.cwd(), client.output);
     expect(builders.size).toEqual(2);
-    expect(builders.get('@vercel/node@canary')?.pkg).toMatchObject(
+    expect(builders.get('@khulnasoft/node@canary')?.pkg).toMatchObject(
       vercelNodePkg
     );
     expect(builders.get('@vercel/next@canary')?.pkg).toMatchObject(
       vercelNextPkg
     );
-    expect(builders.get('@vercel/node@canary')?.pkgPath).toEqual(
+    expect(builders.get('@khulnasoft/node@canary')?.pkgPath).toEqual(
       join(repoRoot, 'packages/node/package.json')
     );
     expect(builders.get('@vercel/next@canary')?.pkgPath).toEqual(
       join(repoRoot, 'packages/next/package.json')
     );
-    expect(typeof builders.get('@vercel/node@canary')?.builder.build).toEqual(
+    expect(typeof builders.get('@khulnasoft/node@canary')?.builder.build).toEqual(
       'function'
     );
     expect(typeof builders.get('@vercel/next@canary')?.builder.build).toEqual(
@@ -94,18 +94,18 @@ describe('importBuilders()', () => {
 
     const cwd = await getWriteableDirectory();
     try {
-      const spec = '@vercel/node@2.0.0';
+      const spec = '@khulnasoft/node@2.0.0';
       const specs = new Set([spec]);
       const builders = await importBuilders(specs, cwd, client.output);
       expect(builders.size).toEqual(1);
-      expect(builders.get(spec)?.pkg.name).toEqual('@vercel/node');
+      expect(builders.get(spec)?.pkg.name).toEqual('@khulnasoft/node');
       expect(builders.get(spec)?.pkg.version).toEqual('2.0.0');
       expect(builders.get(spec)?.pkgPath).toEqual(
-        join(cwd, '.vercel/builders/node_modules/@vercel/node/package.json')
+        join(cwd, '.vercel/builders/node_modules/@khulnasoft/node/package.json')
       );
       expect(typeof builders.get(spec)?.builder.build).toEqual('function');
       await expect(client.stderr).toOutput(
-        '> Installing Builder: @vercel/node'
+        '> Installing Builder: @khulnasoft/node'
       );
       await expect(client.stderr).not.toOutput('npm WARN deprecated');
     } finally {
@@ -169,7 +169,7 @@ describe('importBuilders()', () => {
       );
       expect(typeof builders.get(spec)?.builder.build).toEqual('function');
       await expect(client.stderr).toOutput(
-        'npm WARN deprecated @now/node@1.8.5: "@now/node" is deprecated and will stop receiving updates on December 31, 2020. Please use "@vercel/node" instead.'
+        'npm WARN deprecated @now/node@1.8.5: "@now/node" is deprecated and will stop receiving updates on December 31, 2020. Please use "@khulnasoft/node" instead.'
       );
     } finally {
       await remove(cwd);

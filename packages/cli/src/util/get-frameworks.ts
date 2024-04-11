@@ -1,4 +1,4 @@
-import { Framework } from '@vercel/frameworks';
+import { Framework } from '@khulnasoft/frameworks';
 import Client from './client';
 
 export async function getFrameworks(client: Client) {

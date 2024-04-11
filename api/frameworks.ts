@@ -1,4 +1,4 @@
-import { VercelRequest, VercelResponse } from '@vercel/node';
+import { VercelRequest, VercelResponse } from '@khulnasoft/node';
 import { withApiHandler } from './_lib/util/with-api-handler';
 import _frameworks, { Framework } from '../packages/frameworks';
 

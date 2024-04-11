@@ -3,14 +3,14 @@
   "builds": [
     {
       "src": "index.go",
-      "use": "@vercel/go",
+      "use": "@khulnasoft/go",
       "config": {
         "includeFiles": ["templates/**"]
       }
     },
     {
       "src": "another.go",
-      "use": "@vercel/go",
+      "use": "@khulnasoft/go",
       "config": {
         "includeFiles": "templates/**"
       }

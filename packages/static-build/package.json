@@ -1,9 +1,9 @@
 {
-  "name": "@vercel/static-build",
-  "version": "2.4.6",
+  "name": "@khulnasoft/static-build",
+  "version": "2.4.7",
   "license": "Apache-2.0",
   "main": "./dist/index",
-  "homepage": "https://vercel.com/docs/build-step",
+  "homepage": "https://khulnasoft.com/docs/build-step",
   "files": [
     "dist"
   ],
@@ -20,12 +20,14 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@vercel/gatsby-plugin-vercel-analytics": "1.0.11",
-    "@vercel/gatsby-plugin-vercel-builder": "2.0.24",
-    "@vercel/static-config": "3.0.0",
+    "@khulnasoft/static-config": "3.0.0",
+    "@vercel/gatsby-plugin-vercel-analytics": "workspace:*",
+    "@vercel/gatsby-plugin-vercel-builder": "workspace:*",
     "ts-morph": "12.0.0"
   },
   "devDependencies": {
+    "@khulnasoft/fs-detectors": "workspace:*",
+    "@khulnasoft/routing-utils": "workspace:*",
     "@types/aws-lambda": "8.10.64",
     "@types/cross-spawn": "6.0.0",
     "@types/fs-extra": "9.0.13",
@@ -35,11 +37,9 @@
     "@types/node-fetch": "2.5.4",
     "@types/promise-timeout": "1.3.0",
     "@types/semver": "7.3.13",
-    "@vercel/build-utils": "7.11.0",
-    "@vercel/error-utils": "2.0.2",
-    "@vercel/frameworks": "3.0.1",
-    "@vercel/fs-detectors": "5.2.2",
-    "@vercel/routing-utils": "3.1.0",
+    "@khulnasoft/build-utils": "workspace:*",
+    "@vercel/error-utils": "workspace:*",
+    "@khulnasoft/frameworks": "workspace:*",
     "execa": "3.2.0",
     "fs-extra": "10.0.0",
     "get-port": "5.0.0",

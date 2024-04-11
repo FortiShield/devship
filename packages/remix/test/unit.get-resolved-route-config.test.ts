@@ -3,7 +3,7 @@ import type {
   ConfigRoute,
   RouteManifest,
 } from '@remix-run/dev/dist/config/routes';
-import type { BaseFunctionConfig } from '@vercel/static-config';
+import type { BaseFunctionConfig } from '@khulnasoft/static-config';
 
 describe('getResolvedRouteConfig()', () => {
   const staticConfigsMap = new Map<ConfigRoute, BaseFunctionConfig | null>([

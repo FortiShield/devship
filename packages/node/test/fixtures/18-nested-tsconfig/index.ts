@@ -1,4 +1,4 @@
-import { VercelRequest, VercelResponse } from '@vercel/node';
+import { VercelRequest, VercelResponse } from '@khulnasoft/node';
 import { hello } from './dep';
 
 export default function (req: VercelRequest, res: VercelResponse) {

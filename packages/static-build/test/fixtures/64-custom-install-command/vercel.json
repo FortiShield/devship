@@ -2,7 +2,7 @@
   "builds": [
     {
       "src": "build.js",
-      "use": "@vercel/static-build",
+      "use": "@khulnasoft/static-build",
       "config": {
         "zeroConfig": true,
         "installCommand": "node install.js",

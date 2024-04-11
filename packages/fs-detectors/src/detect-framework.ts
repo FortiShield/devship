@@ -1,4 +1,4 @@
-import type { Framework, FrameworkDetectionItem } from '@vercel/frameworks';
+import type { Framework, FrameworkDetectionItem } from '@khulnasoft/frameworks';
 import { spawnSync } from 'child_process';
 import { DetectorFilesystem } from './detectors/filesystem';
 

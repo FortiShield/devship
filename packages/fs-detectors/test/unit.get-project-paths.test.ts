@@ -1,5 +1,5 @@
 import path from 'path';
-import { normalizePath } from '@vercel/build-utils';
+import { normalizePath } from '@khulnasoft/build-utils';
 import { getProjectPaths, ProjectPath } from '../src/get-project-paths';
 import { LocalFileSystemDetector } from '../src';
 

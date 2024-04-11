@@ -1,4 +1,4 @@
-import type { Images } from '@vercel/build-utils';
+import type { Images } from '@khulnasoft/build-utils';
 
 export type Config = {
   version: 3;

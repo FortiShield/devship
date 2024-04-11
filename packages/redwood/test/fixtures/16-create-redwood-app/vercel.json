@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/redwood",
+      "use": "@khulnasoft/redwood",
       "config": {
         "zeroConfig": true,
         "installCommand": "node install.js && yarn"

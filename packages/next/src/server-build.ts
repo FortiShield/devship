@@ -14,8 +14,8 @@ import {
   Files,
   BuildResultV2Typical as BuildResult,
   NodejsLambda,
-} from '@vercel/build-utils';
-import { Route, RouteWithHandle } from '@vercel/routing-utils';
+} from '@khulnasoft/build-utils';
+import { Route, RouteWithHandle } from '@khulnasoft/routing-utils';
 import { MAX_AGE_ONE_YEAR } from '.';
 import { MAX_UNCOMPRESSED_LAMBDA_SIZE } from './constants';
 import {
@@ -671,7 +671,7 @@ export async function serverBuild({
       throw new NowBuildError({
         message: `Required files read using Node.js fs library and node_modules exceed max lambda size of ${lambdaCompressedByteLimit} bytes`,
         code: 'NEXT_REQUIRED_FILES_LIMIT',
-        link: 'https://vercel.com/docs/platform/limits#serverless-function-size',
+        link: 'https://khulnasoft.com/docs/platform/limits#serverless-function-size',
       });
     }
 

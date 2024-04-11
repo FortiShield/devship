@@ -14,8 +14,8 @@
     "unzip-stream": "0.3.0"
   },
   "devDependencies": {
+    "@khulnasoft/node": "workspace:^",
     "@types/node": "16.18.11",
-    "@types/node-fetch": "2.5.4",
-    "@vercel/node": "*"
+    "@types/node-fetch": "2.5.4"
   }
 }

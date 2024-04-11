@@ -1,11 +1,11 @@
-# @vercel/fs-detectors
+# @khulnasoft/fs-detectors
 
 ## 5.2.2
 
 ### Patch Changes
 
 - Updated dependencies [[`9ed967034`](https://github.com/khulnasoft/devship/commit/9ed967034d61b6a5b1e4bb32449c9193c50615c0)]:
-  - @vercel/frameworks@3.0.1
+  - @khulnasoft/frameworks@3.0.1
 
 ## 5.2.1
 
@@ -22,35 +22,35 @@
 ### Patch Changes
 
 - Updated dependencies [[`1333071a3`](https://github.com/khulnasoft/devship/commit/1333071a3a2d324679327bfdd4e872f8fd3521c6)]:
-  - @vercel/frameworks@3.0.0
+  - @khulnasoft/frameworks@3.0.0
 
 ## 5.1.6
 
 ### Patch Changes
 
 - Updated dependencies [[`471bdd5b4`](https://github.com/khulnasoft/devship/commit/471bdd5b4506f1410afd7bca6efae3bc696cd939)]:
-  - @vercel/frameworks@2.0.6
+  - @khulnasoft/frameworks@2.0.6
 
 ## 5.1.5
 
 ### Patch Changes
 
 - Updated dependencies [[`e6aaf79d0`](https://github.com/khulnasoft/devship/commit/e6aaf79d04fafd032d9a28143b02d28766add415)]:
-  - @vercel/frameworks@2.0.5
+  - @khulnasoft/frameworks@2.0.5
 
 ## 5.1.4
 
 ### Patch Changes
 
 - Updated dependencies [[`a8934da62`](https://github.com/khulnasoft/devship/commit/a8934da6232b66a98e9ce43ebf5342eac664d40d)]:
-  - @vercel/frameworks@2.0.4
+  - @khulnasoft/frameworks@2.0.4
 
 ## 5.1.3
 
 ### Patch Changes
 
 - Updated dependencies [[`306f653da`](https://github.com/khulnasoft/devship/commit/306f653da9de96ddf583cce35603229aa55c4e53), [`34dd9c091`](https://github.com/khulnasoft/devship/commit/34dd9c0918585cf6d3b04bddd9158978b0b4192f)]:
-  - @vercel/frameworks@2.0.3
+  - @khulnasoft/frameworks@2.0.3
   - @vercel/error-utils@2.0.2
 
 ## 5.1.2
@@ -58,7 +58,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`9e9fac019`](https://github.com/khulnasoft/devship/commit/9e9fac0191cb1428ac9e5479c3d5c8afd7b7d357)]:
-  - @vercel/routing-utils@3.1.0
+  - @khulnasoft/routing-utils@3.1.0
 
 ## 5.1.1
 
@@ -77,7 +77,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`ec894bdf7`](https://github.com/khulnasoft/devship/commit/ec894bdf7f167debded37183f11360756f577f14)]:
-  - @vercel/frameworks@2.0.2
+  - @khulnasoft/frameworks@2.0.2
 
 ## 5.0.2
 
@@ -90,7 +90,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`c615423a0`](https://github.com/khulnasoft/devship/commit/c615423a0b60ed64bf5e0e10bbc4ca997c31bd60), [`96f99c714`](https://github.com/khulnasoft/devship/commit/96f99c714715651b85eb7a03f58ecc9e1316d156)]:
-  - @vercel/frameworks@2.0.1
+  - @khulnasoft/frameworks@2.0.1
   - @vercel/error-utils@2.0.1
 
 ## 5.0.0
@@ -107,29 +107,29 @@
 
 - Updated dependencies [[`37f5c6270`](https://github.com/khulnasoft/devship/commit/37f5c6270058336072ca733673ea72dd6c56bd6a), [`ed806d8a6`](https://github.com/khulnasoft/devship/commit/ed806d8a6b560b173ba80b24cbfafaa6f179d8b1)]:
   - @vercel/error-utils@2.0.0
-  - @vercel/frameworks@2.0.0
-  - @vercel/routing-utils@3.0.0
+  - @khulnasoft/frameworks@2.0.0
+  - @khulnasoft/routing-utils@3.0.0
 
 ## 4.1.3
 
 ### Patch Changes
 
 - Updated dependencies [[`65ab3b23e`](https://github.com/khulnasoft/devship/commit/65ab3b23e9db008ecc13b425a7adcf5a6c1ef568)]:
-  - @vercel/frameworks@1.6.0
+  - @khulnasoft/frameworks@1.6.0
 
 ## 4.1.2
 
 ### Patch Changes
 
 - Updated dependencies [[`33d9c1b7f`](https://github.com/khulnasoft/devship/commit/33d9c1b7f901b0ef6a28398942b6d447cfea882f), [`f54598724`](https://github.com/khulnasoft/devship/commit/f54598724c3cb7fc0761cf452f34d527fd5be16f)]:
-  - @vercel/frameworks@1.5.1
+  - @khulnasoft/frameworks@1.5.1
 
 ## 4.1.1
 
 ### Patch Changes
 
 - Updated dependencies [[`ce4633fe4`](https://github.com/khulnasoft/devship/commit/ce4633fe4d00cb5c251cdabbfab08f39ec3f3b5f)]:
-  - @vercel/frameworks@1.5.0
+  - @khulnasoft/frameworks@1.5.0
 
 ## 4.1.0
 
@@ -144,7 +144,7 @@
 - Resolve symlinks in `LocalFileSystemDetector#readdir()` ([#10126](https://github.com/khulnasoft/devship/pull/10126))
 
 - Updated dependencies [[`0867f11a6`](https://github.com/khulnasoft/devship/commit/0867f11a6a1086ef4f4701db2b98da8fcc299586)]:
-  - @vercel/frameworks@1.4.3
+  - @khulnasoft/frameworks@1.4.3
 
 ## 4.0.0
 

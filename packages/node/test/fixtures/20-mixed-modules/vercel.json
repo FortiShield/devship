@@ -1,8 +1,8 @@
 {
   "version": 2,
   "builds": [
-    { "src": "entrypoint**", "use": "@vercel/node" },
-    { "src": "type-module-package-json/**/*.js", "use": "@vercel/node" }
+    { "src": "entrypoint**", "use": "@khulnasoft/node" },
+    { "src": "type-module-package-json/**/*.js", "use": "@khulnasoft/node" }
   ],
   "probes": [
     {

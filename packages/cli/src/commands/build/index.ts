@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import semver from 'semver';
 import minimatch from 'minimatch';
 import { join, normalize, relative, resolve, sep } from 'path';
-import { frameworkList } from '@vercel/frameworks';
+import { frameworkList } from '@khulnasoft/frameworks';
 import {
   getDiscontinuedNodeVersions,
   normalizePath,
@@ -22,20 +22,20 @@ import {
   Cron,
   validateNpmrc,
   type FlagDefinitions,
-} from '@vercel/build-utils';
+} from '@khulnasoft/build-utils';
 import {
   detectBuilders,
   detectFrameworkRecord,
   detectFrameworkVersion,
   LocalFileSystemDetector,
-} from '@vercel/fs-detectors';
+} from '@khulnasoft/fs-detectors';
 import {
   appendRoutesToPhase,
   getTransformedRoutes,
   mergeRoutes,
   MergeRoutesProps,
   Route,
-} from '@vercel/routing-utils';
+} from '@khulnasoft/routing-utils';
 import { fileNameSymbol } from '@vercel/client';
 import type { VercelConfig } from '@vercel/client';
 
@@ -738,7 +738,7 @@ function expandBuild(files: string[], build: Builder): Builder[] {
     throw new NowBuildError({
       code: `invalid_build_specification`,
       message: 'Field `use` is missing in build specification',
-      link: 'https://vercel.com/docs/concepts/projects/project-configuration#builds',
+      link: 'https://khulnasoft.com/docs/concepts/projects/project-configuration#builds',
       action: 'View Documentation',
     });
   }
@@ -750,7 +750,7 @@ function expandBuild(files: string[], build: Builder): Builder[] {
     throw new NowBuildError({
       code: `invalid_build_specification`,
       message: 'A build `src` path resolves to an empty string',
-      link: 'https://vercel.com/docs/concepts/projects/project-configuration#builds',
+      link: 'https://khulnasoft.com/docs/concepts/projects/project-configuration#builds',
       action: 'View Documentation',
     });
   }

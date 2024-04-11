@@ -1,8 +1,8 @@
 {
   "version": 2,
   "builds": [
-    { "src": "index.js", "use": "@vercel/node" },
-    { "src": "subdirectory/index.js", "use": "@vercel/node" }
+    { "src": "index.js", "use": "@khulnasoft/node" },
+    { "src": "subdirectory/index.js", "use": "@khulnasoft/node" }
   ],
   "probes": [
     { "path": "/", "mustContain": "cow:RANDOMNESS_PLACEHOLDER" },

@@ -9,7 +9,7 @@ import {
   getServerlessPages,
   normalizePrefetches,
 } from '../../src/utils';
-import { FileFsRef, FileRef } from '@vercel/build-utils';
+import { FileFsRef, FileRef } from '@khulnasoft/build-utils';
 import { genDir } from '../utils';
 
 describe('getNextConfig', () => {

@@ -112,7 +112,7 @@ test(
 );
 
 test(
-  '[vercel dev] Use `@vercel/python` with Flask requirements.txt',
+  '[vercel dev] Use `@khulnasoft/python` with Flask requirements.txt',
   testFixtureStdio('python-flask', async (testPath: any) => {
     const name = 'Alice';
     const year = new Date().getFullYear();

@@ -5,8 +5,8 @@ import type {
   Images,
   ProjectSettings,
   Cron,
-} from '@vercel/build-utils';
-import type { Header, Route, Redirect, Rewrite } from '@vercel/routing-utils';
+} from '@khulnasoft/build-utils';
+import type { Header, Route, Redirect, Rewrite } from '@khulnasoft/routing-utils';
 
 export { DeploymentEventType } from './utils';
 

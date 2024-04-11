@@ -21,7 +21,7 @@ export const LONGITUDE_HEADER_NAME = 'x-vercel-ip-longitude';
 /**
  * Country region of the original client IP calculated by Vercel Proxy.
  *
- * See [docs](https://vercel.com/docs/concepts/edge-network/headers#x-vercel-ip-country-region).
+ * See [docs](https://khulnasoft.com/docs/concepts/edge-network/headers#x-vercel-ip-country-region).
  */
 export const REGION_HEADER_NAME = 'x-vercel-ip-country-region';
 /**
@@ -55,11 +55,11 @@ export interface Geo {
   /** The flag emoji for the country the request originated from. */
   flag?: string;
 
-  /** The [Vercel Edge Network region](https://vercel.com/docs/concepts/edge-network/regions) that received the request. */
+  /** The [Vercel Edge Network region](https://khulnasoft.com/docs/concepts/edge-network/regions) that received the request. */
   region?: string;
 
   /** The region part of the ISO 3166-2 code of the client IP.
-   * See [docs](https://vercel.com/docs/concepts/edge-network/headers#x-vercel-ip-country-region).
+   * See [docs](https://khulnasoft.com/docs/concepts/edge-network/headers#x-vercel-ip-country-region).
    */
   countryRegion?: string;
 

@@ -3,7 +3,7 @@ import XDGAppPaths from 'xdg-app-paths';
 import { dirname, parse as parsePath, resolve as resolvePath } from 'path';
 import type { Output } from '../output';
 import { existsSync, outputJSONSync, readJSONSync } from 'fs-extra';
-import type { PackageJson } from '@vercel/build-utils';
+import type { PackageJson } from '@khulnasoft/build-utils';
 import { spawn } from 'child_process';
 
 interface GetLatestVersionOptions {

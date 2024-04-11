@@ -1,4 +1,4 @@
-import type { Framework } from '@vercel/frameworks';
+import type { Framework } from '@khulnasoft/frameworks';
 
 export const packageManagers: Array<
   Omit<Framework, 'description' | 'getOutputDirName' | 'settings'>

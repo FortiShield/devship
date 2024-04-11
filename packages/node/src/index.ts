@@ -38,7 +38,7 @@ import {
   debug,
   isSymbolicLink,
   walkParentDirs,
-} from '@vercel/build-utils';
+} from '@khulnasoft/build-utils';
 import type {
   File,
   Files,
@@ -50,8 +50,8 @@ import type {
   StartDevServer,
   NodeVersion,
   BuildResultV3,
-} from '@vercel/build-utils';
-import { getConfig } from '@vercel/static-config';
+} from '@khulnasoft/build-utils';
+import { getConfig } from '@khulnasoft/static-config';
 
 import { fixConfig, Register, register } from './typescript';
 import {
@@ -584,7 +584,7 @@ export const startDevServer: StartDevServer = async opts => {
       ts = requireTypescript(compiler);
     }
 
-    // Otherwise fall back to using the copy that `@vercel/node` uses
+    // Otherwise fall back to using the copy that `@khulnasoft/node` uses
     if (!ts) {
       compiler = resolveTypescript(join(__dirname, '..'));
       ts = requireTypescript(compiler);

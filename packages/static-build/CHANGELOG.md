@@ -1,4 +1,4 @@
-# @vercel/static-build
+# @khulnasoft/static-build
 
 ## 2.4.6
 
@@ -164,7 +164,7 @@
 
 ### Patch Changes
 
-- Mark `@vercel/static-config` and `ts-morph` as externals ([#10543](https://github.com/khulnasoft/devship/pull/10543))
+- Mark `@khulnasoft/static-config` and `ts-morph` as externals ([#10543](https://github.com/khulnasoft/devship/pull/10543))
 
 - Updated dependencies [[`4b376a564`](https://github.com/khulnasoft/devship/commit/4b376a564a09679dc1085d3bfcd6290c6f15760e), [`b8bc682d3`](https://github.com/khulnasoft/devship/commit/b8bc682d3eef0e6033fd6e8db2089c6c4ca671af)]:
   - @vercel/gatsby-plugin-vercel-builder@2.0.6

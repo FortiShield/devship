@@ -580,7 +580,7 @@ module.exports = async function prepare(session, binaryPath, tmpFixturesDir) {
         builds: [
           {
             src: 'package.json',
-            use: '@vercel/static-build',
+            use: '@khulnasoft/static-build',
             config: { distDir: '.' },
           },
         ],
@@ -605,7 +605,7 @@ module.exports = async function prepare(session, binaryPath, tmpFixturesDir) {
         builds: [
           {
             src: 'package.json',
-            use: '@vercel/static-build',
+            use: '@khulnasoft/static-build',
             config: { zeroConfig: true, outputDirectory: '.' },
           },
         ],

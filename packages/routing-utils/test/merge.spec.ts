@@ -9,7 +9,7 @@ test('mergeRoutes simple', () => {
   ];
   const builds: Build[] = [
     {
-      use: '@vercel/node',
+      use: '@khulnasoft/node',
       entrypoint: 'api/home.js',
       routes: [
         { src: '/node1', dest: '/n1' },
@@ -17,7 +17,7 @@ test('mergeRoutes simple', () => {
       ],
     },
     {
-      use: '@vercel/python',
+      use: '@khulnasoft/python',
       entrypoint: 'api/users.py',
       routes: [
         { src: '/python1', dest: '/py1' },
@@ -45,7 +45,7 @@ test('mergeRoutes handle filesystem user routes', () => {
   ];
   const builds: Build[] = [
     {
-      use: '@vercel/node',
+      use: '@khulnasoft/node',
       entrypoint: 'api/home.js',
       routes: [
         { src: '/node1', dest: '/n1' },
@@ -53,7 +53,7 @@ test('mergeRoutes handle filesystem user routes', () => {
       ],
     },
     {
-      use: '@vercel/python',
+      use: '@khulnasoft/python',
       entrypoint: 'api/users.py',
       routes: [
         { src: '/python1', dest: '/py1' },
@@ -81,7 +81,7 @@ test('mergeRoutes handle filesystem build routes', () => {
   ];
   const builds: Build[] = [
     {
-      use: '@vercel/node',
+      use: '@khulnasoft/node',
       entrypoint: 'api/home.js',
       routes: [
         { src: '/node1', dest: '/n1' },
@@ -90,7 +90,7 @@ test('mergeRoutes handle filesystem build routes', () => {
       ],
     },
     {
-      use: '@vercel/python',
+      use: '@khulnasoft/python',
       entrypoint: 'api/users.py',
       routes: [
         { src: '/python1', dest: '/py1' },
@@ -120,7 +120,7 @@ test('mergeRoutes handle filesystem both user and builds', () => {
   ];
   const builds: Build[] = [
     {
-      use: '@vercel/node',
+      use: '@khulnasoft/node',
       entrypoint: 'api/home.js',
       routes: [
         { src: '/node1', dest: '/n1' },
@@ -129,7 +129,7 @@ test('mergeRoutes handle filesystem both user and builds', () => {
       ],
     },
     {
-      use: '@vercel/python',
+      use: '@khulnasoft/python',
       entrypoint: 'api/users.py',
       routes: [
         { src: '/python1', dest: '/py1' },
@@ -159,7 +159,7 @@ test('mergeRoutes continue true', () => {
   ];
   const builds: Build[] = [
     {
-      use: '@vercel/node',
+      use: '@khulnasoft/node',
       entrypoint: 'api/home.js',
       routes: [
         { src: '/node1', dest: '/n1' },
@@ -168,7 +168,7 @@ test('mergeRoutes continue true', () => {
       ],
     },
     {
-      use: '@vercel/python',
+      use: '@khulnasoft/python',
       entrypoint: 'api/users.py',
       routes: [
         { src: '/python1', dest: '/py1' },
@@ -200,7 +200,7 @@ test('mergeRoutes check true', () => {
   ];
   const builds: Build[] = [
     {
-      use: '@vercel/node',
+      use: '@khulnasoft/node',
       entrypoint: 'api/home.js',
       routes: [
         { src: '/node1', dest: '/n1' },
@@ -209,7 +209,7 @@ test('mergeRoutes check true', () => {
       ],
     },
     {
-      use: '@vercel/python',
+      use: '@khulnasoft/python',
       entrypoint: 'api/users.py',
       routes: [
         { src: '/python1', dest: '/py1' },
@@ -242,7 +242,7 @@ test('mergeRoutes check true, continue true, handle filesystem middle', () => {
   ];
   const builds: Build[] = [
     {
-      use: '@vercel/node',
+      use: '@khulnasoft/node',
       entrypoint: 'api/home.js',
       routes: [
         { src: '/node1', dest: '/n1', continue: true },
@@ -252,7 +252,7 @@ test('mergeRoutes check true, continue true, handle filesystem middle', () => {
       ],
     },
     {
-      use: '@vercel/python',
+      use: '@khulnasoft/python',
       entrypoint: 'api/users.py',
       routes: [
         { src: '/python1', dest: '/py1', check: true },
@@ -285,7 +285,7 @@ test('mergeRoutes check true, continue true, handle filesystem top', () => {
   ];
   const builds: Build[] = [
     {
-      use: '@vercel/node',
+      use: '@khulnasoft/node',
       entrypoint: 'api/home.js',
       routes: [
         { handle: 'filesystem' },
@@ -295,7 +295,7 @@ test('mergeRoutes check true, continue true, handle filesystem top', () => {
       ],
     },
     {
-      use: '@vercel/python',
+      use: '@khulnasoft/python',
       entrypoint: 'api/users.py',
       routes: [
         { handle: 'filesystem' },
@@ -330,7 +330,7 @@ test('mergeRoutes multiple handle values', () => {
   ];
   const builds: Build[] = [
     {
-      use: '@vercel/node',
+      use: '@khulnasoft/node',
       entrypoint: 'api/home.js',
       routes: [
         { handle: 'filesystem' },
@@ -342,7 +342,7 @@ test('mergeRoutes multiple handle values', () => {
       ],
     },
     {
-      use: '@vercel/python',
+      use: '@khulnasoft/python',
       entrypoint: 'api/users.py',
       routes: [
         { handle: 'filesystem' },
@@ -376,7 +376,7 @@ test('mergeRoutes ensure `handle: error` comes last', () => {
   const userRoutes: Route[] = [];
   const builds: Build[] = [
     {
-      use: '@vercel/static-build',
+      use: '@khulnasoft/static-build',
       entrypoint: 'packge.json',
       routes: [
         {

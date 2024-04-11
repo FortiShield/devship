@@ -1,4 +1,4 @@
-import { NowBuildError } from '@vercel/build-utils';
+import { NowBuildError } from '@khulnasoft/build-utils';
 import which from 'which';
 
 interface PythonVersion {

@@ -25,13 +25,13 @@ import {
   NodejsLambda,
   BuildResultV2Typical as BuildResult,
   BuildResultBuildOutput,
-} from '@vercel/build-utils';
-import { Route, RouteWithHandle, RouteWithSrc } from '@vercel/routing-utils';
+} from '@khulnasoft/build-utils';
+import { Route, RouteWithHandle, RouteWithSrc } from '@khulnasoft/routing-utils';
 import {
   convertHeaders,
   convertRedirects,
   convertRewrites,
-} from '@vercel/routing-utils/dist/superstatic';
+} from '@khulnasoft/routing-utils/dist/superstatic';
 import { nodeFileTrace } from '@vercel/nft';
 import { Sema } from 'async-sema';
 // escape-string-regexp version must match Next.js version
@@ -686,7 +686,7 @@ export const build: BuildV2 = async ({
               code: 'NEXT_BASEPATH_LEGACY_BUILDS',
               message:
                 'basePath can not be used with `builds` in vercel.json, use Project Settings to configure your monorepo instead',
-              link: 'https://vercel.com/docs/platform/projects#project-settings',
+              link: 'https://khulnasoft.com/docs/platform/projects#project-settings',
             });
           }
 

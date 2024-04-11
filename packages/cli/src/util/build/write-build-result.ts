@@ -27,7 +27,7 @@ import {
   BuildResultBuildOutput,
   getLambdaOptionsFromFunction,
   normalizePath,
-} from '@vercel/build-utils';
+} from '@khulnasoft/build-utils';
 import pipe from 'promisepipe';
 import { merge } from './merge';
 import { unzip } from './unzip';

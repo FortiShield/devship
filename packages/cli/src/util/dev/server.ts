@@ -28,7 +28,7 @@ import {
   appendRoutesToPhase,
   HandleValue,
   Route,
-} from '@vercel/routing-utils';
+} from '@khulnasoft/routing-utils';
 import {
   Builder,
   cloneEnv,
@@ -38,14 +38,14 @@ import {
   FileFsRef,
   PackageJson,
   spawnCommand,
-} from '@vercel/build-utils';
+} from '@khulnasoft/build-utils';
 import {
   detectBuilders,
   detectApiDirectory,
   detectApiExtensions,
   isOfficialRuntime,
-} from '@vercel/fs-detectors';
-import { frameworkList } from '@vercel/frameworks';
+} from '@khulnasoft/fs-detectors';
+import { frameworkList } from '@khulnasoft/frameworks';
 
 import cmd from '../output/cmd';
 import link from '../output/link';
@@ -99,7 +99,7 @@ import { pickOverrides } from '../projects/project-settings';
 import { replaceLocalhost } from './parse-listen';
 
 const frontendRuntimeSet = new Set(
-  frameworkList.map(f => f.useRuntime?.use || '@vercel/static-build')
+  frameworkList.map(f => f.useRuntime?.use || '@khulnasoft/static-build')
 );
 
 interface FSEvent {
@@ -478,7 +478,7 @@ export default class DevServer {
         });
     }
 
-    // Sort build matches to make sure `@vercel/static-build` is always last
+    // Sort build matches to make sure `@khulnasoft/static-build` is always last
     this.buildMatches = new Map(
       [...this.buildMatches.entries()].sort((matchA, matchB) => {
         return sortBuilders(matchA[1] as Builder, matchB[1] as Builder);
@@ -650,7 +650,7 @@ export default class DevServer {
         vercelConfig.builds = vercelConfig.builds.filter(filterFrontendBuilds);
       }
 
-      // `@vercel/static-build` needs to be the last builder
+      // `@khulnasoft/static-build` needs to be the last builder
       // since it might catch all other requests
       vercelConfig.builds.sort(sortBuilders);
     }

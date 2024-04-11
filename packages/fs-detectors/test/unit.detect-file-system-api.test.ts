@@ -3,7 +3,7 @@ import { detectFileSystemAPI } from '../src/detect-file-system-api';
 describe('Test `detectFileSystemAPI`', () => {
   it('should error when builds in vercel.json', async () => {
     const vercelConfig = {
-      builds: [{ use: '@vercel/node', src: 'api/**/*.js' }],
+      builds: [{ use: '@khulnasoft/node', src: 'api/**/*.js' }],
     };
     const files = {
       'vercel.json': JSON.stringify(vercelConfig),
@@ -120,7 +120,7 @@ describe('Test `detectFileSystemAPI`', () => {
     const result = await detectFileSystemAPI({
       files: { 'api/foo.go': 'print("foo")' },
       projectSettings: {},
-      builders: [{ use: '@vercel/go', src: 'api/**/*.go' }],
+      builders: [{ use: '@khulnasoft/go', src: 'api/**/*.go' }],
       vercelConfig: null,
       pkg: null,
       tag: '',
@@ -138,7 +138,7 @@ describe('Test `detectFileSystemAPI`', () => {
     const result = await detectFileSystemAPI({
       files: { 'api/foo.py': 'print("foo")' },
       projectSettings: {},
-      builders: [{ use: '@vercel/python', src: 'api/**/*.py' }],
+      builders: [{ use: '@khulnasoft/python', src: 'api/**/*.py' }],
       vercelConfig: null,
       pkg: null,
       tag: '',
@@ -156,7 +156,7 @@ describe('Test `detectFileSystemAPI`', () => {
     const result = await detectFileSystemAPI({
       files: { 'api/foo.rb': 'print("foo")' },
       projectSettings: {},
-      builders: [{ use: '@vercel/ruby', src: 'api/**/*.rb' }],
+      builders: [{ use: '@khulnasoft/ruby', src: 'api/**/*.rb' }],
       vercelConfig: null,
       pkg: null,
       tag: '',
@@ -174,7 +174,7 @@ describe('Test `detectFileSystemAPI`', () => {
     const result = await detectFileSystemAPI({
       files: { 'api/foo.go': 'print("foo")' },
       projectSettings: {},
-      builders: [{ use: '@vercel/go', src: 'api/**/*.go' }],
+      builders: [{ use: '@khulnasoft/go', src: 'api/**/*.go' }],
       vercelConfig: null,
       pkg: { dependencies: { 'vercel-plugin-go': '^1.0.0' } },
       tag: '',
@@ -205,7 +205,7 @@ describe('Test `detectFileSystemAPI`', () => {
     const result = await detectFileSystemAPI({
       files: { 'api/foo.py': 'print("foo")' },
       projectSettings: {},
-      builders: [{ use: '@vercel/python', src: 'api/**/*.py' }],
+      builders: [{ use: '@khulnasoft/python', src: 'api/**/*.py' }],
       vercelConfig: null,
       pkg: { dependencies: { 'vercel-plugin-python': '^1.0.0' } },
       tag: '',
@@ -236,7 +236,7 @@ describe('Test `detectFileSystemAPI`', () => {
     const result = await detectFileSystemAPI({
       files: { 'api/foo.rb': 'print("foo")' },
       projectSettings: {},
-      builders: [{ use: '@vercel/ruby', src: 'api/**/*.rb' }],
+      builders: [{ use: '@khulnasoft/ruby', src: 'api/**/*.rb' }],
       vercelConfig: null,
       pkg: { dependencies: { 'vercel-plugin-ruby': '^1.0.0' } },
       tag: '',
@@ -267,7 +267,7 @@ describe('Test `detectFileSystemAPI`', () => {
     const result = await detectFileSystemAPI({
       files: { 'api/foo.js': 'console.log("foo")' },
       projectSettings: { framework: 'nuxtjs' },
-      builders: [{ use: '@vercel/node', src: 'api/**/*.js' }],
+      builders: [{ use: '@khulnasoft/node', src: 'api/**/*.js' }],
       vercelConfig: null,
       pkg: null,
       tag: '',
@@ -285,7 +285,7 @@ describe('Test `detectFileSystemAPI`', () => {
     const result = await detectFileSystemAPI({
       files: { 'api/foo.js': 'console.log("foo")' },
       projectSettings: { framework: 'sveltekit' },
-      builders: [{ use: '@vercel/node', src: 'api/**/*.js' }],
+      builders: [{ use: '@khulnasoft/node', src: 'api/**/*.js' }],
       vercelConfig: null,
       pkg: null,
       tag: '',
@@ -303,7 +303,7 @@ describe('Test `detectFileSystemAPI`', () => {
     const result = await detectFileSystemAPI({
       files: { 'api/foo.js': 'console.log("foo")' },
       projectSettings: { framework: 'redwoodjs' },
-      builders: [{ use: '@vercel/node', src: 'api/**/*.js' }],
+      builders: [{ use: '@khulnasoft/node', src: 'api/**/*.js' }],
       vercelConfig: null,
       pkg: null,
       tag: '',
@@ -393,7 +393,7 @@ describe('Test `detectFileSystemAPI`', () => {
     const result = await detectFileSystemAPI({
       files: { '_middleware.js': 'print("foo")' },
       projectSettings: {},
-      builders: [{ use: '@vercel/static-build', src: 'package.json' }],
+      builders: [{ use: '@khulnasoft/static-build', src: 'package.json' }],
       vercelConfig: null,
       pkg: null,
       tag: '',
@@ -420,7 +420,7 @@ describe('Test `detectFileSystemAPI`', () => {
     const result = await detectFileSystemAPI({
       files: { '.output/routes-manifest.json': '{}' },
       projectSettings: { framework: 'remix' },
-      builders: [{ use: '@vercel/static-build', src: 'package.json' }],
+      builders: [{ use: '@khulnasoft/static-build', src: 'package.json' }],
       vercelConfig: null,
       pkg: null,
       tag: '',

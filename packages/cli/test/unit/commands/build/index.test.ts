@@ -1,7 +1,7 @@
 import { beforeAll, beforeEach, describe, expect, it } from 'vitest';
 import fs from 'fs-extra';
 import { join } from 'path';
-import { getWriteableDirectory } from '@vercel/build-utils';
+import { getWriteableDirectory } from '@khulnasoft/build-utils';
 import build from '../../../../src/commands/build';
 import { client } from '../../../mocks/client';
 import { defaultProject, useProject } from '../../../mocks/project';
@@ -73,43 +73,43 @@ describe('build', () => {
     expect(www).toEqual(['index.html']);
   });
 
-  it('should build with `@vercel/node`', async () => {
+  it('should build with `@khulnasoft/node`', async () => {
     const cwd = fixture('node');
     const output = join(cwd, '.vercel/output');
     client.cwd = cwd;
     const exitCode = await build(client);
     expect(exitCode).toEqual(0);
 
-    // `builds.json` says that "@vercel/node" was run
+    // `builds.json` says that "@khulnasoft/node" was run
     const builds = await fs.readJSON(join(output, 'builds.json'));
     expect(builds).toMatchObject({
       target: 'preview',
       builds: [
         {
-          require: '@vercel/node',
+          require: '@khulnasoft/node',
           apiVersion: 3,
-          use: '@vercel/node',
+          use: '@khulnasoft/node',
           src: 'api/es6.js',
           config: { zeroConfig: true },
         },
         {
-          require: '@vercel/node',
+          require: '@khulnasoft/node',
           apiVersion: 3,
-          use: '@vercel/node',
+          use: '@khulnasoft/node',
           src: 'api/index.js',
           config: { zeroConfig: true },
         },
         {
-          require: '@vercel/node',
+          require: '@khulnasoft/node',
           apiVersion: 3,
-          use: '@vercel/node',
+          use: '@khulnasoft/node',
           src: 'api/mjs.mjs',
           config: { zeroConfig: true },
         },
         {
-          require: '@vercel/node',
+          require: '@khulnasoft/node',
           apiVersion: 3,
-          use: '@vercel/node',
+          use: '@khulnasoft/node',
           src: 'api/typescript.ts',
           config: { zeroConfig: true },
         },
@@ -182,15 +182,15 @@ describe('build', () => {
     const exitCode = await build(client);
     expect(exitCode).toEqual(0);
 
-    // `builds.json` says that "@vercel/node" was run
+    // `builds.json` says that "@khulnasoft/node" was run
     const builds = await fs.readJSON(join(output, 'builds.json'));
     expect(builds).toMatchObject({
       target: 'preview',
       builds: [
         {
-          require: '@vercel/node',
+          require: '@khulnasoft/node',
           apiVersion: 3,
-          use: '@vercel/node',
+          use: '@khulnasoft/node',
           src: 'server.js',
         },
       ],
@@ -413,15 +413,15 @@ describe('build', () => {
     const exitCode = await build(client);
     expect(exitCode).toEqual(0);
 
-    // `builds.json` says that "@vercel/node" was run
+    // `builds.json` says that "@khulnasoft/node" was run
     const builds = await fs.readJSON(join(output, 'builds.json'));
     expect(builds).toMatchObject({
       target: 'preview',
       builds: [
         {
-          require: '@vercel/node',
+          require: '@khulnasoft/node',
           apiVersion: 3,
-          use: '@vercel/node',
+          use: '@khulnasoft/node',
           src: 'middleware.js',
           config: {
             zeroConfig: true,
@@ -479,9 +479,9 @@ describe('build', () => {
       target: 'preview',
       builds: [
         {
-          require: '@vercel/node',
+          require: '@khulnasoft/node',
           apiVersion: 3,
-          use: '@vercel/node',
+          use: '@khulnasoft/node',
           src: 'middleware.js',
           config: {
             zeroConfig: true,
@@ -533,15 +533,15 @@ describe('build', () => {
     const exitCode = await build(client);
     expect(exitCode).toEqual(0);
 
-    // `builds.json` says that "@vercel/node" was run
+    // `builds.json` says that "@khulnasoft/node" was run
     const builds = await fs.readJSON(join(output, 'builds.json'));
     expect(builds).toMatchObject({
       target: 'preview',
       builds: [
         {
-          require: '@vercel/node',
+          require: '@khulnasoft/node',
           apiVersion: 3,
-          use: '@vercel/node',
+          use: '@khulnasoft/node',
           src: 'middleware.js',
           config: {
             zeroConfig: true,
@@ -926,7 +926,7 @@ describe('build', () => {
     await expect(client.stderr).toOutput(
       'Error: Invalid vercel.json - `rewrites[2]` should NOT have additional property `src`. Did you mean `source`?' +
         '\n' +
-        'View Documentation: https://vercel.com/docs/concepts/projects/project-configuration#rewrites'
+        'View Documentation: https://khulnasoft.com/docs/concepts/projects/project-configuration#rewrites'
     );
     const builds = await fs.readJSON(join(output, 'builds.json'));
     expect(builds.builds).toBeUndefined();
@@ -937,7 +937,7 @@ describe('build', () => {
       stack: expect.stringContaining('at Module.validateConfig'),
       hideStackTrace: true,
       code: 'INVALID_VERCEL_CONFIG',
-      link: 'https://vercel.com/docs/concepts/projects/project-configuration#rewrites',
+      link: 'https://khulnasoft.com/docs/concepts/projects/project-configuration#rewrites',
       action: 'View Documentation',
     });
     const configJson = await fs.readJSON(join(output, 'config.json'));
@@ -1141,10 +1141,10 @@ describe('build', () => {
         target: 'preview',
         builds: [
           {
-            require: '@vercel/static-build',
+            require: '@khulnasoft/static-build',
             apiVersion: 2,
             src: 'package.json',
-            use: '@vercel/static-build',
+            use: '@khulnasoft/static-build',
           },
         ],
       });

@@ -1,4 +1,4 @@
-# @vercel/python
+# @khulnasoft/python
 
 ## 4.1.1
 

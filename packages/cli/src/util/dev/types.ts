@@ -12,9 +12,9 @@ import {
   FileBlob,
   FileFsRef,
   Lambda,
-} from '@vercel/build-utils';
+} from '@khulnasoft/build-utils';
 import { VercelConfig } from '@vercel/client';
-import { HandleValue, Route } from '@vercel/routing-utils';
+import { HandleValue, Route } from '@khulnasoft/routing-utils';
 import { Output } from '../output';
 import type { ProjectSettings } from '@vercel-internals/types';
 import { BuilderWithPkg } from '../build/import-builders';

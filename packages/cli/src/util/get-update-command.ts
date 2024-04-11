@@ -1,6 +1,6 @@
 import { readFile, realpath } from 'fs-extra';
 import { sep, dirname, join, resolve } from 'path';
-import { scanParentDirs } from '@vercel/build-utils';
+import { scanParentDirs } from '@khulnasoft/build-utils';
 import { packageName } from './pkg-name';
 
 async function getConfigPrefix() {

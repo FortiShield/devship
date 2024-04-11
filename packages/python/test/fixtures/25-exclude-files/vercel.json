@@ -3,11 +3,11 @@
   "builds": [
     {
       "src": "api/yes.py",
-      "use": "@vercel/python"
+      "use": "@khulnasoft/python"
     },
     {
       "src": "api/no.py",
-      "use": "@vercel/python",
+      "use": "@khulnasoft/python",
       "config": {
         "excludeFiles": "ignoreme/**"
       }

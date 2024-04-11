@@ -1,13 +1,13 @@
 {
   "version": 2,
   "builds": [
-    { "src": "index.js", "use": "@vercel/node" },
-    { "src": "ts/index.ts", "use": "@vercel/node" },
-    { "src": "ts-legacy/index.ts", "use": "@vercel/node" },
-    { "src": "micro-compat/index.js", "use": "@vercel/node" },
+    { "src": "index.js", "use": "@khulnasoft/node" },
+    { "src": "ts/index.ts", "use": "@khulnasoft/node" },
+    { "src": "ts-legacy/index.ts", "use": "@khulnasoft/node" },
+    { "src": "micro-compat/index.js", "use": "@khulnasoft/node" },
     {
       "src": "no-helpers/index.js",
-      "use": "@vercel/node",
+      "use": "@khulnasoft/node",
       "config": { "helpers": false }
     }
   ],

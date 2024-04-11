@@ -3,12 +3,12 @@
   "builds": [
     {
       "src": "/api/go-one/one.go",
-      "use": "@vercel/go",
+      "use": "@khulnasoft/go",
       "config": { "parallel": true }
     },
     {
       "src": "/api/go-two/two.go",
-      "use": "@vercel/go",
+      "use": "@khulnasoft/go",
       "config": { "parallel": true }
     }
   ],

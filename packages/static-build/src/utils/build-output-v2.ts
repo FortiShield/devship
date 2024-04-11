@@ -1,6 +1,6 @@
 import path from 'path';
 import { pathExists, readJson, appendFile } from 'fs-extra';
-import { Route } from '@vercel/routing-utils';
+import { Route } from '@khulnasoft/routing-utils';
 import {
   Files,
   FileFsRef,
@@ -8,10 +8,10 @@ import {
   glob,
   EdgeFunction,
   BuildResultV2,
-} from '@vercel/build-utils';
+} from '@khulnasoft/build-utils';
 import { isObjectEmpty } from './_shared';
 import { Project } from 'ts-morph';
-import { getConfig } from '@vercel/static-config';
+import { getConfig } from '@khulnasoft/static-config';
 import { isErrnoException } from '@vercel/error-utils';
 
 const BUILD_OUTPUT_DIR = '.output';

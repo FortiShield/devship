@@ -3,7 +3,7 @@ import { join } from 'path';
 import fs from 'fs-extra';
 import os from 'os';
 import createLineIterator from 'line-async-iterator';
-import { getWriteableDirectory } from '@vercel/build-utils';
+import { getWriteableDirectory } from '@khulnasoft/build-utils';
 import {
   createGitMeta,
   getOriginUrl,

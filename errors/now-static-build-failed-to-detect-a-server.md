@@ -1,8 +1,8 @@
-# `@vercel/static-build` Failed to detect a server running
+# `@khulnasoft/static-build` Failed to detect a server running
 
 #### Why This Warning Occurred
 
-When running `vercel dev`, the `@vercel/static-build` builder proxies relevant HTTP
+When running `vercel dev`, the `@khulnasoft/static-build` builder proxies relevant HTTP
 requests to the server that is created by the `dev` script in the
 `package.json` file.
 

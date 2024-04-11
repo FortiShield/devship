@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "homepage": "https://vercel.com/docs/concepts/functions/edge-functions/vercel-edge-package",
+  "homepage": "https://khulnasoft.com/docs/concepts/functions/edge-functions/vercel-edge-package",
   "files": [
     "dist"
   ],

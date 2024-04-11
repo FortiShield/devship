@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { Framework, frameworks } from '@vercel/frameworks';
+import { Framework, frameworks } from '@khulnasoft/frameworks';
 import editProjectSettings from '../../../../src/util/input/edit-project-settings';
 import { client } from '../../../mocks/client';
 

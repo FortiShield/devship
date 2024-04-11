@@ -4,12 +4,12 @@ import {
   getMonorepoDefaultSettings,
   MissingBuildPipeline,
   MissingBuildTarget,
-} from '@vercel/fs-detectors';
+} from '@khulnasoft/fs-detectors';
 import { ProjectLinkAndSettings } from '../projects/project-settings';
 import { Output } from '../output';
 import title from 'title';
 import { PartialProjectSettings } from '../input/edit-project-settings';
-import { debug } from '@vercel/build-utils';
+import { debug } from '@khulnasoft/build-utils';
 
 export async function setMonorepoDefaultSettings(
   cwd: string,

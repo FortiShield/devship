@@ -203,8 +203,8 @@ export const frameworks = [
     website: 'https://remix.run',
     sort: 6,
     supersedes: ['hydrogen', 'vite'],
-    useRuntime: { src: 'package.json', use: '@vercel/remix-builder' },
-    ignoreRuntimes: ['@vercel/node'],
+    useRuntime: { src: 'package.json', use: '@khulnasoft/remix-builder' },
+    ignoreRuntimes: ['@khulnasoft/node'],
     detectors: {
       some: [
         {
@@ -1501,8 +1501,8 @@ export const frameworks = [
     description: 'A RedwoodJS app, bootstraped with create-redwood-app.',
     website: 'https://redwoodjs.com',
     envPrefix: 'REDWOOD_ENV_',
-    useRuntime: { src: 'package.json', use: '@vercel/redwood' },
-    ignoreRuntimes: ['@vercel/node'],
+    useRuntime: { src: 'package.json', use: '@khulnasoft/redwood' },
+    ignoreRuntimes: ['@khulnasoft/node'],
     detectors: {
       every: [
         {
@@ -1986,7 +1986,7 @@ export const frameworks = [
     description:
       'Storybook is a frontend workshop for building UI components and pages in isolation.',
     website: 'https://storybook.js.org',
-    ignoreRuntimes: ['@vercel/next', '@vercel/node'],
+    ignoreRuntimes: ['@vercel/next', '@khulnasoft/node'],
     disableRootMiddleware: true,
     detectors: {
       every: [

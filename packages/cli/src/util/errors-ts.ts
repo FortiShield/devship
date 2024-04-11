@@ -1,6 +1,6 @@
 import bytes from 'bytes';
 import { Response } from 'node-fetch';
-import { NowBuildError } from '@vercel/build-utils';
+import { NowBuildError } from '@khulnasoft/build-utils';
 import { NowError } from './now-error';
 import code from './output/code';
 import { getCommandName } from './pkg-name';

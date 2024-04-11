@@ -1,4 +1,4 @@
-# @vercel/go
+# @khulnasoft/go
 
 ## 3.1.1
 

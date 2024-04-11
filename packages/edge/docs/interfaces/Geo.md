@@ -45,7 +45,7 @@ The country that the request originated from.
 • `Optional` **countryRegion**: `string`
 
 The region part of the ISO 3166-2 code of the client IP.
-See [docs](https://vercel.com/docs/concepts/edge-network/headers#x-vercel-ip-country-region).
+See [docs](https://khulnasoft.com/docs/concepts/edge-network/headers#x-vercel-ip-country-region).
 
 #### Defined in
 
@@ -93,7 +93,7 @@ The longitude of the client.
 
 • `Optional` **region**: `string`
 
-The [Vercel Edge Network region](https://vercel.com/docs/concepts/edge-network/regions) that received the request.
+The [Vercel Edge Network region](https://khulnasoft.com/docs/concepts/edge-network/regions) that received the request.
 
 #### Defined in
 

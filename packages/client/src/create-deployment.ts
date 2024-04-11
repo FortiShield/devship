@@ -10,7 +10,7 @@ import {
   DeploymentOptions,
   DeploymentEventType,
 } from './types';
-import { streamToBuffer } from '@vercel/build-utils';
+import { streamToBuffer } from '@khulnasoft/build-utils';
 import tar from 'tar-fs';
 import { createGzip } from 'zlib';
 

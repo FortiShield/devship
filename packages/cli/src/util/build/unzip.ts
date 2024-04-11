@@ -7,7 +7,7 @@
 import path from 'path';
 import pipe from 'promisepipe';
 import * as fs from 'fs-extra';
-import { streamToBuffer } from '@vercel/build-utils';
+import { streamToBuffer } from '@khulnasoft/build-utils';
 import { Entry, ZipFile, fromBuffer as zipFromBuffer } from 'yauzl-promise';
 
 async function* createZipIterator(zipFile: ZipFile) {

@@ -5,7 +5,7 @@ import isURL from './is-url';
 import DevServer from './server';
 
 import { VercelConfig, HttpHeadersConfig, RouteResult } from './types';
-import { isHandler, Route, HandleValue } from '@vercel/routing-utils';
+import { isHandler, Route, HandleValue } from '@khulnasoft/routing-utils';
 import { parseQueryString } from './parse-query-string';
 
 export function resolveRouteParameters(

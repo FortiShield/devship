@@ -1,4 +1,4 @@
-# @vercel/static-config
+# @khulnasoft/static-config
 
 ## 3.0.0
 

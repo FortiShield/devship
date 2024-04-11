@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "homepage": "https://vercel.com/docs",
+  "homepage": "https://khulnasoft.com/docs",
   "repository": {
     "type": "git",
     "url": "https://github.com/khulnasoft/devship.git",
@@ -20,13 +20,13 @@
     "edge-entry.js"
   ],
   "dependencies": {
-    "@vercel/static-config": "3.0.0",
+    "@khulnasoft/static-config": "3.0.0",
     "ts-morph": "12.0.0"
   },
   "devDependencies": {
     "@types/jest": "27.5.1",
     "@types/node": "14.18.33",
-    "@vercel/build-utils": "7.11.0",
+    "@khulnasoft/build-utils": "workspace:*",
     "execa": "3.2.0",
     "fs-extra": "11.1.0",
     "jest-junit": "16.0.0"

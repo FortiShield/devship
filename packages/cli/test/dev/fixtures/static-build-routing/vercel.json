@@ -3,14 +3,14 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static-build",
+      "use": "@khulnasoft/static-build",
       "config": {
         "distDir": "public"
       }
     },
     {
       "src": "api/**/*.js",
-      "use": "@vercel/node"
+      "use": "@khulnasoft/node"
     }
   ],
   "buildCommand": "rm -Rf public && cp -r src public",

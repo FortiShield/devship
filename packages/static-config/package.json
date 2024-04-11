@@ -1,6 +1,6 @@
 {
-  "name": "@vercel/static-config",
-  "version": "3.0.0",
+  "name": "@khulnasoft/static-config",
+  "version": "3.0.2",
   "license": "Apache-2.0",
   "main": "./dist/index",
   "repository": {

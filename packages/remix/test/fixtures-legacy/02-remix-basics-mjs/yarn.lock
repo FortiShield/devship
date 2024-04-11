@@ -1893,26 +1893,26 @@
   resolved "https://registry.yarnpkg.com/@vanilla-extract/private/-/private-1.0.3.tgz#7ec72bc2ff6fe51f9d650f962e8d1989b073690f"
   integrity sha512-17kVyLq3ePTKOkveHxXuIJZtGYs+cSoev7BlP+Lf4916qfDhk/HBjvlYDe8egrea7LNPHKwSZJK/bzZC+Q6AwQ==
 
-"@vercel/build-utils@6.3.0":
+"@khulnasoft/build-utils@6.3.0":
   version "6.3.0"
-  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-6.3.0.tgz#74d2b029f1d30eee146f1fdb0079d435cd42617c"
+  resolved "https://registry.yarnpkg.com/@khulnasoft/build-utils/-/build-utils-6.3.0.tgz#74d2b029f1d30eee146f1fdb0079d435cd42617c"
   integrity sha512-Nbu/CIsv8HMp1+KPZ0n2YlHTKPfGRDrwhMgKW9Dx4z2S5sQWkXpe9WQ5ajePgwZVd7V1XiJYx1CCRaupIVgUwA==
 
-"@vercel/node-bridge@3.1.11":
+"@khulnasoft/node-bridge@3.1.11":
   version "3.1.11"
-  resolved "https://registry.yarnpkg.com/@vercel/node-bridge/-/node-bridge-3.1.11.tgz#48f086628c412ce1f737d0003c8174652df0477a"
+  resolved "https://registry.yarnpkg.com/@khulnasoft/node-bridge/-/node-bridge-3.1.11.tgz#48f086628c412ce1f737d0003c8174652df0477a"
   integrity sha512-LGbj+kPGgRnIlKo3949z01mLbHVi4BnRE7V5R6+J4E3f7xpQ12I9Wek10V7ivLB+LyS1+ATdjasdXAF4HOhqQw==
 
-"@vercel/node@2.9.6":
+"@khulnasoft/node@2.9.6":
   version "2.9.6"
-  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-2.9.6.tgz#04e25cb9a429e4ea19f7440d999a14f239a1c89b"
+  resolved "https://registry.yarnpkg.com/@khulnasoft/node/-/node-2.9.6.tgz#04e25cb9a429e4ea19f7440d999a14f239a1c89b"
   integrity sha512-A1/1LucW54jUH8YspTTQYeGdhOPK8Z17bt5vrnB4PW5PGnq5Dn2DaC1mly0/Lo4Qlz44xDIiknwGvAitLAs2gQ==
   dependencies:
     "@edge-runtime/vm" "2.0.0"
     "@types/node" "14.18.33"
-    "@vercel/build-utils" "6.3.0"
-    "@vercel/node-bridge" "3.1.11"
-    "@vercel/static-config" "2.0.13"
+    "@khulnasoft/build-utils" "6.3.0"
+    "@khulnasoft/node-bridge" "3.1.11"
+    "@khulnasoft/static-config" "2.0.13"
     edge-runtime "2.0.0"
     esbuild "0.14.47"
     exit-hook "2.2.1"
@@ -1920,9 +1920,9 @@
     ts-node "10.9.1"
     typescript "4.3.4"
 
-"@vercel/static-config@2.0.13":
+"@khulnasoft/static-config@2.0.13":
   version "2.0.13"
-  resolved "https://registry.yarnpkg.com/@vercel/static-config/-/static-config-2.0.13.tgz#6ffd6879bdfa3014e7aceb68876b5757e9d90e19"
+  resolved "https://registry.yarnpkg.com/@khulnasoft/static-config/-/static-config-2.0.13.tgz#6ffd6879bdfa3014e7aceb68876b5757e9d90e19"
   integrity sha512-09bVISGyhRMoL6gQTfM7n89SeUmyOlIzVMo2oNOj3thy4AIKGuN0SzEp0qNRw8d9j07rifp9JPD4rOuDRx4+eA==
   dependencies:
     ajv "8.6.3"

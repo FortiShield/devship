@@ -20,7 +20,7 @@ import {
   FileBlob,
   type Files,
   type BuildV3,
-} from '@vercel/build-utils';
+} from '@khulnasoft/build-utils';
 import { installBundler } from './install-ruby';
 
 async function matchPaths(

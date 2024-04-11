@@ -6,14 +6,14 @@ import {
   redirectsSchema,
   rewritesSchema,
   trailingSlashSchema,
-} from '@vercel/routing-utils';
+} from '@khulnasoft/routing-utils';
 import { VercelConfig } from './dev/types';
 import {
   functionsSchema,
   buildsSchema,
   NowBuildError,
   getPrettyError,
-} from '@vercel/build-utils';
+} from '@khulnasoft/build-utils';
 import { fileNameSymbol } from '@vercel/client';
 
 const imagesSchema = {

@@ -1,5 +1,5 @@
 import { constants, PathLike, promises as fs } from 'fs';
-import { PackageJson } from '@vercel/build-utils';
+import { PackageJson } from '@khulnasoft/build-utils';
 import path from 'path';
 
 export type ImagesConfig = {

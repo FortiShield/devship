@@ -10,10 +10,10 @@
 </p>
 
 <p align="center">
-  <a href="https://vercel.com/docs"><strong>Documentation</strong></a> ·
+  <a href="https://khulnasoft.com/docs"><strong>Documentation</strong></a> ·
   <a href="https://vercel.com/changelog"><strong>Changelog</strong></a> ·
   <a href="https://vercel.com/templates"><strong>Templates</strong></a> ·
-  <a href="https://vercel.com/docs/cli"><strong>CLI</strong></a>
+  <a href="https://khulnasoft.com/docs/cli"><strong>CLI</strong></a>
 </p>
 <br/>
 
@@ -23,11 +23,11 @@ Vercel’s Frontend Cloud provides the developer experience and infrastructure t
 
 ## Deploy
 
-Get started by [importing a project](https://vercel.com/new) or using the [Vercel CLI](https://vercel.com/docs/cli). Then, `git push` to deploy.
+Get started by [importing a project](https://vercel.com/new) or using the [Vercel CLI](https://khulnasoft.com/docs/cli). Then, `git push` to deploy.
 
 ## Documentation
 
-For details on how to use Vercel, check out our [documentation](https://vercel.com/docs).
+For details on how to use Vercel, check out our [documentation](https://khulnasoft.com/docs).
 
 ## Contributing
 
@@ -119,7 +119,7 @@ The logs of this deployment will contain the actual error which may help you to 
 
 While running the full integration suite locally is not recommended, it's sometimes useful to isolate a failing test by running it on your machine. To do so, you'll need to ensure you have the appropriate credentials sourced in your shell:
 
-1. Create an access token. Follow the insructions here https://vercel.com/docs/rest-api#creating-an-access-token. Ensure the token scope is for your personal
+1. Create an access token. Follow the insructions here https://khulnasoft.com/docs/rest-api#creating-an-access-token. Ensure the token scope is for your personal
    account.
 2. Grab the team ID from the Vercel dashboard at `https://vercel.com/<MY-TEAM>/~/settings`.
 3. Source these into your shell rc file: `echo 'export VERCEL_TOKEN=<MY-TOKEN> VERCEL_TEAM_ID=<MY-TEAM-ID>' >> ~/.zshrc`

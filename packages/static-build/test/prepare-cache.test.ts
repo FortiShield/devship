@@ -1,4 +1,4 @@
-import { FileFsRef } from '@vercel/build-utils';
+import { FileFsRef } from '@khulnasoft/build-utils';
 import path from 'path';
 import { prepareCache } from '../src';
 

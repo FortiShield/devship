@@ -1,9 +1,9 @@
 {
   "version": 2,
   "builds": [
-    { "src": "with-npm/index.js", "use": "@vercel/node" },
-    { "src": "with-yarn/index.js", "use": "@vercel/node" },
-    { "src": "with-yarn-and-npm/index.js", "use": "@vercel/node" }
+    { "src": "with-npm/index.js", "use": "@khulnasoft/node" },
+    { "src": "with-yarn/index.js", "use": "@khulnasoft/node" },
+    { "src": "with-yarn-and-npm/index.js", "use": "@khulnasoft/node" }
   ],
   "probes": [
     { "path": "/with-npm", "mustContain": "npm:RANDOMNESS_PLACEHOLDER" },

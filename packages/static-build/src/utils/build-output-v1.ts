@@ -1,6 +1,6 @@
 import path from 'path';
 import { promises as fs } from 'fs';
-import { Route } from '@vercel/routing-utils';
+import { Route } from '@khulnasoft/routing-utils';
 import {
   Files,
   Lambda,
@@ -8,7 +8,7 @@ import {
   NodejsLambda,
   debug,
   glob,
-} from '@vercel/build-utils';
+} from '@khulnasoft/build-utils';
 import { BuildConfig, ImagesConfig, isObjectEmpty } from './_shared';
 
 const VERCEL_BUILD_OUTPUT = '.vercel_build_output';

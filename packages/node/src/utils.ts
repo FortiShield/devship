@@ -1,4 +1,4 @@
-import { debug, streamToBuffer } from '@vercel/build-utils';
+import { debug, streamToBuffer } from '@khulnasoft/build-utils';
 import { pathToRegexp } from 'path-to-regexp';
 import type { IncomingMessage } from 'http';
 import { extname } from 'path';

@@ -32,9 +32,9 @@ import {
   NodejsLambda,
   BuildV2,
   PrepareCache,
-} from '@vercel/build-utils';
+} from '@khulnasoft/build-utils';
 import { nodeFileTrace } from '@vercel/nft';
-import { getTransformedRoutes, Route } from '@vercel/routing-utils';
+import { getTransformedRoutes, Route } from '@khulnasoft/routing-utils';
 
 interface RedwoodToml {
   web: { port?: number; apiProxyPath?: string };
@@ -105,7 +105,7 @@ export const build: BuildV2 = async ({
   }
 
   if (meta.isDev) {
-    throw new Error('Detected `@vercel/redwood` dev but this is not supported');
+    throw new Error('Detected `@khulnasoft/redwood` dev but this is not supported');
   }
 
   const pkg = await readConfigFile<PackageJson>(join(workPath, 'package.json'));

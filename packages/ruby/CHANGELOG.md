@@ -1,4 +1,4 @@
-# @vercel/ruby
+# @khulnasoft/ruby
 
 ## 2.0.5
 

@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": "env/index.go",
-      "use": "@vercel/go"
+      "use": "@khulnasoft/go"
     }
   ],
   "env": {

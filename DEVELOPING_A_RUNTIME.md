@@ -3,7 +3,7 @@
 The following page is a reference for how to create a Runtime by implementing
 the Runtime API interface. It's a way to add support for a new programming language to Vercel.
 
-> Note: If you're the author of a web framework, please use the [Build Output API](https://vercel.com/docs/build-output-api/v3) instead to make your framework compatible with Vercel.
+> Note: If you're the author of a web framework, please use the [Build Output API](https://khulnasoft.com/docs/build-output-api/v3) instead to make your framework compatible with Vercel.
 
 A Runtime is an npm module that implements the following interface:
 
@@ -30,7 +30,7 @@ Official Runtimes are published to [the npm registry](https://npmjs.com) as a pa
 > which is useful for testing your Runtime. Alternatively, the `functions` property
 > requires that you specify a specific tag published to npm, for stability purposes.
 
-See the [Runtimes Documentation](https://vercel.com/docs/runtimes) to view example usage.
+See the [Runtimes Documentation](https://khulnasoft.com/docs/runtimes) to view example usage.
 
 ## Runtime Exports
 
@@ -50,12 +50,12 @@ export const version = 3;
 
 A **required** exported function that returns a Serverless Function.
 
-> What's a Serverless Function? Read about [Serverless Functions](https://vercel.com/docs/concepts/functions/serverless-functions) to learn more.
+> What's a Serverless Function? Read about [Serverless Functions](https://khulnasoft.com/docs/concepts/functions/serverless-functions) to learn more.
 
 **Example:**
 
 ```typescript
-import { BuildOptions, createLambda } from '@vercel/build-utils';
+import { BuildOptions, createLambda } from '@khulnasoft/build-utils';
 
 export async function build(options: BuildOptions) {
   // Build the code here…
@@ -75,7 +75,7 @@ export async function build(options: BuildOptions) {
 An **optional** exported function that is executed after [`build()`](#build) is
 completed. The implementation should return an object of `File`s that will be
 pre-populated in the working directory for the next build run in the user's
-project. An example use-case is that `@vercel/node` uses this function to cache
+project. An example use-case is that `@khulnasoft/node` uses this function to cache
 the `node_modules` directory, making it faster to install npm dependencies for
 future builds.
 
@@ -85,7 +85,7 @@ future builds.
 
 ```typescript
 import { relative } from 'path';
-import { glob, PrepareCache } from '@vercel/build-utils';
+import { glob, PrepareCache } from '@khulnasoft/build-utils';
 
 export const prepareCache: PrepareCache = async ({
   workPath,
@@ -102,13 +102,13 @@ export const prepareCache: PrepareCache = async ({
 
 An **optional** exported function that is only used by `vercel dev` in [Vercel
 CLI](https://vercel.com/download) and indicates whether a
-[Runtime](https://vercel.com/docs/runtimes) wants to be responsible for responding
+[Runtime](https://khulnasoft.com/docs/runtimes) wants to be responsible for responding
 to a certain request path.
 
 **Example:**
 
 ```typescript
-import { ShouldServeOptions } from '@vercel/build-utils';
+import { ShouldServeOptions } from '@khulnasoft/build-utils';
 
 export async function shouldServe(options: ShouldServeOptions) {
   // Determine whether or not the Runtime should respond to the request path here…
@@ -141,7 +141,7 @@ Process ID, which `vercel dev` uses to send the shut down signal to.
 
 > **Hint:** To determine which ephemeral port the child process is listening on,
 > some form of [IPC](https://en.wikipedia.org/wiki/Inter-process_communication) is
-> required. For example, in `@vercel/go` the child process writes the port number
+> required. For example, in `@khulnasoft/go` the child process writes the port number
 > to [_file descriptor 3_](https://en.wikipedia.org/wiki/File_descriptor), which is read by the `startDevServer()` function
 > implementation.
 
@@ -152,7 +152,7 @@ path or entrypoint.
 
 ```typescript
 import { spawn } from 'child_process';
-import { StartDevServerOptions } from '@vercel/build-utils';
+import { StartDevServerOptions } from '@khulnasoft/build-utils';
 
 export async function startDevServer(options: StartDevServerOptions) {
   // Create a child process which will create an HTTP server.
@@ -274,14 +274,14 @@ process to enable large environment support for this runtime.
 
 ### Utilities as peerDependencies
 
-When you publish your Runtime to npm, make sure to not specify `@vercel/build-utils` (as seen below in the API definitions) as a dependency, but rather as part of `peerDependencies`.
+When you publish your Runtime to npm, make sure to not specify `@khulnasoft/build-utils` (as seen below in the API definitions) as a dependency, but rather as part of `peerDependencies`.
 
-## `@vercel/build-utils` Types
+## `@khulnasoft/build-utils` Types
 
 ### `Files`
 
 ```typescript
-import { File } from '@vercel/build-utils';
+import { File } from '@khulnasoft/build-utils';
 type Files = { [filePath: string]: File };
 ```
 
@@ -303,7 +303,7 @@ An example of a valid output `Files` object is:
 This is an abstract type that can be imported if you are using TypeScript.
 
 ```typescript
-import { File } from '@vercel/build-utils';
+import { File } from '@khulnasoft/build-utils';
 ```
 
 Valid `File` types include:
@@ -315,7 +315,7 @@ Valid `File` types include:
 ### `FileRef`
 
 ```typescript
-import { FileRef } from '@vercel/build-utils';
+import { FileRef } from '@khulnasoft/build-utils';
 ```
 
 This is a [class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) that represents an abstract file instance stored in our platform, based on the file identifier string (its checksum). When a `Files` object is passed as an input to `analyze` or `build`, all its values will be instances of `FileRef`.
@@ -332,7 +332,7 @@ This is a [class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 ### `FileFsRef`
 
 ```typescript
-import { FileFsRef } from '@vercel/build-utils';
+import { FileFsRef } from '@khulnasoft/build-utils';
 ```
 
 This is a [class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) that represents an abstract instance of a file present in the filesystem that the build process is executing in.
@@ -350,7 +350,7 @@ This is a [class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 ### `FileBlob`
 
 ```typescript
-import { FileBlob } from '@vercel/build-utils';
+import { FileBlob } from '@khulnasoft/build-utils';
 ```
 
 This is a [class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) that represents an abstract instance of a file present in memory.
@@ -368,7 +368,7 @@ This is a [class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 ### `Lambda`
 
 ```typescript
-import { Lambda } from '@vercel/build-utils';
+import { Lambda } from '@khulnasoft/build-utils';
 ```
 
 This is a [class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) that represents a Serverless Function. An instance can be created by supplying `files`, `handler`, `runtime`, and `environment` as an object to the [`createLambda`](#createlambda) helper. The instances of this class should not be created directly. Instead, invoke the [`createLambda`](#createlambda) helper function.
@@ -396,22 +396,22 @@ This is an abstract enumeration type that is implemented by one of the following
 - `provided.al2`
 - `provided.al2023`
 
-## `@vercel/build-utils` Helper Functions
+## `@khulnasoft/build-utils` Helper Functions
 
-The following is exposed by `@vercel/build-utils` to simplify the process of writing Runtimes, manipulating the file system, using the above types, etc.
+The following is exposed by `@khulnasoft/build-utils` to simplify the process of writing Runtimes, manipulating the file system, using the above types, etc.
 
 ### `createLambda()`
 
 Signature: `createLambda(Object spec): Lambda`
 
 ```typescript
-import { createLambda } from '@vercel/build-utils';
+import { createLambda } from '@khulnasoft/build-utils';
 ```
 
 Constructor for the [`Lambda`](#lambda) type.
 
 ```js
-const { createLambda, FileBlob } = require('@vercel/build-utils');
+const { createLambda, FileBlob } = require('@khulnasoft/build-utils');
 await createLambda({
   runtime: 'nodejs8.10',
   handler: 'index.main',
@@ -426,7 +426,7 @@ await createLambda({
 Signature: `download(): Files`
 
 ```typescript
-import { download } from '@vercel/build-utils';
+import { download } from '@khulnasoft/build-utils';
 ```
 
 This utility allows you to download the contents of a [`Files`](#files) data
@@ -448,7 +448,7 @@ await download(files, workPath, meta);
 Signature: `glob(): Files`
 
 ```typescript
-import { glob } from '@vercel/build-utils';
+import { glob } from '@khulnasoft/build-utils';
 ```
 
 This utility allows you to _scan_ the filesystem and return a [`Files`](#files) representation of the matched glob search string. It can be thought of as the reverse of [`download`](#download).
@@ -456,7 +456,7 @@ This utility allows you to _scan_ the filesystem and return a [`Files`](#files) 
 The following trivial example downloads everything to the filesystem, only to return it back (therefore just re-creating the passed-in [`Files`](#files)):
 
 ```js
-const { glob, download } = require('@vercel/build-utils');
+const { glob, download } = require('@khulnasoft/build-utils');
 
 exports.build = ({ files, workPath }) => {
   await download(files, workPath);
@@ -469,7 +469,7 @@ exports.build = ({ files, workPath }) => {
 Signature: `getWritableDirectory(): String`
 
 ```typescript
-import { getWritableDirectory } from '@vercel/build-utils';
+import { getWritableDirectory } from '@khulnasoft/build-utils';
 ```
 
 In some occasions, you might want to write to a temporary directory.
@@ -479,13 +479,13 @@ In some occasions, you might want to write to a temporary directory.
 Signature: `rename(Files, Function): Files`
 
 ```typescript
-import { rename } from '@vercel/build-utils';
+import { rename } from '@khulnasoft/build-utils';
 ```
 
 Renames the keys of the [`Files`](#files) object, which represent the paths. For example, to remove the `*.go` suffix you can use:
 
 ```js
-const rename = require('@vercel/build-utils')
+const rename = require('@khulnasoft/build-utils')
 const originalFiles = { 'one.go': fileFsRef1, 'two.go': fileFsRef2 }
 const renamedFiles = rename(originalFiles, path => path.replace(/\.go$/, '')
 ```

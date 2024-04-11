@@ -3,7 +3,7 @@ import path from 'path';
 import fetch from 'node-fetch';
 import getPort from 'get-port';
 import isPortReachable from 'is-port-reachable';
-import frameworks, { Framework } from '@vercel/frameworks';
+import frameworks, { Framework } from '@khulnasoft/frameworks';
 import type { ChildProcess, SpawnOptions } from 'child_process';
 import { existsSync, readFileSync, statSync, readdirSync } from 'fs';
 import { cpus } from 'os';
@@ -32,8 +32,8 @@ import {
   NowBuildError,
   scanParentDirs,
   cloneEnv,
-} from '@vercel/build-utils';
-import type { Route, RouteWithSrc } from '@vercel/routing-utils';
+} from '@khulnasoft/build-utils';
+import type { Route, RouteWithSrc } from '@khulnasoft/routing-utils';
 import * as BuildOutputV1 from './utils/build-output-v1';
 import * as BuildOutputV2 from './utils/build-output-v2';
 import * as BuildOutputV3 from './utils/build-output-v3';
@@ -44,7 +44,7 @@ import treeKill from 'tree-kill';
 import {
   detectFrameworkRecord,
   LocalFileSystemDetector,
-} from '@vercel/fs-detectors';
+} from '@khulnasoft/fs-detectors';
 
 const SUPPORTED_RUBY_VERSION = '3.2.0';
 const sleep = (n: number) => new Promise(resolve => setTimeout(resolve, n));

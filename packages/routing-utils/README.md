@@ -1,13 +1,13 @@
-# @vercel/routing-utils
+# @khulnasoft/routing-utils
 
 Route validation utilities
 
 ## Usage
 
-`npm add @vercel/routing-utils`
+`npm add @khulnasoft/routing-utils`
 
 ```ts
-import { normalizeRoutes } from '@vercel/routing-utils';
+import { normalizeRoutes } from '@khulnasoft/routing-utils';
 
 const { routes, error } = normalizeRoutes(inputRoutes);
 
@@ -17,7 +17,7 @@ if (error) {
 ```
 
 ```ts
-import { routesSchema } from '@vercel/routing-utils';
+import { routesSchema } from '@khulnasoft/routing-utils';
 
 const ajv = new Ajv();
 const validate = ajv.compile(routesSchema);

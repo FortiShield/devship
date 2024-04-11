@@ -108,7 +108,7 @@ Longitude of the original client IP as calculated by Vercel Proxy.
 
 Country region of the original client IP calculated by Vercel Proxy.
 
-See [docs](https://vercel.com/docs/concepts/edge-network/headers#x-vercel-ip-country-region).
+See [docs](https://khulnasoft.com/docs/concepts/edge-network/headers#x-vercel-ip-country-region).
 
 #### Defined in
 

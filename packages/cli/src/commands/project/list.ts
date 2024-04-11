@@ -5,7 +5,7 @@ import type { Project } from '@vercel-internals/types';
 import Client from '../../util/client';
 import getCommandFlags from '../../util/get-command-flags';
 import { getCommandName } from '../../util/pkg-name';
-import { NODE_VERSIONS } from '@vercel/build-utils';
+import { NODE_VERSIONS } from '@khulnasoft/build-utils';
 
 export default async function list(
   client: Client,
@@ -71,7 +71,7 @@ export default async function list(
       )}. Please upgrade your projects immediately.`
     );
     output.log(
-      `For more information visit: https://vercel.com/docs/functions/serverless-functions/runtimes/node-js#node.js-version`
+      `For more information visit: https://khulnasoft.com/docs/functions/serverless-functions/runtimes/node-js#node.js-version`
     );
   }
 

@@ -17,7 +17,7 @@ class Home extends Component {
         <h2>
           Deployed with{' '}
           <a
-            href="https://vercel.com/docs"
+            href="https://khulnasoft.com/docs"
             target="_blank"
             rel="noreferrer noopener"
           >

@@ -1,4 +1,4 @@
-import type { Framework } from '@vercel/frameworks';
+import type { Framework } from '@khulnasoft/frameworks';
 
 /**
  * The supported list of monorepo managers.
@@ -6,8 +6,8 @@ import type { Framework } from '@vercel/frameworks';
  * This list is designed to work with the @see {@link detectFramework} function.
  *
  * @example
- *   import { monorepoManagers as frameworkList } from '@vercel/fs-detectors'
- *   import { detectFramework } from '@vercel/fs-detectors'
+ *   import { monorepoManagers as frameworkList } from '@khulnasoft/fs-detectors'
+ *   import { detectFramework } from '@khulnasoft/fs-detectors'
  *
  *   const fs = new GitDetectorFilesystem(...)
  *   detectFramwork({ fs, frameworkList }) // returns the 'slug' field if detected, otherwise null

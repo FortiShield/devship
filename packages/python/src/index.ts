@@ -15,7 +15,7 @@ import {
   type GlobOptions,
   type BuildV3,
   type Files,
-} from '@vercel/build-utils';
+} from '@khulnasoft/build-utils';
 import { installRequirement, installRequirementsFile } from './install';
 import { getLatestPythonVersion, getSupportedPythonVersion } from './version';
 

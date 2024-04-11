@@ -1,5 +1,5 @@
 import { join } from 'path';
-import { getNodeVersion } from '@vercel/build-utils';
+import { getNodeVersion } from '@khulnasoft/build-utils';
 import { build } from 'esbuild';
 import {
   copy,

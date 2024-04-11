@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "builds": [{ "src": "package.json", "use": "@vercel/redwood" }],
+  "builds": [{ "src": "package.json", "use": "@khulnasoft/redwood" }],
   "probes": [
     { "path": "/", "mustContain": "Deployment URL is" },
     { "path": "/", "mustContain": ".vercel.app" },

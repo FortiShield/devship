@@ -1,7 +1,7 @@
-import type { BuilderFunctions } from '@vercel/build-utils';
+import type { BuilderFunctions } from '@khulnasoft/build-utils';
 import type { Readable, Writable } from 'stream';
 import type * as tty from 'tty';
-import type { Route } from '@vercel/routing-utils';
+import type { Route } from '@khulnasoft/routing-utils';
 import { PROJECT_ENV_TARGET } from '@vercel-internals/constants';
 
 export type ProjectEnvTarget = typeof PROJECT_ENV_TARGET[number];
@@ -12,7 +12,7 @@ export type ProjectEnvType =
   | 'system'
   | 'sensitive';
 
-export type ProjectSettings = import('@vercel/build-utils').ProjectSettings;
+export type ProjectSettings = import('@khulnasoft/build-utils').ProjectSettings;
 
 export type Primitive =
   | bigint
@@ -560,7 +560,7 @@ export interface Build {
 
   /**
    * The Runtime the Build used to generate the output
-   * @example "@vercel/node"
+   * @example "@khulnasoft/node"
    */
   use?: string;
 

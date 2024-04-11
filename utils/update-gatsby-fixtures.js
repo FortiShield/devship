@@ -91,7 +91,7 @@ module.exports = async ({ github, context }) => {
         head: branch,
         base: 'main',
         title: '[tests] Update Gatsby fixture versions',
-        body: 'Automatically generated PR to update Gatsby fixture versions in `@vercel/static-build`',
+        body: 'Automatically generated PR to update Gatsby fixture versions in `@khulnasoft/static-build`',
       });
 
       await github.rest.issues.addLabels({

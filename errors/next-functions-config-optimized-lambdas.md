@@ -11,4 +11,4 @@ Remove the `functions` config from your `now.json` or `vercel.json` to take adva
 
 ### Useful Links
 
-- [Functions Config Documentation](https://vercel.com/docs/concepts/projects/project-configuration#functions)
+- [Functions Config Documentation](https://khulnasoft.com/docs/concepts/projects/project-configuration#functions)

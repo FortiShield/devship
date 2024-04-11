@@ -5,8 +5,8 @@ import { satisfies } from 'semver';
 import { dirname, join } from 'path';
 import { createRequire } from 'module';
 import { mkdirp, outputJSON, readJSON, symlink } from 'fs-extra';
-import { isStaticRuntime } from '@vercel/fs-detectors';
-import { BuilderV2, BuilderV3, PackageJson } from '@vercel/build-utils';
+import { isStaticRuntime } from '@khulnasoft/fs-detectors';
+import { BuilderV2, BuilderV3, PackageJson } from '@khulnasoft/build-utils';
 import execa from 'execa';
 import * as staticBuilder from './static-builder';
 import { VERCEL_DIR } from '../projects/link';
@@ -220,7 +220,7 @@ async function installBuilders(
   try {
     const { stderr } = await execa(
       'npm',
-      ['install', '@vercel/build-utils', ...buildersToAdd],
+      ['install', '@khulnasoft/build-utils', ...buildersToAdd],
       {
         cwd: buildersDir,
         stdio: 'pipe',
@@ -257,12 +257,12 @@ async function installBuilders(
     throw err;
   }
 
-  // Symlink `@now/build-utils` -> `@vercel/build-utils` to support legacy Builders
+  // Symlink `@now/build-utils` -> `@khulnasoft/build-utils` to support legacy Builders
   const nowScopePath = join(buildersDir, 'node_modules/@now');
   await mkdirp(nowScopePath);
 
   try {
-    await symlink('../@vercel/build-utils', join(nowScopePath, 'build-utils'));
+    await symlink('../@khulnasoft/build-utils', join(nowScopePath, 'build-utils'));
   } catch (err: unknown) {
     if (!isErrnoException(err) || err.code !== 'EEXIST') {
       // Throw unless the error is due to the symlink already existing

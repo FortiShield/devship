@@ -1,8 +1,8 @@
 {
   "version": 2,
   "builds": [
-    { "src": "index.go", "use": "@vercel/go" },
-    { "src": "subdirectory/index.go", "use": "@vercel/go" }
+    { "src": "index.go", "use": "@khulnasoft/go" },
+    { "src": "subdirectory/index.go", "use": "@khulnasoft/go" }
   ],
   "probes": [
     { "path": "/", "mustContain": "cow:go1.22.2:RANDOMNESS_PLACEHOLDER" },

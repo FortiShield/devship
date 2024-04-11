@@ -91,7 +91,7 @@ export default async function dev(
 
   // If there is no Development Command, we must delete the
   // v3 Build Output because it will incorrectly be detected by
-  // @vercel/static-build in BuildOutputV3.getBuildOutputDirectory()
+  // @khulnasoft/static-build in BuildOutputV3.getBuildOutputDirectory()
   if (!devServer.devCommand) {
     const outputDir = join(cwd, OUTPUT_DIR);
     if (await fs.pathExists(outputDir)) {

@@ -21,7 +21,7 @@ import {
   prepareE2EFixtures,
 } from './helpers/setup-e2e-fixture';
 import formatOutput from './helpers/format-output';
-import type { PackageJson } from '@vercel/build-utils';
+import type { PackageJson } from '@khulnasoft/build-utils';
 import type http from 'http';
 import { CLIProcess } from './helpers/types';
 
@@ -1285,7 +1285,7 @@ test('[vc link] should support the `--project` flag', async () => {
   expect(output.stderr).toContain(`Linked to ${user.username}/${projectName}`);
 });
 
-test('[vc build] should build project with `@vercel/static-build`', async () => {
+test('[vc build] should build project with `@khulnasoft/static-build`', async () => {
   const directory = await setupE2EFixture('vc-build-static-build');
   const output = await execCli(binaryPath, ['build'], { cwd: directory });
   expect(output.exitCode, formatOutput(output)).toBe(0);
@@ -1308,7 +1308,7 @@ test('[vc build] should build project with `@vercel/static-build`', async () => 
   );
   expect(builds.target).toBe('preview');
   expect(builds.builds[0].src).toBe('package.json');
-  expect(builds.builds[0].use).toBe('@vercel/static-build');
+  expect(builds.builds[0].use).toBe('@khulnasoft/static-build');
 });
 
 test('[vc build] should build project with `@vercel/speed-insights`', async () => {

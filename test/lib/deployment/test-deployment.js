@@ -11,7 +11,7 @@ const { logWithinTest } = require('./log');
 const {
   scanParentDirs,
   getSupportedNodeVersion,
-} = require('@vercel/build-utils');
+} = require('@khulnasoft/build-utils');
 
 async function packAndDeploy(builderPath, shouldUnlink = true) {
   await spawnAsync('npm', ['--loglevel', 'warn', 'pack'], {

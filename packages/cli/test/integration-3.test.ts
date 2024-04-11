@@ -5,7 +5,7 @@ import { URL, parse as parseUrl } from 'url';
 import semVer from 'semver';
 import { Readable } from 'stream';
 import { homedir } from 'os';
-import { runNpmInstall } from '@vercel/build-utils';
+import { runNpmInstall } from '@khulnasoft/build-utils';
 import { execCli } from './helpers/exec';
 import fetch, { RequestInit, RequestInfo } from 'node-fetch';
 import retry from 'async-retry';
@@ -694,7 +694,7 @@ test('try to create a builds deployments with wrong now.json', async () => {
     'Error: Invalid now.json - should NOT have additional property `builder`. Did you mean `builds`?'
   );
   expect(stderr).toContain(
-    'https://vercel.com/docs/concepts/projects/project-configuration'
+    'https://khulnasoft.com/docs/concepts/projects/project-configuration'
   );
 });
 
@@ -712,7 +712,7 @@ test('try to create a builds deployments with wrong vercel.json', async () => {
     'Error: Invalid vercel.json - should NOT have additional property `fake`. Please remove it.'
   );
   expect(stderr).toContain(
-    'https://vercel.com/docs/concepts/projects/project-configuration'
+    'https://khulnasoft.com/docs/concepts/projects/project-configuration'
   );
 });
 
@@ -732,7 +732,7 @@ test('try to create a builds deployments with wrong `build.env` property', async
     'Error: Invalid vercel.json - should NOT have additional property `build.env`. Did you mean `{ "build": { "env": {"name": "value"} } }`?'
   );
   expect(stderr).toContain(
-    'https://vercel.com/docs/concepts/projects/project-configuration'
+    'https://khulnasoft.com/docs/concepts/projects/project-configuration'
   );
 });
 

@@ -33,7 +33,7 @@ import {
   debug,
   cloneEnv,
   getProvidedRuntime,
-} from '@vercel/build-utils';
+} from '@khulnasoft/build-utils';
 
 const TMP = tmpdir();
 

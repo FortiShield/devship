@@ -2,7 +2,7 @@ import fs from 'fs';
 // @ts-ignore
 import tar from 'tar-fs';
 import { extract } from '../../_lib/examples/extract';
-import { VercelRequest, VercelResponse } from '@vercel/node';
+import { VercelRequest, VercelResponse } from '@khulnasoft/node';
 import { withApiHandler } from '../../_lib/util/with-api-handler';
 
 const TMP_DIR = '/tmp';

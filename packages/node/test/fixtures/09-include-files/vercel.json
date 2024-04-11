@@ -3,28 +3,28 @@
   "builds": [
     {
       "src": "index.js",
-      "use": "@vercel/node",
+      "use": "@khulnasoft/node",
       "config": {
         "includeFiles": ["templates/**"]
       }
     },
     {
       "src": "root.js",
-      "use": "@vercel/node",
+      "use": "@khulnasoft/node",
       "config": {
         "includeFiles": ["root.edge"]
       }
     },
     {
       "src": "accepts-string.js",
-      "use": "@vercel/node",
+      "use": "@khulnasoft/node",
       "config": {
         "includeFiles": "templates/accepts-string.edge"
       }
     },
     {
       "src": "include-ts-file.js",
-      "use": "@vercel/node",
+      "use": "@khulnasoft/node",
       "config": {
         "includeFiles": "file.ts"
       }

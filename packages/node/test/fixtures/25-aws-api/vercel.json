@@ -3,17 +3,17 @@
   "builds": [
     {
       "src": "index.js",
-      "use": "@vercel/node",
+      "use": "@khulnasoft/node",
       "config": { "awsLambdaHandler": "index.handler" }
     },
     {
       "src": "callback/index.js",
-      "use": "@vercel/node",
+      "use": "@khulnasoft/node",
       "config": { "awsLambdaHandler": "callback/index.handler" }
     },
     {
       "src": "graphql/index.js",
-      "use": "@vercel/node",
+      "use": "@khulnasoft/node",
       "config": { "awsLambdaHandler": "graphql/index.handler" }
     }
   ],

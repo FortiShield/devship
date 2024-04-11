@@ -9,14 +9,14 @@ const externals = Object.keys(pkg.dependencies || {});
 await Promise.all([
   esbuild({
     bundle: true,
-    external: ['@vercel/build-utils', ...externals],
+    external: ['@khulnasoft/build-utils', ...externals],
   }),
   esbuild({
     entryPoints: ['src/dev-server.mts'],
     outfile: 'dist/dev-server.mjs',
     format: 'esm',
     bundle: true,
-    external: ['@vercel/build-utils', ...externals],
+    external: ['@khulnasoft/build-utils', ...externals],
   }),
 ]);
 

@@ -1,6 +1,6 @@
 import { createRequire } from 'module';
 import { relative, basename, dirname } from 'path';
-import { NowBuildError } from '@vercel/build-utils';
+import { NowBuildError } from '@khulnasoft/build-utils';
 import type _ts from 'typescript';
 
 /*

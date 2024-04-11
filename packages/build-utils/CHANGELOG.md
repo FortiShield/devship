@@ -1,4 +1,4 @@
-# @vercel/build-utils
+# @khulnasoft/build-utils
 
 ## 7.11.0
 

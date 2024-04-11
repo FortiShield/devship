@@ -26,11 +26,11 @@ cd <PROJECT>    # Change directory to the new project
 vercel          # Deploy to the cloud
 ```
 
-Finally, [connect your Git repository to Vercel](https://vercel.com/docs/git) and deploy with `git push`.
+Finally, [connect your Git repository to Vercel](https://khulnasoft.com/docs/git) and deploy with `git push`.
 
 ## Documentation
 
-For details on how to use Vercel CLI, check out our [documentation](https://vercel.com/docs/cli).
+For details on how to use Vercel CLI, check out our [documentation](https://khulnasoft.com/docs/cli).
 
 ## Local Development
 

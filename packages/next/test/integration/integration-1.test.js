@@ -7,7 +7,7 @@ const {
   createRunBuildLambda,
 } = require('../../../../test/lib/run-build-lambda');
 const { duplicateWithConfig } = require('../utils');
-const { streamToBuffer } = require('@vercel/build-utils');
+const { streamToBuffer } = require('@khulnasoft/build-utils');
 const { createHash } = require('crypto');
 
 const runBuildLambda = createRunBuildLambda(builder);

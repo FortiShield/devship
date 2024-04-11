@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import { Route } from '@vercel/routing-utils';
+import { Route } from '@khulnasoft/routing-utils';
 
 const longestProperty = (routes: Route[], name: keyof Route): number => {
   const longestItem = routes.sort((a, b) => {

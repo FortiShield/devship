@@ -2,15 +2,15 @@ import semver from 'semver';
 import { existsSync, readFileSync, promises as fs } from 'fs';
 import { basename, dirname, join, relative, resolve, sep } from 'path';
 import { pathToRegexp, Key } from 'path-to-regexp';
-import { debug, type PackageJson } from '@vercel/build-utils';
-import { walkParentDirs } from '@vercel/build-utils';
+import { debug, type PackageJson } from '@khulnasoft/build-utils';
+import { walkParentDirs } from '@khulnasoft/build-utils';
 import { createRequire } from 'module';
 import type {
   ConfigRoute,
   RouteManifest,
 } from '@remix-run/dev/dist/config/routes';
 import type { RemixConfig } from '@remix-run/dev/dist/config';
-import type { BaseFunctionConfig } from '@vercel/static-config';
+import type { BaseFunctionConfig } from '@khulnasoft/static-config';
 
 export const require_ = createRequire(__filename);
 

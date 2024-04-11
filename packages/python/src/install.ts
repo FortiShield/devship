@@ -1,5 +1,5 @@
 import execa from 'execa';
-import { Meta, debug } from '@vercel/build-utils';
+import { Meta, debug } from '@khulnasoft/build-utils';
 
 const makeDependencyCheckCode = (dependency: string) => `
 from importlib import util

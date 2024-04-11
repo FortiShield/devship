@@ -2,7 +2,7 @@
  * This script is the build configuration common to all our Builder packages.
  * We bundle the output using `esbuild`, and do not publish type definitions.
  *
- * `@vercel/build-utils` is marked as external because it's always an implicit
+ * `@khulnasoft/build-utils` is marked as external because it's always an implicit
  * dependency when the Builder is invoked by `vercel build`.
  */
 import { join } from 'node:path';
@@ -17,7 +17,7 @@ export async function buildBuilder(opts, cwd = process.cwd()) {
 
   await esbuild({
     bundle: true,
-    external: ['@vercel/build-utils', ...externals],
+    external: ['@khulnasoft/build-utils', ...externals],
     ...opts,
   });
 }

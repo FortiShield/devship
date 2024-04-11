@@ -1,5 +1,5 @@
 import { join } from 'path';
-import { hardLinkDir } from '@vercel/build-utils';
+import { hardLinkDir } from '@khulnasoft/build-utils';
 
 export async function createStaticDir(prefix?: string) {
   const publicDir = join(process.cwd(), 'public');

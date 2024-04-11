@@ -45,7 +45,7 @@ export function getPrettyError(obj: {
   params: any;
 }): NowBuildError {
   const docsUrl =
-    'https://vercel.com/docs/concepts/projects/project-configuration';
+    'https://khulnasoft.com/docs/concepts/projects/project-configuration';
   try {
     const { dataPath, params, message: ajvMessage } = obj;
     const prop = getTopLevelPropertyName(dataPath);

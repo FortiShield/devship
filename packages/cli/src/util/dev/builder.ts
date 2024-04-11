@@ -14,8 +14,8 @@ import {
   FileBlob,
   FileFsRef,
   normalizePath,
-} from '@vercel/build-utils';
-import { isStaticRuntime } from '@vercel/fs-detectors';
+} from '@khulnasoft/build-utils';
+import { isStaticRuntime } from '@khulnasoft/fs-detectors';
 import plural from 'pluralize';
 import minimatch from 'minimatch';
 
@@ -37,7 +37,7 @@ import {
   EnvConfigs,
   BuiltLambda,
 } from './types';
-import { normalizeRoutes } from '@vercel/routing-utils';
+import { normalizeRoutes } from '@khulnasoft/routing-utils';
 import getUpdateCommand from '../get-update-command';
 import { getTitleName } from '../pkg-name';
 import { importBuilders } from '../build/import-builders';

@@ -1,4 +1,4 @@
-# @vercel/frameworks
+# @khulnasoft/frameworks
 
 ## 3.0.1
 

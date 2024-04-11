@@ -2,7 +2,7 @@ import {
   getTransformedRoutes,
   type Redirect,
   type Rewrite,
-} from '@vercel/routing-utils';
+} from '@khulnasoft/routing-utils';
 import { writeJson } from 'fs-extra';
 import { validateGatsbyState } from './schemas';
 import {

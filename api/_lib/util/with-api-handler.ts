@@ -1,4 +1,4 @@
-import { VercelRequest, VercelResponse } from '@vercel/node';
+import { VercelRequest, VercelResponse } from '@khulnasoft/node';
 import { errorHandler } from './error-handler';
 
 type Handler = (req: VercelRequest, res: VercelResponse) => Promise<any>;

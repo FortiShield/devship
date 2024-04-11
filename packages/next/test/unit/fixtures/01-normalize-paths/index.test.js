@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const ms = require('ms');
 const path = require('path');
 const { build } = require('../../../../dist');
-const { FileFsRef } = require('@vercel/build-utils');
+const { FileFsRef } = require('@khulnasoft/build-utils');
 
 jest.setTimeout(ms('6m'));
 

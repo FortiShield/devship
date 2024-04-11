@@ -1,4 +1,4 @@
-# @vercel/routing-utils
+# @khulnasoft/routing-utils
 
 ## 3.1.0
 

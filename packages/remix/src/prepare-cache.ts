@@ -3,10 +3,10 @@ import {
   getSpawnOptions,
   glob,
   runNpmInstall,
-} from '@vercel/build-utils';
+} from '@khulnasoft/build-utils';
 import { dirname, join, relative } from 'path';
 import { require_, chdirAndReadConfig, isVite } from './utils';
-import type { Files, PrepareCache } from '@vercel/build-utils';
+import type { Files, PrepareCache } from '@khulnasoft/build-utils';
 
 export const prepareCache: PrepareCache = async ({
   entrypoint,

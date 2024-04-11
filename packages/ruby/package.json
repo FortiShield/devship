@@ -1,10 +1,10 @@
 {
-  "name": "@vercel/ruby",
+  "name": "@khulnasoft/ruby",
   "author": "Nathan Cahill <nathan@nathancahill.com>",
   "version": "2.0.5",
   "license": "Apache-2.0",
   "main": "./dist/index",
-  "homepage": "https://vercel.com/docs/runtimes#official-runtimes/ruby",
+  "homepage": "https://khulnasoft.com/docs/runtimes#official-runtimes/ruby",
   "files": [
     "dist",
     "vc_init.rb"
@@ -23,7 +23,7 @@
   "devDependencies": {
     "@types/fs-extra": "8.0.0",
     "@types/semver": "6.0.0",
-    "@vercel/build-utils": "7.11.0",
+    "@khulnasoft/build-utils": "workspace:*",
     "execa": "2.0.4",
     "fs-extra": "^7.0.1",
     "jest-junit": "16.0.0",

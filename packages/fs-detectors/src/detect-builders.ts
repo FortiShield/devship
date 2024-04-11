@@ -1,15 +1,15 @@
 import minimatch from 'minimatch';
 import { valid as validSemver } from 'semver';
 import { parse as parsePath, extname } from 'path';
-import type { Route, RouteWithSrc } from '@vercel/routing-utils';
-import frameworkList, { Framework } from '@vercel/frameworks';
+import type { Route, RouteWithSrc } from '@khulnasoft/routing-utils';
+import frameworkList, { Framework } from '@khulnasoft/frameworks';
 import type {
   PackageJson,
   Builder,
   Config,
   BuilderFunctions,
   ProjectSettings,
-} from '@vercel/build-utils';
+} from '@khulnasoft/build-utils';
 import { isOfficialRuntime } from './is-official-runtime';
 const slugToFramework = new Map<string | null, Framework>(
   frameworkList.map(f => [f.slug, f])
@@ -318,7 +318,7 @@ export async function detectBuilders(
   ) {
     apiBuilders = apiBuilders.filter(builder => {
       const isMiddlewareBuilder =
-        builder.use === '@vercel/node' && builder.config?.middleware;
+        builder.use === '@khulnasoft/node' && builder.config?.middleware;
       return !isMiddlewareBuilder;
     });
   }
@@ -459,13 +459,13 @@ function getApiMatches(): Builder[] {
   return [
     {
       src: 'middleware.[jt]s',
-      use: `@vercel/node`,
+      use: `@khulnasoft/node`,
       config: { ...config, middleware: true },
     },
-    { src: 'api/**/*.+(js|mjs|ts|tsx)', use: `@vercel/node`, config },
-    { src: 'api/**/!(*_test).go', use: `@vercel/go`, config },
-    { src: 'api/**/*.py', use: `@vercel/python`, config },
-    { src: 'api/**/*.rb', use: `@vercel/ruby`, config },
+    { src: 'api/**/*.+(js|mjs|ts|tsx)', use: `@khulnasoft/node`, config },
+    { src: 'api/**/!(*_test).go', use: `@khulnasoft/go`, config },
+    { src: 'api/**/*.py', use: `@khulnasoft/python`, config },
+    { src: 'api/**/*.rb', use: `@khulnasoft/ruby`, config },
   ];
 }
 
@@ -561,7 +561,7 @@ function detectFrontBuilder(
 
   return {
     src: source || 'package.json',
-    use: `@vercel/static-build${withTag}`,
+    use: `@khulnasoft/static-build${withTag}`,
     config,
   };
 }
@@ -1000,7 +1000,7 @@ function getRouteResult(
   if (apiRoutes && apiRoutes.length > 0) {
     if (options.featHandleMiss) {
       // Exclude extension names if the corresponding plugin is not found in package.json
-      // detectBuilders({ignoreRoutesForBuilders: ['@vercel/python']})
+      // detectBuilders({ignoreRoutesForBuilders: ['@khulnasoft/python']})
       // return a copy of routes.
       // We should exclud errorRoutes and
       const extSet = detectApiExtensions(apiBuilders);

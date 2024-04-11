@@ -1,11 +1,11 @@
 import { join } from 'path';
-import { frameworkList, Framework } from '@vercel/frameworks';
+import { frameworkList, Framework } from '@khulnasoft/frameworks';
 import {
   detectFrameworks,
   getWorkspacePackagePaths,
   getWorkspaces,
   LocalFileSystemDetector,
-} from '@vercel/fs-detectors';
+} from '@khulnasoft/fs-detectors';
 
 export async function detectProjects(cwd: string) {
   const fs = new LocalFileSystemDetector(cwd);

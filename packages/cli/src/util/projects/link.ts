@@ -18,7 +18,7 @@ import type {
 } from '@vercel-internals/types';
 import { prependEmoji, emoji, EmojiLabel } from '../emoji';
 import { isDirectory } from '../config/global-path';
-import { NowBuildError, getPlatformEnv } from '@vercel/build-utils';
+import { NowBuildError, getPlatformEnv } from '@khulnasoft/build-utils';
 import outputCode from '../output/code';
 import { isErrnoException, isError } from '@vercel/error-utils';
 import { findProjectsFromPath, getRepoLink } from '../link/repo';

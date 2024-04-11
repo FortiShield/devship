@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": "app/config.ru",
-      "use": "@vercel/ruby"
+      "use": "@khulnasoft/ruby"
     }
   ],
   "routes": [{ "src": "/", "dest": "app/config.ru" }],

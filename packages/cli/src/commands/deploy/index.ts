@@ -2,7 +2,7 @@ import {
   getPrettyError,
   getSupportedNodeVersion,
   scanParentDirs,
-} from '@vercel/build-utils';
+} from '@khulnasoft/build-utils';
 import {
   fileNameSymbol,
   VALID_ARCHIVE_FORMATS,

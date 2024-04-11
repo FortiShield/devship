@@ -2,7 +2,7 @@
 
 # RedwoodJS Example
 
-This directory is a brief example of a [RedwoodJS](https://redwoodjs.com) app with [Serverless Functions](https://vercel.com/docs/concepts/functions/serverless-functions) that can be deployed to Vercel with zero configuration.
+This directory is a brief example of a [RedwoodJS](https://redwoodjs.com) app with [Serverless Functions](https://khulnasoft.com/docs/concepts/functions/serverless-functions) that can be deployed to Vercel with zero configuration.
 
 ## Deploy Your Own
 

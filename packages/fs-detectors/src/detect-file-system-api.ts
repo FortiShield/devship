@@ -5,7 +5,7 @@ import type {
   BuilderFunctions,
   PackageJson,
   ProjectSettings,
-} from '@vercel/build-utils';
+} from '@khulnasoft/build-utils';
 
 interface Metadata {
   plugins: string[];

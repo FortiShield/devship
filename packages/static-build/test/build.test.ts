@@ -150,7 +150,7 @@ describe('build()', () => {
       );
     });
 
-    it('should throw an Error when `vercel dev` is used with `@vercel/static-build`', async () => {
+    it('should throw an Error when `vercel dev` is used with `@khulnasoft/static-build`', async () => {
       let err;
       const workPath = path.join(
         __dirname,

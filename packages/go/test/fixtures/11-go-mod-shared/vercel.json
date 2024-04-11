@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "builds": [{ "src": "api/*.go", "use": "@vercel/go" }],
+  "builds": [{ "src": "api/*.go", "use": "@khulnasoft/go" }],
   "probes": [
     {
       "path": "/api",

@@ -47,7 +47,7 @@ module.exports = async ({ github, context }, newVersion) => {
   fs.writeFileSync(
     changesetName,
     `---
-'@vercel/remix-builder': patch
+'@khulnasoft/remix-builder': patch
 ---
 
 Update \`@remix-run/dev\` fork to v${newVersion}

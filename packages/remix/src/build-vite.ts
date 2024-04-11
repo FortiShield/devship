@@ -17,7 +17,7 @@ import {
   FileFsRef,
   EdgeFunction,
   NodejsLambda,
-} from '@vercel/build-utils';
+} from '@khulnasoft/build-utils';
 import {
   getPathFromRoute,
   getRegExpFromPath,
@@ -25,7 +25,7 @@ import {
   hasScript,
   logNftWarnings,
 } from './utils';
-import type { BuildV2, Files, NodeVersion } from '@vercel/build-utils';
+import type { BuildV2, Files, NodeVersion } from '@khulnasoft/build-utils';
 
 const DEFAULTS_PATH = join(__dirname, '../defaults');
 

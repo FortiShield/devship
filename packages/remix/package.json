@@ -1,9 +1,9 @@
 {
-  "name": "@vercel/remix-builder",
+  "name": "@khulnasoft/remix-builder",
   "version": "2.1.5",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "homepage": "https://vercel.com/docs",
+  "homepage": "https://khulnasoft.com/docs",
   "sideEffects": false,
   "repository": {
     "type": "git",
@@ -22,9 +22,9 @@
     "defaults"
   ],
   "dependencies": {
-    "@vercel/error-utils": "2.0.2",
+    "@khulnasoft/static-config": "3.0.0",
+    "@vercel/error-utils": "workspace:*",
     "@vercel/nft": "0.26.4",
-    "@vercel/static-config": "3.0.0",
     "ts-morph": "12.0.0"
   },
   "devDependencies": {
@@ -32,7 +32,7 @@
     "@types/jest": "27.5.1",
     "@types/node": "14.18.33",
     "@types/semver": "7.3.13",
-    "@vercel/build-utils": "7.11.0",
+    "@khulnasoft/build-utils": "workspace:*",
     "jest-junit": "16.0.0",
     "path-to-regexp": "6.2.1",
     "semver": "7.5.2"

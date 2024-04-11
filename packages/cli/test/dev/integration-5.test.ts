@@ -45,7 +45,7 @@ test(
   )
 );
 
-test('[vercel dev] add a `package.json` to trigger `@vercel/static-build`', async () => {
+test('[vercel dev] add a `package.json` to trigger `@khulnasoft/static-build`', async () => {
   const directory = fixture('trigger-static-build');
 
   await fs.unlink(join(directory, 'package.json')).catch(() => null);

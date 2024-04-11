@@ -1,4 +1,4 @@
-import frameworkList from '@vercel/frameworks';
+import frameworkList from '@khulnasoft/frameworks';
 import { detectFrameworkRecord } from '../src';
 import VirtualFilesystem from './virtual-file-system';
 

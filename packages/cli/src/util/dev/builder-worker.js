@@ -2,9 +2,9 @@
  * This file gets copied out of the `pkg` snapshot filesystem into the `vc dev`
  * builder cache directory, so it's very important that it does not rely on any
  * modules from npm that would not be available in that directory (so basically,
- * only Vercel Runtimes and `@vercel/build-utils`.
+ * only Vercel Runtimes and `@khulnasoft/build-utils`.
  */
-const { FileFsRef } = require('@vercel/build-utils');
+const { FileFsRef } = require('@khulnasoft/build-utils');
 
 process.on('unhandledRejection', err => {
   console.error('Exiting builder due to build error:');

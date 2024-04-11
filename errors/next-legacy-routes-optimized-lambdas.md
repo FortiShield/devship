@@ -11,6 +11,6 @@ Migrate from using legacy `routes` to the new `rewrites`, `redirects`, and `head
 
 ### Useful Links
 
-- [Rewrites Documentation](https://vercel.com/docs/concepts/projects/project-configuration#rewrites)
-- [Redirects Documentation](https://vercel.com/docs/concepts/projects/project-configuration#redirects)
-- [Headers Documentation](https://vercel.com/docs/concepts/projects/project-configuration#headers)
+- [Rewrites Documentation](https://khulnasoft.com/docs/concepts/projects/project-configuration#rewrites)
+- [Redirects Documentation](https://khulnasoft.com/docs/concepts/projects/project-configuration#redirects)
+- [Headers Documentation](https://khulnasoft.com/docs/concepts/projects/project-configuration#headers)

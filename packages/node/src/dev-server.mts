@@ -8,7 +8,7 @@ if (!entrypoint) {
 import { join } from 'path';
 import type { Headers } from 'undici';
 import type { VercelProxyResponse } from './types.js';
-import { Config } from '@vercel/build-utils';
+import { Config } from '@khulnasoft/build-utils';
 import { createEdgeEventHandler } from './edge-functions/edge-handler.mjs';
 import { createServer, IncomingMessage, ServerResponse } from 'http';
 import {
@@ -18,7 +18,7 @@ import {
 import { isEdgeRuntime, logError, validateConfiguredRuntime } from './utils.js';
 import { init, parse as parseEsm } from 'es-module-lexer';
 import { parse as parseCjs } from 'cjs-module-lexer';
-import { getConfig } from '@vercel/static-config';
+import { getConfig } from '@khulnasoft/static-config';
 import { Project } from 'ts-morph';
 import { listen } from 'async-listen';
 import { readFile } from 'fs/promises';

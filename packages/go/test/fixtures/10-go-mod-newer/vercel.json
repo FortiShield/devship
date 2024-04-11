@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "builds": [{ "src": "index.go", "use": "@vercel/go" }],
+  "builds": [{ "src": "index.go", "use": "@khulnasoft/go" }],
   "probes": [
     { "path": "/", "mustContain": "version:go1.19.13:RANDOMNESS_PLACEHOLDER" }
   ]

@@ -1,4 +1,4 @@
-# @vercel/redwood
+# @khulnasoft/redwood
 
 ## 2.0.8
 
@@ -23,7 +23,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`9e9fac019`](https://github.com/khulnasoft/devship/commit/9e9fac0191cb1428ac9e5479c3d5c8afd7b7d357)]:
-  - @vercel/routing-utils@3.1.0
+  - @khulnasoft/routing-utils@3.1.0
 
 ## 2.0.4
 
@@ -60,4 +60,4 @@
 ### Patch Changes
 
 - Updated dependencies [[`37f5c6270`](https://github.com/khulnasoft/devship/commit/37f5c6270058336072ca733673ea72dd6c56bd6a)]:
-  - @vercel/routing-utils@3.0.0
+  - @khulnasoft/routing-utils@3.0.0

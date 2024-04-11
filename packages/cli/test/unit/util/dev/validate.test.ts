@@ -26,7 +26,7 @@ describe('validateConfig', () => {
 
   it('should not error with builds and routes', async () => {
     const config = {
-      builds: [{ src: 'api/index.js', use: '@vercel/node' }],
+      builds: [{ src: 'api/index.js', use: '@khulnasoft/node' }],
       routes: [{ src: '/(.*)', dest: '/api/index.js' }],
     };
     const error = validateConfig(config);
@@ -42,7 +42,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `rewrites[0]` should NOT have additional property `src`. Did you mean `source`?'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#rewrites'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#rewrites'
     );
   });
 
@@ -55,7 +55,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `routes[0]` should NOT have additional property `source`. Did you mean `src`?'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#routes'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#routes'
     );
   });
 
@@ -68,7 +68,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `routes` should be array.'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#routes'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#routes'
     );
   });
 
@@ -85,7 +85,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `redirects[0]` missing required property `source`.'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#redirects'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#redirects'
     );
   });
 
@@ -98,7 +98,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `redirects[0].permanent` should be boolean.'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#redirects'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#redirects'
     );
   });
 
@@ -111,7 +111,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `cleanUrls` should be boolean.'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#cleanurls'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#cleanurls'
     );
   });
 
@@ -124,7 +124,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `trailingSlash` should be boolean.'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#trailingslash'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#trailingslash'
     );
   });
 
@@ -137,7 +137,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `headers[0]` should NOT have additional property `Content-Type`. Please remove it.'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#headers'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#headers'
     );
   });
 
@@ -150,7 +150,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `headers[0].source` should be string.'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#headers'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#headers'
     );
   });
 
@@ -163,7 +163,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `headers[0]` should NOT have additional property `stuff`. Please remove it.'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#headers'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#headers'
     );
   });
 
@@ -176,7 +176,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `headers[0].headers[0]` should NOT have additional property `Content-Type`. Please remove it.'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#headers'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#headers'
     );
   });
 
@@ -191,7 +191,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `headers[0].headers[0]` should NOT have additional property `val`. Please remove it.'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#headers'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#headers'
     );
   });
 
@@ -206,7 +206,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `redirects` should NOT have more than 1024 items.'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#redirects'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#redirects'
     );
   });
 
@@ -230,7 +230,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `headers[1].headers` should NOT have more than 1024 items.'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#headers'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#headers'
     );
   });
 
@@ -246,7 +246,7 @@ describe('validateConfig', () => {
       "Invalid vercel.json - `functions['api/test.js'].memory` should be >= 128."
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#functions'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#functions'
     );
   });
 
@@ -262,7 +262,7 @@ describe('validateConfig', () => {
       "Invalid vercel.json - `functions['api/test.js'].memory` should be <= 3009."
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#functions'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#functions'
     );
   });
 
@@ -296,7 +296,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `crons[0]` missing required property `schedule`.'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#crons'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#crons'
     );
   });
 
@@ -309,7 +309,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `crons[0]` missing required property `path`.'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#crons'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#crons'
     );
   });
 
@@ -321,7 +321,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `crons[0].path` should NOT be longer than 512 characters.'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#crons'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#crons'
     );
   });
 
@@ -333,7 +333,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `crons[0].schedule` should NOT be longer than 256 characters.'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#crons'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#crons'
     );
   });
 
@@ -345,7 +345,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `crons[0].path` should NOT be shorter than 1 characters.'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#crons'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#crons'
     );
   });
 
@@ -357,7 +357,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `crons[0].schedule` should NOT be shorter than 9 characters.'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#crons'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#crons'
     );
   });
 
@@ -369,7 +369,7 @@ describe('validateConfig', () => {
       'Invalid vercel.json - `crons[0].path` should match pattern "^/.*".'
     );
     expect(error!.link).toEqual(
-      'https://vercel.com/docs/concepts/projects/project-configuration#crons'
+      'https://khulnasoft.com/docs/concepts/projects/project-configuration#crons'
     );
   });
 });

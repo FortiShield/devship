@@ -2,7 +2,7 @@ import which from 'which';
 import execa from 'execa';
 import { dirname } from 'path';
 import { listen } from 'async-listen';
-import { scanParentDirs, walkParentDirs } from '@vercel/build-utils';
+import { scanParentDirs, walkParentDirs } from '@khulnasoft/build-utils';
 import { createProxy } from './proxy';
 import type Client from '../client';
 

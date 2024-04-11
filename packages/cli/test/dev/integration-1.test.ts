@@ -564,7 +564,7 @@ test('[vercel dev] should support `@vercel/static` routing', async () => {
   }
 });
 
-test('[vercel dev] should support `@vercel/static-build` routing', async () => {
+test('[vercel dev] should support `@khulnasoft/static-build` routing', async () => {
   const dir = fixture('static-build-routing');
   const { dev, port, readyResolver } = await testFixture(dir);
 
@@ -870,13 +870,13 @@ test('[vercel dev] reflects changes to config and env without restart', async ()
   }
 });
 
-test('[vercel dev] `@vercel/node` TypeScript should be resolved by default', async () => {
-  // The purpose of this test is to test that `@vercel/node` can properly
+test('[vercel dev] `@khulnasoft/node` TypeScript should be resolved by default', async () => {
+  // The purpose of this test is to test that `@khulnasoft/node` can properly
   // resolve the default "typescript" module when the project doesn't include
   // its own version. To properly test for this, a fixture needs to be created
   // *outside* of the `vercel` repo, since otherwise the root-level
   // "node_modules/typescript" is resolved as relative to the project, and
-  // not relative to `@vercel/node` which is what we are testing for here.
+  // not relative to `@khulnasoft/node` which is what we are testing for here.
   const dir = join(os.tmpdir(), 'vercel-node-typescript-resolve-test');
   const apiDir = join(dir, 'api');
   await fs.mkdirp(apiDir);

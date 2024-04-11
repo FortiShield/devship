@@ -1,10 +1,10 @@
 {
   "version": 2,
   "builds": [
-    { "src": "some-build.sh", "use": "@vercel/static-build" },
-    { "src": "node18sh/build.sh", "use": "@vercel/static-build" },
-    { "src": "node16sh/build.sh", "use": "@vercel/static-build" },
-    { "src": "subdirectory/some-build.sh", "use": "@vercel/static-build" }
+    { "src": "some-build.sh", "use": "@khulnasoft/static-build" },
+    { "src": "node18sh/build.sh", "use": "@khulnasoft/static-build" },
+    { "src": "node16sh/build.sh", "use": "@khulnasoft/static-build" },
+    { "src": "subdirectory/some-build.sh", "use": "@khulnasoft/static-build" }
   ],
   "probes": [
     { "path": "/", "mustContain": "cow:RANDOMNESS_PLACEHOLDER" },

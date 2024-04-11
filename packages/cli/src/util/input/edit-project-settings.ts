@@ -1,6 +1,6 @@
 import confirm from './confirm';
 import chalk from 'chalk';
-import { frameworkList, Framework } from '@vercel/frameworks';
+import { frameworkList, Framework } from '@khulnasoft/frameworks';
 import Client from '../client';
 import { isSettingValue } from '../is-setting-value';
 import type { ProjectSettings } from '@vercel-internals/types';

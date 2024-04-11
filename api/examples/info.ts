@@ -3,7 +3,7 @@
 
 // @ts-ignore
 import parseGitUrl from 'parse-github-url';
-import { VercelRequest, VercelResponse } from '@vercel/node';
+import { VercelRequest, VercelResponse } from '@khulnasoft/node';
 import { withApiHandler } from '../_lib/util/with-api-handler';
 import { getGitHubRepoInfo } from '../_lib/examples/github-repo-info';
 import { getGitLabRepoInfo } from '../_lib/examples/gitlab-repo-info';

@@ -5,7 +5,7 @@ import { join, sep, relative, basename } from 'path';
 import { URL } from 'url';
 import ignore from 'ignore';
 import { pkgVersion } from '../pkg';
-import { NowBuildError } from '@vercel/build-utils';
+import { NowBuildError } from '@khulnasoft/build-utils';
 import { VercelClientOptions, VercelConfig } from '../types';
 import { Sema } from 'async-sema';
 import { readFile } from 'fs-extra';

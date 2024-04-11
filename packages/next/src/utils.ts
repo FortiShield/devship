@@ -17,7 +17,7 @@ import {
   Images,
   File,
   FlagDefinitions,
-} from '@vercel/build-utils';
+} from '@khulnasoft/build-utils';
 import { NodeFileTraceReasons } from '@vercel/nft';
 import type {
   HasField,
@@ -25,7 +25,7 @@ import type {
   Rewrite,
   Route,
   RouteWithSrc,
-} from '@vercel/routing-utils';
+} from '@khulnasoft/routing-utils';
 import { Sema } from 'async-sema';
 import crc32 from 'buffer-crc32';
 import fs, { lstat, stat } from 'fs-extra';
@@ -38,7 +38,7 @@ import escapeStringRegexp from 'escape-string-regexp';
 import { htmlContentType } from '.';
 import textTable from 'text-table';
 import { getNextjsEdgeFunctionSource } from './edge-function-source/get-edge-function-source';
-import type { LambdaOptionsWithFiles } from '@vercel/build-utils/dist/lambda';
+import type { LambdaOptionsWithFiles } from '@khulnasoft/build-utils/dist/lambda';
 import { stringifySourceMap } from './sourcemapped';
 import type { RawSourceMap } from 'source-map';
 import { prettyBytes } from './pretty-bytes';

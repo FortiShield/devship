@@ -1,4 +1,4 @@
-import { BuildResultV2Typical } from '@vercel/build-utils/dist';
+import { BuildResultV2Typical } from '@khulnasoft/build-utils/dist';
 import type { BuildResult } from '../src/index';
 
 export interface Context {

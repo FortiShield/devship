@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "builds": [{ "src": "project/index.rb", "use": "@vercel/ruby" }],
+  "builds": [{ "src": "project/index.rb", "use": "@khulnasoft/ruby" }],
   "probes": [
     { "path": "/project/", "mustContain": "gem:RANDOMNESS_PLACEHOLDER" }
   ]

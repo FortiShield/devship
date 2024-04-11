@@ -1,4 +1,4 @@
-import { Rewrite, Route } from '@vercel/routing-utils';
+import { Rewrite, Route } from '@khulnasoft/routing-utils';
 
 export interface FrameworkDetectionItem {
   /**
